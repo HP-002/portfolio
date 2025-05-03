@@ -1,0 +1,16 @@
+.header {
+  margin: 0;
+  padding: 10px;
+  background-color: bisque;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.header > * {
+  background-color: transparent;
+}
