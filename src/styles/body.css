@@ -1,7 +1,0 @@
-section > .body {
-  margin-left: 150px;
-  padding: 20px;
-  box-sizing: border-box;
-  width: calc(100vw - 150px);
-  height: calc(100vh - 60px);
-}

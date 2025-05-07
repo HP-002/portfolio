@@ -6,8 +6,8 @@ import '../styles/app.css'
 function App() {
     return (
         <>
-            <Header />
-            <section className="main">
+            {/* <Header /> */}
+            <section className='flex gap-6'>
                 <Sidebar />
                 <Body />
             </section>
