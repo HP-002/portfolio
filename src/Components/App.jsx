@@ -7,7 +7,7 @@ function App() {
     return (
         <>
             {/* <Header /> */}
-            <section className='flex gap-6'>
+            <section className='flex'>
                 <Sidebar />
                 <Body />
             </section>

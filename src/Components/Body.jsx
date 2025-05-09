@@ -1,9 +1,9 @@
-// import '../styles/body.css'
+import AboutMe from './AboutMe.jsx';
 
 function Body() {
     return (
-        <div className='m-3 text-xl test-gray-200 font-semibold'>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ea accusamus vero nobis quasi ipsa ullam veniam. Deserunt aliquid odit eveniet fugit maxime nihil dolorem quia impedit! Deleniti, accusamus excepturi.</p>
+        <div className="m-0 bg-gray-900 h-screen w-full">
+            <AboutMe />
         </div>
     )
 }
