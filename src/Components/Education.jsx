@@ -1,11 +1,11 @@
 import UBLogo from "../assets/ublogo.png"
-// import coursework from "../data/coursework.js"
+import WordCloud from "./WordCloud.jsx"
 
 function Education() {
     return (
         <div
-            className="border-2 border-gray-800 bg-gray-900 text-white p-4 rounded-lg shadow-lg m-4
-            flex flex-col sm:flex-row gap-4 items-center justify-between"
+            className="text-white p-4 rounded-lg shadow-lg m-4
+            flex flex-wrap flex-col sm:flex-row gap-4 sm:items-center sm:justify-between"
         >
             {/* Left */}
             <div
@@ -51,8 +51,10 @@ function Education() {
             </div>
 
             {/* Right */}
+            <WordCloud />
+
             <div>
-                Word Cloud
+                hello
             </div>
         </div>
     )

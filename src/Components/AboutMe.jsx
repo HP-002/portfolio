@@ -19,7 +19,7 @@ function AboutMe() {
                 <div
                     className="text-left text-gray-400 font-semibold"
                 >
-                    <div class="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1.5">
                         <p
                             className="text-balance text-xl"
                         >

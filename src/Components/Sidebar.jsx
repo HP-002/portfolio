@@ -4,7 +4,7 @@ import sideBarItems from "../data/sidebarItems.js"
 import { useState } from "react"
 
 function Sidebar() {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
 
     function toggleSidebar() {
         setIsOpen(!isOpen)
