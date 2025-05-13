@@ -12,6 +12,8 @@ function Languages() {
                     name={lang.name}
                     icon={lang.icon}
                     description={lang.description}
+                    insetColor={lang.insetColor}
+                    shadowColor={lang.shadowColor}
                 />
             ))}
         </div>

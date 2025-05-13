@@ -2,8 +2,8 @@
 function Language(props) {
     return (
         <div
-            className="pt-1 pb-1 pl-4 pr-4 w-fit flex gap-3 rounded-2xl items-center
-            inset-shadow-blue-50 inset-shadow-2xs shadow-2xs shadow-blue-400"
+            className={`pt-1 pb-1 pl-4 pr-4 w-fit flex gap-3 rounded-2xl items-center
+            inset-shadow-2xs shadow-2xs inset-shadow-${props.insetColor} shadow-${props.shadowColor}`}
         >
             {/* Left */}
             <img 
