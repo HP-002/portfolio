@@ -1,4 +1,5 @@
-import Languages from "./Languages.jsx"
+import List from "./List.jsx"
+import languages from "../data/languages.js"
 
 function Skills() {
     return (
@@ -8,9 +9,22 @@ function Skills() {
             <h1
                 className="text-3xl font-bold mb-3"
             >
+                Skills
+            </h1>
+            
+            <h1
+                className="text-xl font-bold mb-3"
+            >
                 Programming Languages
             </h1>
-            <Languages />
+            <List list={languages}/>
+
+            <h1
+                className="text-xl font-bold mb-3 mt-5"
+            >
+                Frameworks & Libraries
+            </h1>
+            
         </div>
     )
 }

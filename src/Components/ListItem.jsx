@@ -1,5 +1,5 @@
 
-function Language(props) {
+function ListItem(props) {
     return (
         <div
             className={`pt-1 pb-1 pl-4 pr-4 w-fit flex gap-3 rounded-2xl items-center
@@ -31,4 +31,4 @@ function Language(props) {
     )
 }
 
-export default Language
+export default ListItem
