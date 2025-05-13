@@ -1,5 +1,7 @@
 
 function ListItem(props) {
+    const iconIsBlack = props.name === "Pandas" || props.name === "MicroPython" || props.name === "Node.js"
+
     return (
         <div
             className={`pt-1 pb-1 pl-4 pr-4 w-fit flex gap-3 rounded-2xl items-center
@@ -8,7 +10,7 @@ function ListItem(props) {
             {/* Left */}
             <img 
                 src={props.icon}
-                className="h-10"
+                className={`h-10 ${iconIsBlack ? "bg-white rounded-md p-0.5" : ""}`}
             />
 
             {/* Right */}

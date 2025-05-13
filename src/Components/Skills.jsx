@@ -1,5 +1,6 @@
 import List from "./List.jsx"
 import languages from "../data/languages.js"
+import framesAndLibs from '../data/framesAndLibs.js';
 
 function Skills() {
     return (
@@ -24,6 +25,7 @@ function Skills() {
             >
                 Frameworks & Libraries
             </h1>
+            <List list={framesAndLibs} />
             
         </div>
     )
