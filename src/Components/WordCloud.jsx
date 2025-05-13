@@ -1,10 +1,10 @@
 import Course from "./Course.jsx"
 import coursework from './../data/coursework.js';
 
-function WordCloud() {
+function CourseCloud() {
     return (
         <div
-            className="flex justify-stretch justify-items-stretch flex-wrap gap-3"
+            className="flex flex-wrap gap-3"
         >
             {coursework.map((course) => (
                 <Course
@@ -18,4 +18,4 @@ function WordCloud() {
     )
 }
 
-export default WordCloud
+export default CourseCloud
