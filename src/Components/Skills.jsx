@@ -1,6 +1,8 @@
 import List from "./List.jsx"
 import languages from "../data/languages.js"
 import framesAndLibs from '../data/framesAndLibs.js';
+import tools from './../data/tools.js';
+import operatingSystems from './../data/operatingSystems.js';
 
 function Skills() {
     return (
@@ -26,6 +28,20 @@ function Skills() {
                 Frameworks & Libraries
             </h1>
             <List list={framesAndLibs} />
+
+            <h1
+                className="text-xl font-bold mb-3 mt-5"
+            >
+                Tools
+            </h1>
+            <List list={tools} />
+
+            <h1
+                className="text-xl font-bold mb-3 mt-5"
+            >
+                Environments
+            </h1>
+            <List list={operatingSystems} />
             
         </div>
     )
