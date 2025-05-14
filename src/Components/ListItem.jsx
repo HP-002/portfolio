@@ -1,3 +1,4 @@
+import { motion } from "motion/react"
 
 function ListItem(props) {
     const iconIsBlack = props.name === "Pandas" || props.name === "MicroPython" || props.name === "Node.js"
@@ -72,7 +73,10 @@ function ListItem(props) {
     const cls = `pt-2 pb-2 pl-4 pr-4 w-fit flex gap-3 rounded-2xl items-center bg-white/10
                 inset-shadow-xs shadow-xs ${insetColors[props.insetColor]} ${shadowColors[props.shadowColor]}`
     return (
-        <div
+        <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            whileTap={{ scale: 0.95 }}
             className={cls}
         >
             {/* Left */}
@@ -97,7 +101,7 @@ function ListItem(props) {
                     {props.description}
                 </p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

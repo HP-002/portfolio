@@ -30,7 +30,7 @@ function AboutMe() {
                         <IoMdSchool className="text-amber-50" />
                         <p>University at Buffalo</p>
                     </div>
-                    <div class="flex items-center gap-1.5 text-lg">
+                    <div className="flex items-center gap-1.5 text-lg">
                         <MdLocationPin className="text-amber-50" />
                         <p>Buffalo, NY</p>
                     </div>

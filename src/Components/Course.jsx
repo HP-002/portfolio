@@ -14,7 +14,7 @@ function Course(props) {
         >
             <p
                 className={`m-1 p-2.5 text-gray-200  rounded-lg text-sm font-semibold
-             inset-shadow-xs shadow-lg ${color}`}
+             inset-shadow-xs shadow-lg ${color} group-hover:scale-105 duration-300`}
             >
                 {props.title}
             </p>
