@@ -10,7 +10,7 @@ function Course(props) {
 
     return (
         <div
-            className="relative group"
+            className="relative group w-[250px]"
         >
             <p
                 className={`m-1 p-2.5 text-gray-200  rounded-lg text-sm font-semibold
@@ -20,7 +20,7 @@ function Course(props) {
             </p>
             <p
                 className="group-hover:block z-1 transition-all duration-300 translate-x-10 group-hover:translate-x-0 opacity-0 group-hover:opacity-100
-                absolute left-1 top-full mt-1 w-fit p-2 bg-white/35 backdrop-blur-lg text-sm rounded-lg shadow-lg"
+                absolute left-0 top-full mt-1 w-fit p-2 bg-white/35 backdrop-blur-lg text-sm rounded-lg shadow-lg"
             >
                 {props.description}
             </p>

@@ -68,7 +68,7 @@ const framesAndLibs = [
         id: 8,
         name: 'IPOPT',
         icon: IpoptIcon,
-        description: "Library for Nonlinear Optimization",
+        description: "Nonlinear Optimization",
         insetColor: "yellow-500",
         shadowColor: "yellow-500",
     },
