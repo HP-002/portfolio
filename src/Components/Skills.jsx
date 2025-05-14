@@ -2,7 +2,7 @@ import List from "./List.jsx"
 import languages from "../data/languages.js"
 import framesAndLibs from '../data/framesAndLibs.js';
 import tools from './../data/tools.js';
-import operatingSystems from './../data/operatingSystems.js';
+import environments from './../data/environments.js';
 
 function Skills() {
     return (
@@ -41,7 +41,7 @@ function Skills() {
             >
                 Environments
             </h1>
-            <List list={operatingSystems} />
+            <List list={environments} />
             
         </div>
     )

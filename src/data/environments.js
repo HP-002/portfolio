@@ -2,31 +2,31 @@ import WindowsIcon from "./../assets/windows.svg"
 import UbuntuIcon from "./../assets/linux.svg"
 import WSLIcon from "./../assets/wsl.webp"
 
-const tools = [
+const environments = [
     {
         id: 1,
         name: "Windows",
         icon: WindowsIcon,
         description: "OS",
-        insetColor: "",
-        shadowColor: "",
+        insetColor: "red-500",
+        shadowColor: "yellow-500",
     },
     {
         id: 2,
         name: "Ubuntu Linux",
         icon: UbuntuIcon,
         description: "OS",
-        insetColor: "",
-        shadowColor: "",
+        insetColor: "white",
+        shadowColor: "yellow-500",
     },
     {
         id: 3,
         name: "WSL",
         icon: WSLIcon,
         description: "Windows Subsystem for Linux",
-        insetColor: "",
-        shadowColor: "",
+        insetColor: "white",
+        shadowColor: "blue-500",
     },
 ]
 
-export default tools
+export default environments
