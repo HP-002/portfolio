@@ -34,11 +34,11 @@ function AboutMe() {
                         <MdLocationPin className="text-amber-50" />
                         <p>Buffalo, NY</p>
                     </div>
-                    <div class="flex items-center gap-1.5 text-lg">
+                    <div className="flex items-center gap-1.5 text-lg">
                         <FaLinkedinIn className="text-amber-50" />
                         <p>hetpatel19</p>
                     </div>
-                    <div class="flex items-center gap-1.5 text-lg">
+                    <div className="flex items-center gap-1.5 text-lg">
                         <IoLogoGithub className="text-amber-50" />
                         <p>HP-002</p>
                     </div>
