@@ -26,7 +26,7 @@ function AboutMe() {
                             CS Undergrad at University at Buffalo
                         </p>
                     </div>
-                    <div class="mt-2 flex items-center gap-1.5 text-lg">
+                    <div className="mt-2 flex items-center gap-1.5 text-lg">
                         <IoMdSchool className="text-amber-50" />
                         <p>University at Buffalo</p>
                     </div>
