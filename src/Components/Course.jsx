@@ -1,12 +1,12 @@
 
 function Course(props) {
 
-    const color =
+    const hoverColor =
         props.category === "cse" ?
-            "bg-blue-500/60 shadow-blue-500/40 inset-shadow-blue-500/40 " :
+            "group-hover:bg-blue-500/60 group-hover:shadow-blue-500/40 group-hover:inset-shadow-blue-500/40 " :
             props.category === "mth" ?
-                "bg-rose-500/80 shadow-rose-500/40 inset-shadow-rose-500/40 " :
-                "bg-emerald-400/50 shadow-emerald-400/40 inset-shadow-emerald-400/40 "
+                "group-hover:bg-rose-500/80 group-hover:shadow-rose-500/40 group-hover:inset-shadow-rose-500/40 " :
+                "group-hover:bg-emerald-400/50 group-hover:shadow-emerald-400/40 group-hover:inset-shadow-emerald-400/40 "
 
     return (
         <div
@@ -14,7 +14,7 @@ function Course(props) {
         >
             <p
                 className={`m-1 p-2.5 text-gray-200  rounded-lg text-sm font-semibold
-             inset-shadow-xs shadow-lg ${color} group-hover:scale-105 duration-300`}
+             inset-shadow-xs shadow-lg bg-white/10 ${hoverColor} group-hover:scale-105 duration-300`}
             >
                 {props.title}
             </p>

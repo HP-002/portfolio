@@ -2,6 +2,7 @@ import { motion, useScroll } from "motion/react"
 import { useRef } from "react"
 import Experience from "./Experience.jsx"
 import experiences from "../data/experiences.js"
+import { div } from "motion/react-client"
 
 function ExperienceList() {
     const experiencesRef = useRef(null)
@@ -12,38 +13,48 @@ function ExperienceList() {
 
     return (
         <div
-            className="m-5 p-5 flex relative"
+            className="m-5 p-5 text-white rounded-lg"
         >
-            <div
-                className="relative w-4 mr-3"
+            <h1
+                className="text-3xl font-bold mb-3"
             >
-                <motion.div
-                    id="scroll-indicator"
-                    style={{
-                        scaleY: scrollYProgress,
-                        transformOrigin: "top",
-                        backgroundColor: "oklch(70.7% 0.165 254.624)",
-                    }}
-                    className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
-                />
-            </div>
+                Experiences
+            </h1>
 
             <div
-                ref={experiencesRef}
-                className="space-y-8"
+                className="flex relative"
             >
-                {experiences.map((experience) => (
-                    <Experience
-                        key={experience.id}
-                        department={experience.department}
-                        title={experience.title}
-                        start={experience.start}
-                        end={experience.end}
-                        webpage={experience.webpage}
-                        webpageLink={experience.webpageLink}
-                        description={experience.description}
+                <div
+                    className="relative w-4 mr-3"
+                >
+                    <motion.div
+                        id="scroll-indicator"
+                        style={{
+                            scaleY: scrollYProgress,
+                            transformOrigin: "top",
+                            backgroundColor: "oklch(70.7% 0.165 254.624)",
+                        }}
+                        className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />
-                ))}
+                </div>
+
+                <div
+                    ref={experiencesRef}
+                    className="space-y-8"
+                >
+                    {experiences.map((experience) => (
+                        <Experience
+                            key={experience.id}
+                            department={experience.department}
+                            title={experience.title}
+                            start={experience.start}
+                            end={experience.end}
+                            webpage={experience.webpage}
+                            webpageLink={experience.webpageLink}
+                            description={experience.description}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )
