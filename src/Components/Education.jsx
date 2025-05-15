@@ -28,7 +28,7 @@ function Education() {
                         className=""
                     >
                         <h1
-                            className="text-2xl font-bold text-gray-200"
+                            className="text-2xl font-bold text-blue-400"
                         >
                             University at Buffalo
                         </h1>

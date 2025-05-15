@@ -7,7 +7,7 @@ import { IoLogoGithub } from "react-icons/io5";
 function AboutMe() {
     return (
         <div
-            className="m-5 p-5 bg-gray-950
+            className="m-5 p-5
                 flex justify-between items-center gap-1"
         >
             <div>
