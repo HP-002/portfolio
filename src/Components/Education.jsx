@@ -10,6 +10,8 @@ function Education() {
         offset: ["start center", "end center"],
     })
 
+    console.log(motion)
+
     return (
         <div
             className="m-5 p-5 text-white rounded-lg"

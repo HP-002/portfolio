@@ -10,6 +10,8 @@ function ExperienceList() {
         offset: ["start center", "end end"],
     })
 
+    console.log(motion);
+
     return (
         <div
             className="m-5 p-5 text-white rounded-lg"

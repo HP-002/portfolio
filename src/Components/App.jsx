@@ -1,4 +1,4 @@
-import Header from './Header'
+// import Header from './Header'
 import Sidebar from './Sidebar'
 import Body from './Body'
 import '../styles/app.css'

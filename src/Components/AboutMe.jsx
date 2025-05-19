@@ -1,66 +1,51 @@
-import ProfileImage from './../assets/profile.jpg';
-import { MdLocationPin } from "react-icons/md";
-import { IoMdSchool } from "react-icons/io";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { IoLogoGithub } from "react-icons/io5";
+import { useRef } from "react"
+import { motion, useScroll } from "motion/react"
 
 function AboutMe() {
+    const aboutMeRef = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: aboutMeRef,
+        offset: ["start center", "end center"],
+    })
+
+    console.log(motion);
+
     return (
         <div
-            className="m-5 p-5
-                flex justify-between items-center gap-1"
+            className="m-5 p-5 text-white rounded-lg"
         >
-            <div>
-                <h1
-                    className="text-6xl text-left text-amber-50 font-bold"
-                >
-                    Het Patel
-                </h1>
-                <div
-                    className="text-left text-gray-400 font-semibold"
-                >
-                    <div className="flex items-center gap-1.5">
-                        <p
-                            className="text-balance text-xl"
-                        >
-                            CS Undergrad at University at Buffalo
-                        </p>
-                    </div>
-                    <div className="mt-2 flex items-center gap-1.5 text-lg">
-                        <IoMdSchool className="text-amber-50" />
-                        <p>University at Buffalo</p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-lg">
-                        <MdLocationPin className="text-amber-50" />
-                        <p>Buffalo, NY</p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-lg">
-                        <FaLinkedinIn className="text-amber-50" />
-                        <p>hetpatel19</p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-lg">
-                        <IoLogoGithub className="text-amber-50" />
-                        <p>HP-002</p>
-                    </div>
+            <h1
+                className="text-3xl font-bold mb-3"
+            >
+                About Me
+            </h1>
 
-                </div>
+            <div
+                className="flex relative"
+            >
                 <div
-                    className="text-lime-50 text-lg"
+                    className="relative w-4 mr-3"
                 >
-                    <button
-                        className="p-2 mt-2 rounded-2xl
-                            bg-gradient-to-r from-teal-500/50 to-teal-900/50 cursor-pointer"
+                    <motion.div
+                        id="scroll-indicator"
+                        style={{
+                            scaleY: scrollYProgress,
+                            transformOrigin: "top",
+                            backgroundColor: "oklch(70.7% 0.165 254.624)",
+                        }}
+                        className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
+                    />
+                </div>
+
+                <div
+                ref={aboutMeRef}
+                >
+                    <p
+                        className="text-sm text-gray-300 text-justify"
                     >
-                        Resume
-                    </button>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tenetur vitae repellat, voluptatem asperiores animi dolores facilis perferendis ipsa a sit maiores quas vel error molestias tempora temporibus! Incidunt, laboriosam?
+                    </p>
                 </div>
-            </div>
-
-            <div>
-                <img
-                    src={ProfileImage}
-                    className="w-64 rounded-full hidden sm:block"
-                />
             </div>
         </div>
     )
