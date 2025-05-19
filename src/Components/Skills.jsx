@@ -10,7 +10,7 @@ function Skills() {
     const skillsRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: skillsRef,
-        offset: ["start end", "end center"],
+        offset: ["start center", "end center"],
     })
 
     return (

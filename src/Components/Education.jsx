@@ -7,7 +7,7 @@ function Education() {
     const educationRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: educationRef,
-        offset: ["start end", "end center"],
+        offset: ["start center", "end center"],
     })
 
     return (

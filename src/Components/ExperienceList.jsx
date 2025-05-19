@@ -2,13 +2,12 @@ import { motion, useScroll } from "motion/react"
 import { useRef } from "react"
 import Experience from "./Experience.jsx"
 import experiences from "../data/experiences.js"
-import { div } from "motion/react-client"
 
 function ExperienceList() {
     const experiencesRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: experiencesRef,
-        offset: ["start end", "end center"],
+        offset: ["start center", "end end"],
     })
 
     return (
