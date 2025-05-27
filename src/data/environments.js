@@ -1,5 +1,6 @@
 import WindowsIcon from "./../assets/windows.svg"
 import UbuntuIcon from "./../assets/linux.svg"
+import NodeIcon from "./../assets/nodejs.svg"
 import WSLIcon from "./../assets/wsl.webp"
 
 const environments = [
@@ -18,6 +19,14 @@ const environments = [
         description: "OS",
         insetColor: "white",
         shadowColor: "yellow-500",
+    },
+    {
+        id: 2,
+        name: 'Node.js',
+        icon: NodeIcon,
+        description: "Runtime Environment",
+        insetColor: "lime-500",
+        shadowColor: "lime-500",
     },
     {
         id: 3,

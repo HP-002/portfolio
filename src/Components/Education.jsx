@@ -17,7 +17,7 @@ function Education() {
             className="m-5 p-5 text-white rounded-lg"
         >
             <h1
-                className="text-3xl font-bold mb-3"
+                className="text-xl font-bold mb-3"
             >
                 Education
             </h1>
@@ -61,28 +61,28 @@ function Education() {
                                 className=""
                             >
                                 <h1
-                                    className="text-2xl font-bold text-blue-400"
+                                    className="text-lg font-bold text-blue-400"
                                 >
                                     University at Buffalo
                                 </h1>
                                 <h1
-                                    className="text-xl font-semibold text-gray-300"
+                                    className="text-lg font-semibold text-gray-300"
                                 >
                                     BS in Computer Science
                                 </h1>
                                 <p
-                                    className="font-semibold text-gray-300"
+                                    className="text-sm font-semibold text-gray-300"
                                 >
                                     Minor: Statistics
 
                                 </p>
                                 <p
-                                    className="font-semibold text-gray-300"
+                                    className="text-sm font-semibold text-gray-300"
                                 >
                                     GPA: 3.8/4.0
                                 </p>
                                 <p
-                                    className="font-semibold text-gray-300"
+                                    className="text-sm font-semibold text-gray-300"
                                 >
                                     Graduation: May 2024
                                 </p>

@@ -4,7 +4,7 @@ import coursework from './../data/coursework.js';
 function CourseCloud() {
     return (
         <div
-            className="flex flex-wrap gap-3"
+            className="flex flex-wrap gap-1"
         >
             {coursework.map((course) => (
                 <Course

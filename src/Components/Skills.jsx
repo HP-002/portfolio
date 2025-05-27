@@ -20,7 +20,7 @@ function Skills() {
             className="m-5 p-5 text-white rounded-lg"
         >
             <h1
-                className="text-3xl font-bold mb-3"
+                className="text-xl font-bold mb-3"
             >
                 Skills
             </h1>
@@ -45,28 +45,28 @@ function Skills() {
                     ref={skillsRef}
                 >
                     <h1
-                        className="text-xl font-bold mb-3"
+                        className="text-lg font-bold mb-3"
                     >
                         Programming Languages
                     </h1>
                     <List list={languages} />
 
                     <h1
-                        className="text-xl font-bold mb-3 mt-5"
+                        className="text-lg font-bold mb-3 mt-5"
                     >
                         Frameworks & Libraries
                     </h1>
                     <List list={framesAndLibs} />
 
                     <h1
-                        className="text-xl font-bold mb-3 mt-5"
+                        className="text-lg font-bold mb-3 mt-5"
                     >
                         Tools
                     </h1>
                     <List list={tools} />
 
                     <h1
-                        className="text-xl font-bold mb-3 mt-5"
+                        className="text-lg font-bold mb-3 mt-5"
                     >
                         Environments
                     </h1>

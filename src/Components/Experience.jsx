@@ -14,13 +14,13 @@ function Experience(props) {
                 <div>
                     {/* Top */}
                     <h1
-                        className="text-xl font-bold text-blue-400"
+                        className="text-base font-bold text-blue-400"
                     >
                         {props.department}
                     </h1>
                     {/* Bottom */}
                     <h1
-                        className="text-lg font-semibold text-gray-300"
+                        className="text-base font-semibold text-gray-300"
                     >
                         {props.title}
                     </h1>
@@ -28,7 +28,7 @@ function Experience(props) {
 
                 {/* Right */}
                 <div
-                    className="text-right"
+                    className="text-sm text-right"
                 >
                     {/* Top */}
                     <h1
@@ -49,14 +49,14 @@ function Experience(props) {
 
             {/* Bottom */}
             <ul
-                className="space-y-2 text-gray-300"
+                className=" text-sm space-y-1 text-gray-300"
             >
                 {props.description.map((point, idx) => (
                     <li
                         key={idx}
-                        className="pl-4 flex gap-2 justify-start"
+                        className="pl-4 flex gap-1.5 justify-start"
                     >
-                        <span><BsCaretRightFill size={14}
+                        <span><BsCaretRightFill size={10}
                             className="shrink-0 mt-1.5 text-blue-400"
                         /></span>
                         {point}

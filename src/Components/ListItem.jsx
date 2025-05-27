@@ -71,7 +71,7 @@ function ListItem(props) {
 
     console.log(motion);
 
-    const cls = `pt-2 pb-2 pl-4 pr-4 w-[250px] flex gap-3 rounded-2xl items-center bg-white/10
+    const cls = `pt-2 pb-2 pl-4 pr-4 w-[180px] flex gap-3 rounded-2xl items-center bg-white/10
                 inset-shadow-xs shadow-xs ${insetColors[props.insetColor]} ${shadowColors[props.shadowColor]}`
 
     return (
@@ -84,21 +84,21 @@ function ListItem(props) {
             {/* Left */}
             <img
                 src={props.icon}
-                className={`h-8 ${iconIsBlack ? "bg-white rounded-md p-0.5" : ""}`}
+                className={`h-7 ${iconIsBlack ? "bg-white rounded-md p-0.5" : ""}`}
             />
 
             {/* Right */}
             <div>
                 {/* Top */}
                 <h1
-                    className="text-md font-bold"
+                    className="text-sm font-bold"
                 >
                     {props.name}
                 </h1>
 
                 {/* Bottom */}
                 <p
-                    className="text-xs font-semibold pb-0.5"
+                    className="text-[10px] font-semibold pb-0.5"
                 >
                     {props.description}
                 </p>

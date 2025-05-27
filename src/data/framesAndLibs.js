@@ -1,5 +1,4 @@
 import ReactIcon from "./../assets/react.svg"
-import NodeIcon from "./../assets/nodejs.svg"
 import ViteIcon from "./../assets/vite.svg"
 import PandasIcon from "./../assets/pandas.svg"
 import JUnitIcon from "./../assets/JUnit.svg"
@@ -18,14 +17,6 @@ const framesAndLibs = [
     },
     {
         id: 2,
-        name: 'Node.js',
-        icon: NodeIcon,
-        description: "Runtime Environment",
-        insetColor: "lime-500",
-        shadowColor: "lime-500",
-    },
-    {
-        id: 3,
         name: 'Vite',
         icon: ViteIcon,
         description: "Build Tool",
@@ -33,7 +24,7 @@ const framesAndLibs = [
         shadowColor: "violet-400",
     },
     {
-        id: 4,
+        id: 3,
         name: 'Pandas',
         icon: PandasIcon,
         description: "Data Analysis Library",
@@ -41,7 +32,7 @@ const framesAndLibs = [
         shadowColor: "pink-500",
     },
     {
-        id: 5,
+        id: 4,
         name: 'JUnit',
         icon: JUnitIcon,
         description: "Testing Framework",
@@ -49,7 +40,7 @@ const framesAndLibs = [
         shadowColor: "green-500",
     },
     {
-        id: 6,
+        id: 5,
         name: 'Tailwind CSS',
         icon: TailwindIcon,
         description: "CSS Framework",
@@ -57,7 +48,7 @@ const framesAndLibs = [
         shadowColor: "cyan-500",
     },
     {
-        id: 7,
+        id: 6,
         name: 'MicroPython',
         icon: MicroPyIcon,
         description: "Python for Microcontrollers",
@@ -65,7 +56,7 @@ const framesAndLibs = [
         shadowColor: "white",
     },
     {
-        id: 8,
+        id: 7,
         name: 'IPOPT',
         icon: IpoptIcon,
         description: "Nonlinear Optimization",
