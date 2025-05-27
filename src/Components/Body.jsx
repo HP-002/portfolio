@@ -1,8 +1,9 @@
-import Introduction from './Introduction.jsx';
+import Introduction from './Introduction.jsx'
 import AboutMe from './AboutMe.jsx'
-import Education from './Education.jsx';
+import Education from './Education.jsx'
 import Skills from "./Skills.jsx"
-import ExperienceList from './ExperienceList.jsx';
+import ExperienceList from './ExperienceList.jsx'
+import ProjectList from "./ProjectList.jsx"
 
 function Body() {
     return (
@@ -12,6 +13,7 @@ function Body() {
             <Education />
             <Skills />
             <ExperienceList />
+            <ProjectList />
         </div>
     )
 }
