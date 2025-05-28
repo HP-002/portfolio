@@ -6,9 +6,11 @@ import ExperienceList from './ExperienceList.jsx'
 import ProjectList from "./ProjectList.jsx"
 import Contact from "./Contact.jsx"
 
-function Body() {
+function Body(props) {
     return (
-        <div className="m-0 bg-black w-screen ">
+        <div
+            className={`m-0 ${props.isOpen ? "ml-48" : "ml-18"} bg-black w-screen duration-300`}
+        >
             <Introduction />
             <AboutMe />
             <Education />
@@ -16,7 +18,7 @@ function Body() {
             <ExperienceList />
             <ProjectList />
             <Contact />
-            
+
             <footer
                 className="mt-5 text-white text-xs bg-white/10 text-center"
             >

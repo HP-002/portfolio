@@ -1,35 +1,34 @@
 import SidebarItem from "./SidebarItem.jsx"
-import { TiThMenuOutline } from "react-icons/ti"
+import { IoIosArrowDropright } from "react-icons/io"
 import sideBarItems from "../data/sidebarItems.js"
-import { useState } from "react"
 
-function Sidebar() {
-    const [isOpen, setIsOpen] = useState(false)
-
-    function toggleSidebar() {
-        setIsOpen(!isOpen)
-    }
+function Sidebar(props) {
 
     return (
         <div
-            className={`bg-[#000000] min-h-screen shrink-0 ${isOpen ? "w-48" : "w-18"} duration-300 text-gray-100 px-4`}
+            className={`fixed bg-[#000000] min-h-screen flex flex-col justify-center shrink-0 ${props.isOpen ? "w-48" : "w-18"} duration-300 text-gray-100 px-4`}
         >
             <div
                 className="py-3 flex justify-start px-2"
             >
-                <TiThMenuOutline size={24} className="cursor-pointer" onClick={toggleSidebar}/>
+                <IoIosArrowDropright
+                    size={24}
+                    className={`cursor-pointer ${props.isOpen ? "rotate-90" : "rotate-0"} duration-300`}
+                    onClick={props.toggleSidebar}
+                />
             </div>
 
+            {/* Content */}
             <div
-                className="mt-4 flex flex-col gap-4 relative"
+                className="mt-4 flex-1 flex flex-col justify-center gap-1"
             >
                 {sideBarItems?.map((item) => (
-                    <SidebarItem 
+                    <SidebarItem
                         key={item.id}
                         title={item.title}
                         link={item.link}
                         icon={item.icon}
-                        isOpen={isOpen}
+                        isOpen={props.isOpen}
                     />
                 ))}
             </div>

@@ -17,7 +17,8 @@ function Education() {
             className="m-5 p-5 text-white rounded-lg"
         >
             <h1
-                className="text-xl font-bold mb-3"
+                className="text-xl font-bold mb-3 scroll-mt-8"
+                id="education"
             >
                 Education
             </h1>

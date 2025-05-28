@@ -3,16 +3,17 @@ import { MdLocationPin } from "react-icons/md";
 import { IoMdSchool } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io5";
+import { LuDownload } from "react-icons/lu";
 
 function Introduction() {
     return (
         <div
-            className="m-5 p-5
-                flex justify-between items-center gap-1"
+            className="m-5 p-5 flex justify-between items-center gap-1"
         >
             <div>
                 <h1
-                    className="text-4xl text-left text-amber-50 font-bold"
+                    className="text-4xl text-left text-amber-50 font-bold scroll-mt-20"
+                    id="about"
                 >
                     Het Patel
                 </h1>
@@ -45,13 +46,19 @@ function Introduction() {
 
                 </div>
                 <div
-                    className="text-lime-50 text-lg"
+                    className="mt-3 text-lg"
                 >
                     <button
-                        className="p-2 mt-2 rounded-2xl
-                            bg-gradient-to-r from-teal-500/50 to-teal-900/50 cursor-pointer"
+                        className="p-2 rounded-lg bg-blue-400 cursor-pointer"
                     >
-                        Resume
+                        <div
+                            className="flex gap-2 justify-between items-center font-bold"
+                        >
+                            <p>
+                                Resume
+                            </p>
+                            <LuDownload className="size-5 mt-0.5" />
+                        </div>
                     </button>
                 </div>
             </div>

@@ -17,7 +17,8 @@ function ProjectList() {
             className="m-5 p-5 text-white"
         >
             <h1
-                className="text-xl font-bold mb-3"
+                className="text-xl font-bold mb-3 scroll-mt-8"
+                id="projects"
             >
                 Projects
             </h1>

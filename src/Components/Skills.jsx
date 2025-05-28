@@ -20,7 +20,8 @@ function Skills() {
             className="m-5 p-5 text-white rounded-lg"
         >
             <h1
-                className="text-xl font-bold mb-3"
+                className="text-xl font-bold mb-3 scroll-mt-8"
+                id="skills"
             >
                 Skills
             </h1>

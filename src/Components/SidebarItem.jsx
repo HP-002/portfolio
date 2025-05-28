@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function SidebarItem(props) {
     return (
-        <Link
-            to={props.link}
+        <a
+            href={props.link}
             className={`group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
         >
             <div>{React.createElement(props.icon, { size: 24 })}</div>
@@ -24,7 +23,7 @@ function SidebarItem(props) {
             >
                 {props.title}
             </h2>
-        </Link>
+        </a>
     )
 }
 

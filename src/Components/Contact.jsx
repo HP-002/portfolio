@@ -10,6 +10,7 @@ function Contact() {
         >
             <h1
                 className="mb-5 text-xl text-white font-bold"
+                id="contact"
             >
                 Contact Me
             </h1>
