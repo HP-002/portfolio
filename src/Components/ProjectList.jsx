@@ -1,5 +1,7 @@
 import { motion, useScroll } from "motion/react"
 import { useRef } from "react"
+import Project from "./Project.jsx"
+import projects from './../data/projects.js';
 
 function ProjectList() {
     const projectsRef = useRef(null)
@@ -12,7 +14,7 @@ function ProjectList() {
 
     return (
         <div
-            className="m-5 p-5 text-white rounded-lg bg-white/20"
+            className="m-5 p-5 text-white"
         >
             <h1
                 className="text-xl font-bold mb-3"
@@ -38,10 +40,20 @@ function ProjectList() {
                 </div>
 
                 <div
-                    ref={scrollYProgress}
-                    className="flex flex-wrap"
+                    ref={projectsRef}
+                    className="flex flex-wrap gap-5"
                 >
-                    {/* Content */}
+                    {projects.map(project => (
+                        <Project 
+                            key={project.id}
+                            title={project.title}
+                            description={project.description}
+                            tech={project.tech}
+                            img={project.img}
+                            github={project.github}
+                            live={project.live}
+                        />
+                    ))}
                 </div>
             </div>
 

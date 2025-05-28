@@ -3,7 +3,7 @@ import { BsCaretRightFill } from "react-icons/bs";
 function Experience(props) {
     return (
         <div
-            className="mb-5 p-5 text-white bg-white/10 rounded-4xl shadow-xs shadow-blue-400 inset-shadow-xs inset-shadow-white"
+            className="mb-5 p-5 text-white bg-white/10 rounded-4xl shadow-blue-400 inset-shadow-white"
         >
 
             {/* Top */}

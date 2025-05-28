@@ -7,7 +7,7 @@ function ExperienceList() {
     const experiencesRef = useRef(null)
     const { scrollYProgress } = useScroll({
         target: experiencesRef,
-        offset: ["start center", "end end"],
+        offset: ["start center", "end center"],
     })
 
     console.log(motion);

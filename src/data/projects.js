@@ -1,12 +1,13 @@
+import demo from "./../assets/html.svg"
 
 const projects = [
   {
     id: 1,
-    title: "IPOPT",
+    title: "IPOPT (Research)",
     description: "Interior Point Non-linear Optimizer for a Spring Loaded Inverted Pendulums (SLIP)",
     tech: ["C", "Python", "Mathematica"],
     img: null,
-    github: "",
+    github: "https://github.com/HP-002/slip_ipopt",
     live: null
   },
   {
@@ -14,9 +15,9 @@ const projects = [
     title: "Tenzies",
     description: "Tenzies is a fun and interactive dice game",
     tech: ["React", "Vite", "CSS"],
-    img: "",
-    github: "",
-    live: null
+    img: demo,
+    github: "https://github.com/HP-002/tenzies",
+    live: ""
   },
   {
     id: 3,
@@ -24,8 +25,8 @@ const projects = [
     description: "Webpage for Peer-Assisted Learning Program to host worksheets and solutions",
     tech: ["JavaScript", "HTML", "CSS"],
     img: "",
-    github: "",
-    live: null
+    github: "https://github.com/HP-002/PAL_webpage",
+    live: ""
   },
   {
     id: 4,
@@ -33,8 +34,8 @@ const projects = [
     description: "Automaton Simulator based on Conway's Game of Life. It is built using C++ to operate an Arduino UNO R4 Microcontroller and a logical circuit built using NPN transistors and diodes.",
     tech: ["C++", "Arduino UNO R4"],
     img: "",
-    github: "",
-    live: null
+    github: "https://github.com/WhiteWolf1603/alices-game-of-life",
+    live: ""
   },
   {
     id: 5,
@@ -42,8 +43,8 @@ const projects = [
     description: "",
     tech: ["React", "HuggingFace API", "HTML", "CSS"],
     img: "",
-    github: "",
-    live: null
+    github: "https://github.com/HP-002/chefClaude",
+    live: ""
   },  
 ]
 
