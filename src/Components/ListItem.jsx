@@ -72,7 +72,7 @@ function ListItem(props) {
     console.log(motion);
 
     const cls = `pt-2 pb-2 pl-4 pr-4 w-[180px] flex gap-3 rounded-2xl items-center bg-white/10
-                inset-shadow-xs shadow-xs ${insetColors[props.insetColor]} ${shadowColors[props.shadowColor]}`
+                hover:inset-shadow-xs hover:shadow-xs ${insetColors[props.insetColor]} ${shadowColors[props.shadowColor]}`
 
     return (
         <motion.div
