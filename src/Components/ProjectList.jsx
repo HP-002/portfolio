@@ -14,11 +14,11 @@ function ProjectList() {
 
     return (
         <div
-            className="m-5 p-5 text-white"
+            className="m-5 p-5 text-white scroll-mt-8"
+            id="projects"
         >
             <h1
-                className="text-xl font-bold mb-3 scroll-mt-8"
-                id="projects"
+                className="text-xl font-bold mb-3"
             >
                 Projects
             </h1>
@@ -45,7 +45,7 @@ function ProjectList() {
                     className="flex flex-wrap gap-5"
                 >
                     {projects.map(project => (
-                        <Project 
+                        <Project
                             key={project.id}
                             title={project.title}
                             description={project.description}

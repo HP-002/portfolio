@@ -6,10 +6,13 @@ function SidebarItem(props) {
             href={props.link}
             className={`group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
         >
-            <div>{React.createElement(props.icon, { size: 24 })}</div>
+            <div
+                className={`${props.isActive ? "text-white" : "text-gray-500"}`}
+            >{React.createElement(props.icon, { size: 24 })}</div>
 
             <h2
-                className={`whitespace-pre duration-500 ${!props.isOpen && 'opacity-0 -translate-y-10 overflow-hidden'}`}
+                className={`whitespace-pre duration-500 ${!props.isOpen && 'opacity-0 -translate-y-10 overflow-hidden'}
+                ${props.isActive ? "text-white" : "text-gray-500"}`}
             >
                 {props.title}
             </h2>

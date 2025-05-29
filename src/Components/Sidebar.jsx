@@ -6,7 +6,7 @@ function Sidebar(props) {
 
     return (
         <div
-            className={`fixed bg-[#000000] min-h-screen flex flex-col justify-center shrink-0 ${props.isOpen ? "w-48" : "w-18"} duration-300 text-gray-100 px-4`}
+            className={`fixed z-50 bg-[#000000] min-h-screen flex flex-col justify-center shrink-0 ${props.isOpen ? "w-48" : "w-18"} duration-300 text-gray-100 px-4`}
         >
             <div
                 className="py-3 flex justify-start px-2"
@@ -29,6 +29,7 @@ function Sidebar(props) {
                         link={item.link}
                         icon={item.icon}
                         isOpen={props.isOpen}
+                        isActive={props.activeSection === item.id}
                     />
                 ))}
             </div>

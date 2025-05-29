@@ -14,11 +14,11 @@ function Education() {
 
     return (
         <div
-            className="m-5 p-5 text-white rounded-lg"
+            className="m-5 p-5 text-white rounded-lg scroll-mt-8"
+            id="education"
         >
             <h1
-                className="text-xl font-bold mb-3 scroll-mt-8"
-                id="education"
+                className="text-xl font-bold mb-3"
             >
                 Education
             </h1>

@@ -7,10 +7,10 @@ function Contact() {
     return (
         <div
             className="m-5 p-5 mt-15 rounded-2xl"
+            id="contact"
         >
             <h1
                 className="mb-5 text-xl text-white font-bold"
-                id="contact"
             >
                 Contact Me
             </h1>

@@ -8,12 +8,12 @@ import { LuDownload } from "react-icons/lu";
 function Introduction() {
     return (
         <div
-            className="m-5 p-5 flex justify-between items-center gap-1"
+            className="m-5 p-5 flex justify-between items-center gap-1 scroll-mt-20"
+            id="about"
         >
             <div>
                 <h1
-                    className="text-4xl text-left text-amber-50 font-bold scroll-mt-20"
-                    id="about"
+                    className="text-4xl text-left text-amber-50 font-bold"
                 >
                     Het Patel
                 </h1>

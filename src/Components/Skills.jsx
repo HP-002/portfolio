@@ -17,11 +17,11 @@ function Skills() {
 
     return (
         <div
-            className="m-5 p-5 text-white rounded-lg"
+            className="m-5 p-5 text-white rounded-lg scroll-mt-8"
+            id="skills"
         >
             <h1
-                className="text-xl font-bold mb-3 scroll-mt-8"
-                id="skills"
+                className="text-xl font-bold mb-3"
             >
                 Skills
             </h1>

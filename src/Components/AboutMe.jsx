@@ -13,6 +13,7 @@ function AboutMe() {
     return (
         <div
             className="m-5 p-5 text-white rounded-lg"
+            id="about"
         >
             <h1
                 className="text-xl font-bold mb-3"
