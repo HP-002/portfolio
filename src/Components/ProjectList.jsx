@@ -14,11 +14,11 @@ function ProjectList() {
 
     return (
         <div
-            className="m-5 p-5 text-white scroll-mt-8"
+            className="m-5 p-5 scroll-mt-8"
             id="projects"
         >
             <h1
-                className="text-xl font-bold mb-3"
+                className="text-xl font-bold mb-3 text-neutral-200"
             >
                 Projects
             </h1>
@@ -34,7 +34,7 @@ function ProjectList() {
                         style={{
                             scaleY: scrollYProgress,
                             transformOrigin: "top",
-                            backgroundColor: "oklch(70.7% 0.165 254.624)",
+                            backgroundColor: "oklch(70.4% 0.14 182.503)",
                         }}
                         className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />

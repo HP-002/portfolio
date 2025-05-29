@@ -17,11 +17,11 @@ function Skills() {
 
     return (
         <div
-            className="m-5 p-5 text-white rounded-lg scroll-mt-8"
+            className="m-5 p-5 rounded-lg scroll-mt-8 text-neutral-200"
             id="skills"
         >
             <h1
-                className="text-xl font-bold mb-3"
+                className=" mb-3 text-xl font-bold"
             >
                 Skills
             </h1>
@@ -36,7 +36,7 @@ function Skills() {
                         style={{
                             scaleY: scrollYProgress,
                             transformOrigin: "top",
-                            backgroundColor: "oklch(70.7% 0.165 254.624)",
+                            backgroundColor: "oklch(70.4% 0.14 182.503)",
                         }}
                         className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />

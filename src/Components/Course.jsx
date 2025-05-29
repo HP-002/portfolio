@@ -13,7 +13,7 @@ function Course(props) {
             className="relative group w-[250px]"
         >
             <p
-                className={`m-1 p-2.5 text-gray-200  rounded-lg text-sm font-semibold
+                className={`m-1 p-2.5 text-neutral-300 group-hover:text-neutral-200 rounded-lg text-sm font-semibold
              inset-shadow-xs shadow-lg bg-white/10 ${hoverColor} group-hover:scale-105 duration-300`}
             >
                 {props.title}

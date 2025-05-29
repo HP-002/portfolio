@@ -1,3 +1,4 @@
+import Header from "./Header.jsx"
 import Introduction from './Introduction.jsx'
 import AboutMe from './AboutMe.jsx'
 import Education from './Education.jsx'
@@ -20,7 +21,7 @@ function Body(props) {
             <Contact />
 
             <footer
-                className="mt-5 text-white text-xs bg-white/10 text-center"
+                className="mt-5 text-neutral-200 text-xs bg-neutral-900 text-center"
             >
                 HetPatel &copy; {new Date().getFullYear()}
             </footer>

@@ -5,13 +5,13 @@ function Project(props) {
     return (
         <div
             className="p-2 max-w-50 flex flex-col justify-between bg-white/10 rounded-lg
-            hover:scale-102 hover:shadow-2xs hover:inset-shadow-2xs shadow-blue-400 inset-shadow-white duration-300"
+            hover:scale-102 hover:shadow-2xs hover:inset-shadow-2xs shadow-teal-500 inset-shadow-white duration-300"
         >
             <div
                 className="mb-2 flex flex-col gap-3 items-center"
             >
                 <h1
-                    className="text-lg font-bold text-blue-400"
+                    className="text-lg font-bold text-teal-500"
                 >
                     {props.title}
                 </h1>
@@ -22,13 +22,13 @@ function Project(props) {
                 />
 
                 <p
-                    className="text-base font-semibold text-center text-gray-300"
+                    className="text-base font-semibold text-center text-neutral-300"
                 >
                     {props.tech.join(", ")}
                 </p>
 
                 <p
-                    className="p-2 text-sm text-pretty text-gray-300"
+                    className="p-2 text-sm text-pretty text-neutral-400"
                 >
                     {props.description}
                 </p>
@@ -44,7 +44,7 @@ function Project(props) {
                         rel="noopener noreferrer"
                     >
                         <IoLogoGithub
-                            className="size-5 text-gray-300 hover:text-white"
+                            className="size-8 text-neutral-400 hover:text-white"
                         />
                     </a>
                 }
@@ -56,7 +56,7 @@ function Project(props) {
                         rel="noopener noreferrer"
                     >
                         <TbExternalLink
-                            className="size-5 text-gray-300 hover:text-white"
+                            className="size-8 text-neutral-400 hover:text-white"
                         />
                     </a>
                 }

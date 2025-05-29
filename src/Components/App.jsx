@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-// import Header from './Header'
+import Header from './Header'
 import Sidebar from './Sidebar'
 import Body from './Body'
 import '../styles/app.css'
@@ -8,29 +8,49 @@ function App() {
     const sections = ["about", "education", "skills", "experiences", "projects", "contact"]
     const [activeSection, setActiveSection] = useState("about")
 
-    const [isOpen, setIsOpen] = useState(true)
+    const [isVisible, setIsVisible] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
-    const handleScroll = () => {
-      let current = sections[0];
+        const aboutSection = document.getElementById("about");
 
-      for (const id of sections) {
-        const section = document.getElementById(id);
-        const rect = section.getBoundingClientRect();
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(!entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
 
-        if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= 0) {
-          current = id;
+        if (aboutSection) {
+            observer.observe(aboutSection);
         }
-      }
 
-      setActiveSection(current);
-    };
+        return () => {
+            if (aboutSection) observer.unobserve(aboutSection);
+        };
+    }, []);
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); 
+    useEffect(() => {
+        const handleScroll = () => {
+            let current = sections[0];
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [])
+            for (const id of sections) {
+                const section = document.getElementById(id);
+                const rect = section.getBoundingClientRect();
+
+                if (rect.top <= window.innerHeight * 0.55 && rect.bottom >= 0) {
+                    current = id;
+                }
+            }
+
+            setActiveSection(current);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [])
 
     function toggleSidebar() {
         setIsOpen(!isOpen)
@@ -38,8 +58,8 @@ function App() {
 
     return (
         <>
-            {/* <Header /> */}
-            <section className='flex'>
+            <Header isVisible={isVisible}/>
+            <section className='flex bg-black'>
                 <Sidebar
                     isOpen={isOpen}
                     toggleSidebar={toggleSidebar}

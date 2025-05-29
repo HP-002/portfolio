@@ -12,7 +12,7 @@ function AboutMe() {
 
     return (
         <div
-            className="m-5 p-5 text-white rounded-lg"
+            className="m-5 p-5 text-neutral-200 rounded-lg"
             id="about"
         >
             <h1
@@ -32,7 +32,7 @@ function AboutMe() {
                         style={{
                             scaleY: scrollYProgress,
                             transformOrigin: "top",
-                            backgroundColor: "oklch(70.7% 0.165 254.624)",
+                            backgroundColor: "oklch(70.4% 0.14 182.503)",
                         }}
                         className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />
@@ -42,7 +42,7 @@ function AboutMe() {
                 ref={aboutMeRef}
                 >
                     <p
-                        className="text-sm text-gray-300 text-justify"
+                        className="text-sm text-neutral-400 text-justify"
                     >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tenetur vitae repellat, voluptatem asperiores animi dolores facilis perferendis ipsa a sit maiores quas vel error molestias tempora temporibus! Incidunt, laboriosam?
                     </p>

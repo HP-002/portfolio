@@ -6,11 +6,11 @@ import { LuDownload } from "react-icons/lu";
 function Contact() {
     return (
         <div
-            className="m-5 p-5 mt-15 rounded-2xl"
+            className="m-5 p-5 pb-10 mt-15 rounded-2xl"
             id="contact"
         >
             <h1
-                className="mb-5 text-xl text-white font-bold"
+                className="mb-5 text-xl text-neutral-200 font-bold"
             >
                 Contact Me
             </h1>
@@ -21,62 +21,45 @@ function Contact() {
                 <div
                     className="flex flex-col gap-5"
                 >
-                    <p
-                        className="flex justify-start gap-2 items-center text-gray-300 text-base font-semibold"
+                    <a
+                        className="flex justify-start gap-2 items-center text-neutral-400 hover:text-neutral-200 text-base font-semibold"
+                        href="mailto:hetfaldu19@gmail.com"
                     >
                         <MdEmail className="size-5 mt-0.5" />
-                        Personal: <a
-                            className="hover:text-white"
-                            href="mailto:hetfaldu19@gmail.com"
-                        >
-                            hetfaldu19@gmail.com
-                        </a>
-                    </p>
+                        Personal: hetfaldu19@gmail.com
+                    </a>
 
-                    <p
-                        className="flex justify-start gap-2 items-center text-gray-300 text-base font-semibold"
-                    >
-                        <MdEmail className="size-5 mt-0.5" />
-                        College: <a
-                            className="hover:text-white"
+                    <a
+                        className="flex justify-start gap-2 items-center text-neutral-400 hover:text-neutral-200 text-base font-semibold"
                             href="mailto:hetpatel@buffalo.edu"
-                        >
-                            hetpatel@buffalo.edu
-                        </a>
-                    </p>
+                    >
+                        <MdEmail className="size-5 mt-0.5" />
+                        College: hetpatel@buffalo.edu
+                    </a>
 
-                    <p
-                        className="flex justify-start gap-2 items-center text-gray-300 text-base font-semibold"
+                    <a
+                        className="flex justify-start gap-2 items-center text-neutral-400 hover:text-neutral-200 text-base font-semibold"
+                            href="https://www.linkedin.com/in/hetpatel19/"
                     >
                         <FaLinkedinIn className="size-5 mt-0.5" />
-                        LinkedIn: <a
-                            className="hover:text-white"
-                            href="https://www.linkedin.com/in/hetpatel19/"
-                        >
-                            hetpatel19
-                        </a>
+                        LinkedIn: hetpatel19
 
-                    </p>
+                    </a>
 
-                    <p
-                        className="flex justify-start gap-2 items-center text-gray-300 text-base font-semibold"
+                    <a
+                        className="flex justify-start gap-2 items-center text-neutral-400 hover:text-neutral-200 text-base font-semibold"
+                            href="https://github.com/HP-002"
                     >
                         <IoLogoGithub className="size-5 mt-0.5" />
-                        GitHub: <a
-                            className="hover:text-white"
-                            href="https://github.com/HP-002"
-                        >
-                            HP-002
-                        </a>
-
-                    </p>
+                        GitHub: HP-002
+                    </a>
                 </div>
 
                 <div
                     className="flex flex-col gap-5"
                 >
                     <button
-                        className="p-2 rounded-lg bg-blue-400 cursor-pointer"
+                        className="p-2 rounded-lg bg-teal-500 cursor-pointer"
                     >
                         <div
                             className="flex gap-2 justify-between items-center font-bold"
@@ -89,7 +72,7 @@ function Contact() {
                     </button>
 
                     <button
-                        className="p-2 rounded-lg bg-blue-400 cursor-pointer"
+                        className="p-2 rounded-lg bg-teal-500 cursor-pointer"
                     >
                         <div
                             className="flex gap-2 justify-between items-center font-bold"

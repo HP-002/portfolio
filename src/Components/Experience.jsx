@@ -3,7 +3,7 @@ import { BsCaretRightFill } from "react-icons/bs";
 function Experience(props) {
     return (
         <div
-            className="mb-5 p-5 text-white bg-white/10 rounded-4xl hover:scale-102 hover:shadow-2xs hover:inset-shadow-2xs shadow-blue-400 inset-shadow-white duration-300"
+            className="mb-5 p-5 bg-white/10 rounded-4xl hover:scale-102 hover:shadow-2xs hover:inset-shadow-2xs shadow-teal-500 inset-shadow-white duration-300"
         >
 
             {/* Top */}
@@ -14,13 +14,13 @@ function Experience(props) {
                 <div>
                     {/* Top */}
                     <h1
-                        className="text-base font-bold text-blue-400"
+                        className="text-base font-bold text-teal-500"
                     >
                         {props.department}
                     </h1>
                     {/* Bottom */}
                     <h1
-                        className="text-base font-semibold text-gray-300"
+                        className="text-base font-semibold text-neutral-300"
                     >
                         {props.title}
                     </h1>
@@ -32,14 +32,14 @@ function Experience(props) {
                 >
                     {/* Top */}
                     <h1
-                        className="font-semibold text-gray-300"
+                        className="font-semibold text-neutral-400"
                     >
                         {props.start} - {props.end}
                     </h1>
                     {/* Bottom */}
                     {props.webpage &&
                         <p
-                            className="font-semibold text-gray-300"
+                            className="font-semibold text-neutral-400"
                         >
                             {props.webpage}
                         </p>
@@ -49,7 +49,7 @@ function Experience(props) {
 
             {/* Bottom */}
             <ul
-                className=" text-sm space-y-1 text-gray-300"
+                className=" text-sm space-y-1 text-neutral-400"
             >
                 {props.description.map((point, idx) => (
                     <li
@@ -57,7 +57,7 @@ function Experience(props) {
                         className="pl-4 flex gap-1.5 justify-start"
                     >
                         <span><BsCaretRightFill size={10}
-                            className="shrink-0 mt-1.5 text-blue-400"
+                            className="shrink-0 mt-1.5 text-teal-500"
                         /></span>
                         {point}
                     </li>

@@ -14,7 +14,7 @@ function ExperienceList() {
 
     return (
         <div
-            className="m-5 p-5 text-white rounded-lg scroll-mt-8"
+            className="m-5 p-5 text-neutral-200 rounded-lg scroll-mt-8"
             id="experiences"
         >
             <h1
@@ -34,7 +34,7 @@ function ExperienceList() {
                         style={{
                             scaleY: scrollYProgress,
                             transformOrigin: "top",
-                            backgroundColor: "oklch(70.7% 0.165 254.624)",
+                            backgroundColor: "oklch(70.4% 0.14 182.503)",
                         }}
                         className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />

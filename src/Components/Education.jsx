@@ -14,11 +14,11 @@ function Education() {
 
     return (
         <div
-            className="m-5 p-5 text-white rounded-lg scroll-mt-8"
+            className="m-5 p-5 rounded-lg scroll-mt-8"
             id="education"
         >
             <h1
-                className="text-xl font-bold mb-3"
+                className=" mb-3 text-xl font-bold text-neutral-200"
             >
                 Education
             </h1>
@@ -35,7 +35,7 @@ function Education() {
                         style={{
                             scaleY: scrollYProgress,
                             transformOrigin: "top",
-                            backgroundColor: "oklch(70.7% 0.165 254.624)",
+                            backgroundColor: "oklch(70.4% 0.14 182.503)",
                         }}
                         className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />
@@ -46,7 +46,7 @@ function Education() {
                 >
 
                     <div
-                        className="text-white rounded-lg shadow-lg
+                        className="rounded-lg shadow-lg
                     flex flex-wrap flex-col sm:flex-row gap-4 sm:items-center sm:justify-between"
                     >
                         {/* Left */}
@@ -67,25 +67,25 @@ function Education() {
                                     University at Buffalo
                                 </h1>
                                 <h1
-                                    className="text-lg font-semibold text-gray-300"
+                                    className="text-lg font-semibold text-neutral-400"
                                 >
                                     BS in Computer Science
                                 </h1>
                                 <p
-                                    className="text-sm font-semibold text-gray-300"
+                                    className="text-sm font-semibold text-neutral-400"
                                 >
                                     Minor: Statistics
 
                                 </p>
                                 <p
-                                    className="text-sm font-semibold text-gray-300"
+                                    className="text-sm font-semibold text-neutral-400"
                                 >
-                                    GPA: 3.8/4.0
+                                    GPA: 4.0/4.0
                                 </p>
                                 <p
-                                    className="text-sm font-semibold text-gray-300"
+                                    className="text-sm font-semibold text-neutral-400"
                                 >
-                                    Graduation: May 2024
+                                    Graduation: May 2027
                                 </p>
 
                             </div>

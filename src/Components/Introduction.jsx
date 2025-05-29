@@ -8,48 +8,63 @@ import { LuDownload } from "react-icons/lu";
 function Introduction() {
     return (
         <div
-            className="m-5 p-5 flex justify-between items-center gap-1 scroll-mt-20"
+            className="mt-15 m-5 p-5 flex justify-between items-center gap-1 scroll-mt-20"
             id="about"
         >
             <div>
                 <h1
-                    className="text-4xl text-left text-amber-50 font-bold"
+                    className="text-4xl text-left text-white font-bold"
                 >
                     Het Patel
                 </h1>
                 <div
-                    className="text-left text-gray-400 font-semibold"
+                    className="text-left text-neutral-400 font-semibold"
                 >
-                    <div className="flex items-center gap-1.5">
+                    <a
+                        className="flex items-center gap-1.5"
+                    >
                         <p
                             className="text-balance text-lg"
                         >
                             CS Undergrad at University at Buffalo
                         </p>
-                    </div>
-                    <div className="mt-2 flex items-center gap-1.5 text-md">
-                        <IoMdSchool className="text-amber-50" />
+                    </a>
+
+                    <a
+                        className="mt-2 flex items-center gap-1.5 text-md"
+                    >
+                        <IoMdSchool className="text-neutral-400" />
                         <p>University at Buffalo</p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-md">
-                        <MdLocationPin className="text-amber-50" />
+                    </a>
+
+                    <a
+                        className="flex items-center gap-1.5 text-md"
+                    >
+                        <MdLocationPin className="text-neutral-400" />
                         <p>Buffalo, NY</p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-md">
-                        <FaLinkedinIn className="text-amber-50" />
-                        <p>hetpatel19</p>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-md">
-                        <IoLogoGithub className="text-amber-50" />
-                        <p>HP-002</p>
-                    </div>
+                    </a>
+
+                    <a
+                        className="flex items-center gap-1.5 text-md cursor-pointer group"
+                    >
+                        <FaLinkedinIn className="text-neutral-400 group-hover:text-white" />
+                        <p className="group-hover:text-white">hetpatel19</p>
+                    </a>
+
+                    <a
+                        className="flex items-center gap-1.5 text-md cursor-pointer group"
+                    >
+                        <IoLogoGithub className="text-neutral-400 group-hover:text-white" />
+                        <p className="group-hover:text-white">HP-002</p>
+                    </a>
+
 
                 </div>
                 <div
                     className="mt-3 text-lg"
                 >
                     <button
-                        className="p-2 rounded-lg bg-blue-400 cursor-pointer"
+                        className="p-2 rounded-lg bg-teal-500 cursor-pointer"
                     >
                         <div
                             className="flex gap-2 justify-between items-center font-bold"

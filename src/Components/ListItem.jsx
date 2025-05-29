@@ -91,14 +91,14 @@ function ListItem(props) {
             <div>
                 {/* Top */}
                 <h1
-                    className="text-sm font-bold"
+                    className="text-sm font-bold text-neutral-300"
                 >
                     {props.name}
                 </h1>
 
                 {/* Bottom */}
                 <p
-                    className="text-[10px] font-semibold pb-0.5"
+                    className="text-[10px] font-semibold pb-0.5 text-neutral-400"
                 >
                     {props.description}
                 </p>
