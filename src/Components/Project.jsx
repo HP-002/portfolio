@@ -5,13 +5,13 @@ function Project(props) {
     return (
         <div
             className="p-2 max-w-50 flex flex-col justify-between bg-white/10 rounded-lg
-            hover:scale-102 hover:shadow-2xs hover:inset-shadow-2xs shadow-teal-500 inset-shadow-white duration-300"
+            hover:scale-102 hover:shadow-2xs hover:inset-shadow-2xs shadow-sky-500 inset-shadow-white duration-300"
         >
             <div
                 className="mb-2 flex flex-col gap-3 items-center"
             >
                 <h1
-                    className="text-lg font-bold text-teal-500"
+                    className="text-lg font-bold text-sky-500"
                 >
                     {props.title}
                 </h1>

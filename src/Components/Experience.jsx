@@ -3,7 +3,7 @@ import { BsCaretRightFill } from "react-icons/bs";
 function Experience(props) {
     return (
         <div
-            className="mb-5 p-5 bg-white/10 rounded-4xl hover:scale-102 hover:shadow-2xs hover:inset-shadow-2xs shadow-teal-500 inset-shadow-white duration-300"
+            className="mb-5 p-5 bg-white/10 rounded-4xl hover:scale-102 hover:shadow-2xs hover:inset-shadow-2xs shadow-sky-500 inset-shadow-white duration-300"
         >
 
             {/* Top */}
@@ -14,7 +14,7 @@ function Experience(props) {
                 <div>
                     {/* Top */}
                     <h1
-                        className="text-base font-bold text-teal-500"
+                        className="text-base font-bold text-sky-500"
                     >
                         {props.department}
                     </h1>
@@ -57,7 +57,7 @@ function Experience(props) {
                         className="pl-4 flex gap-1.5 justify-start"
                     >
                         <span><BsCaretRightFill size={10}
-                            className="shrink-0 mt-1.5 text-teal-500"
+                            className="shrink-0 mt-1.5 text-sky-500"
                         /></span>
                         {point}
                     </li>

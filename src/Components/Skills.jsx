@@ -1,10 +1,10 @@
 import { motion, useScroll } from "motion/react"
 import { useRef } from "react"
 import List from "./List.jsx"
-import languages from "../data/languages.js"
-import framesAndLibs from '../data/framesAndLibs.js';
-import tools from './../data/tools.js';
-import environments from './../data/environments.js';
+import languages from '../assets/data/languages.js'
+import framesAndLibs from '../assets/data/framesAndLibs.js'
+import tools from '../assets/data/tools.js'
+import environments from '../assets/data/environments.js'
 
 function Skills() {
     const skillsRef = useRef(null)
@@ -36,7 +36,7 @@ function Skills() {
                         style={{
                             scaleY: scrollYProgress,
                             transformOrigin: "top",
-                            backgroundColor: "oklch(70.4% 0.14 182.503)",
+                            backgroundColor: "oklch(68.5% 0.169 237.323)",
                         }}
                         className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />

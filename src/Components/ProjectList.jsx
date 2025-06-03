@@ -1,7 +1,7 @@
 import { motion, useScroll } from "motion/react"
 import { useRef } from "react"
 import Project from "./Project.jsx"
-import projects from './../data/projects.js';
+import projects from '../assets/data/projects.js';
 
 function ProjectList() {
     const projectsRef = useRef(null)
@@ -34,7 +34,7 @@ function ProjectList() {
                         style={{
                             scaleY: scrollYProgress,
                             transformOrigin: "top",
-                            backgroundColor: "oklch(70.4% 0.14 182.503)",
+                            backgroundColor: "oklch(68.5% 0.169 237.323)",
                         }}
                         className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />

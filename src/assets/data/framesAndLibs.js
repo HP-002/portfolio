@@ -1,10 +1,10 @@
-import ReactIcon from "./../assets/react.svg"
-import ViteIcon from "./../assets/vite.svg"
-import PandasIcon from "./../assets/pandas.svg"
-import JUnitIcon from "./../assets/JUnit.svg"
-import TailwindIcon from "./../assets/tailwind.svg"
-import MicroPyIcon from "./../assets/micropython.svg"
-import IpoptIcon from "./../assets/coinor.png"
+import ReactIcon from "../images/react.svg"
+import ViteIcon from "../images//vite.svg"
+import PandasIcon from "../images/pandas.svg"
+import JUnitIcon from "../images/JUnit.svg"
+import TailwindIcon from "../images/tailwind.svg"
+import MicroPyIcon from "../images/micropython.svg"
+import IpoptIcon from "../images/coinor.png"
 
 const framesAndLibs = [
     {

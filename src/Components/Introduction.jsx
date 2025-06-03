@@ -1,22 +1,31 @@
-import ProfileImage from './../assets/profile.jpg';
+import ProfileImage from '../assets/images/profile.jpg';
 import { MdLocationPin } from "react-icons/md";
 import { IoMdSchool } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io5";
 import { LuDownload } from "react-icons/lu";
+import Resume from "../assets/docs/Het Patel - Resume.pdf";
 
 function Introduction() {
     return (
         <div
-            className="mt-15 m-5 p-5 flex justify-between items-center gap-1 scroll-mt-20"
+            className="mt-8 m-5 p-5 pb-2 flex justify-between items-center gap-1 scroll-mt-20"
             id="about"
         >
             <div>
-                <h1
-                    className="text-4xl text-left text-white font-bold"
+                <div
+                    className='flex gap-2 items-center'
                 >
-                    Het Patel
-                </h1>
+                    <img
+                        src={ProfileImage}
+                        className="rounded-2xl size-16 mt-1 block sm:hidden"
+                    />
+                    <h1
+                        className="text-4xl text-left text-white font-bold"
+                    >
+                        Het Patel
+                    </h1>
+                </div>
                 <div
                     className="text-left text-neutral-400 font-semibold"
                 >
@@ -57,24 +66,24 @@ function Introduction() {
                         <IoLogoGithub className="text-neutral-400 group-hover:text-white" />
                         <p className="group-hover:text-white">HP-002</p>
                     </a>
-
-
                 </div>
                 <div
                     className="mt-3 text-lg"
                 >
-                    <button
-                        className="p-2 rounded-lg bg-teal-500 cursor-pointer"
-                    >
-                        <div
-                            className="flex gap-2 justify-between items-center font-bold"
+                    <a href={Resume} download>
+                        <button
+                            className="p-2 rounded-lg bg-sky-500 cursor-pointer"
                         >
-                            <p>
-                                Resume
-                            </p>
-                            <LuDownload className="size-5 mt-0.5" />
-                        </div>
-                    </button>
+                            <div
+                                className="flex gap-2 justify-between items-center font-bold"
+                            >
+                                <p>
+                                    Resume
+                                </p>
+                                <LuDownload className="size-5 mt-0.5" />
+                            </div>
+                        </button>
+                    </a>
                 </div>
             </div>
 

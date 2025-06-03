@@ -1,4 +1,3 @@
-import Header from "./Header.jsx"
 import Introduction from './Introduction.jsx'
 import AboutMe from './AboutMe.jsx'
 import Education from './Education.jsx'
@@ -10,14 +9,14 @@ import Contact from "./Contact.jsx"
 function Body(props) {
     return (
         <div
-            className={`m-0 ${props.isOpen ? "ml-48" : "ml-18"} bg-black w-screen duration-300`}
+            className={`m-0 ${props.isOpen ? "ml-48" : "ml-18"} bg-black w-screen duration-300 relative`}
         >
             <Introduction />
             <AboutMe />
             <Education />
             <Skills />
-            <ExperienceList />
             <ProjectList />
+            <ExperienceList />
             <Contact />
 
             <footer

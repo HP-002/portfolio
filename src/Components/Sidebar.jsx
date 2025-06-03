@@ -1,6 +1,6 @@
 import SidebarItem from "./SidebarItem.jsx"
 import { IoIosArrowDropright } from "react-icons/io"
-import sideBarItems from "../data/sidebarItems.js"
+import sideBarItems from "../assets/data/sidebarItems.js"
 
 function Sidebar(props) {
     return (

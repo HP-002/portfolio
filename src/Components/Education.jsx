@@ -1,7 +1,7 @@
 import { motion, useScroll } from "motion/react"
 import { useRef } from "react"
-import UBLogo from "../assets/ublogo.png"
-import CourseCloud from "./WordCloud.jsx"
+import UBLogo from "../assets/images/ublogo.png"
+import CourseCloud from "./CourseCloud.jsx"
 
 function Education() {
     const educationRef = useRef(null)
@@ -35,7 +35,7 @@ function Education() {
                         style={{
                             scaleY: scrollYProgress,
                             transformOrigin: "top",
-                            backgroundColor: "oklch(70.4% 0.14 182.503)",
+                            backgroundColor: "oklch(68.5% 0.169 237.323)",
                         }}
                         className="w-0.5 rounded-full h-full bg-gray-700 absolute left-1/2 top-0 -translate-x-1/2 origin-top"
                     />

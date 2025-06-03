@@ -25,16 +25,16 @@ const sidebarItems = [
         icon: FaGears,
     },
     {
-        id: "experiences",
-        title: "Experiences",
-        link: "#experiences",
-        icon: MdWork,
-    },
-    {
         id: "projects",
         title: "Projects",
         link: "#projects",
         icon: FaLaptopCode,
+    },
+    {
+        id: "experiences",
+        title: "Experiences",
+        link: "#experiences",
+        icon: MdWork,
     },
     {
         id: "contact",

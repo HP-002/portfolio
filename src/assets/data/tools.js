@@ -1,10 +1,10 @@
-import GitIcon from "./../assets/git.svg"
-import NPMIcon from "./../assets/npm.svg"
-import WebpackIcon from "./../assets/webpack.svg"
-import VSCodeIcon from "./../assets/vscode.svg"
-import IntelliJIcon from "./../assets/intellij.svg"
-import MinitabIcon from "./../assets/minitab.svg"
-import FigmaIcon from "./../assets/figma.svg"
+import GitIcon from "../images/git.svg"
+import NPMIcon from "../images/npm.svg"
+import WebpackIcon from "../images/webpack.svg"
+import VSCodeIcon from "../images/vscode.svg"
+import IntelliJIcon from "../images/intellij.svg"
+import MinitabIcon from "../images/minitab.svg"
+import FigmaIcon from "../images/figma.svg"
 
 const tools = [
     {

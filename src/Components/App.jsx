@@ -2,14 +2,13 @@ import { useEffect, useState } from "react"
 import Header from './Header'
 import Sidebar from './Sidebar'
 import Body from './Body'
-import '../styles/app.css'
+import './../app.css'
 
 function App() {
-    const sections = ["about", "education", "skills", "experiences", "projects", "contact"]
     const [activeSection, setActiveSection] = useState("about")
 
     const [isVisible, setIsVisible] = useState(false);
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     useEffect(() => {
         const aboutSection = document.getElementById("about");
@@ -32,6 +31,7 @@ function App() {
 
     useEffect(() => {
         const handleScroll = () => {
+            const sections = ["about", "education", "skills", "experiences", "projects", "contact"]
             let current = sections[0];
 
             for (const id of sections) {
@@ -58,7 +58,7 @@ function App() {
 
     return (
         <>
-            <Header isVisible={isVisible}/>
+            <Header isVisible={isVisible} />
             <section className='flex bg-black'>
                 <Sidebar
                     isOpen={isOpen}

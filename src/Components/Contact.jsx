@@ -2,6 +2,8 @@ import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io5";
 import { LuDownload } from "react-icons/lu";
+import Resume from "./../assets/docs/Het Patel - Resume.pdf";
+import Transcript from "../assets/docs/Het Patel - Transcript.pdf"
 
 function Contact() {
     return (
@@ -31,7 +33,7 @@ function Contact() {
 
                     <a
                         className="flex justify-start gap-2 items-center text-neutral-400 hover:text-neutral-200 text-base font-semibold"
-                            href="mailto:hetpatel@buffalo.edu"
+                        href="mailto:hetpatel@buffalo.edu"
                     >
                         <MdEmail className="size-5 mt-0.5" />
                         College: hetpatel@buffalo.edu
@@ -39,7 +41,7 @@ function Contact() {
 
                     <a
                         className="flex justify-start gap-2 items-center text-neutral-400 hover:text-neutral-200 text-base font-semibold"
-                            href="https://www.linkedin.com/in/hetpatel19/"
+                        href="https://www.linkedin.com/in/hetpatel19/"
                     >
                         <FaLinkedinIn className="size-5 mt-0.5" />
                         LinkedIn: hetpatel19
@@ -48,7 +50,7 @@ function Contact() {
 
                     <a
                         className="flex justify-start gap-2 items-center text-neutral-400 hover:text-neutral-200 text-base font-semibold"
-                            href="https://github.com/HP-002"
+                        href="https://github.com/HP-002"
                     >
                         <IoLogoGithub className="size-5 mt-0.5" />
                         GitHub: HP-002
@@ -58,31 +60,35 @@ function Contact() {
                 <div
                     className="flex flex-col gap-5"
                 >
-                    <button
-                        className="p-2 rounded-lg bg-teal-500 cursor-pointer"
-                    >
-                        <div
-                            className="flex gap-2 justify-between items-center font-bold"
+                    <a href={Resume} download>
+                        <button
+                            className="p-2 w-full rounded-lg bg-teal-500 cursor-pointer"
                         >
-                            <p>
-                                Resume
-                            </p>
-                            <LuDownload className="size-5 mt-0.5" />
-                        </div>
-                    </button>
+                            <div
+                                className="flex gap-2 justify-between items-center font-bold"
+                            >
+                                <p>
+                                    Resume
+                                </p>
+                                <LuDownload className="size-5 mt-0.5" />
+                            </div>
+                        </button>
+                    </a>
 
-                    <button
-                        className="p-2 rounded-lg bg-teal-500 cursor-pointer"
-                    >
-                        <div
-                            className="flex gap-2 justify-between items-center font-bold"
+                    <a href={Transcript} download>
+                        <button
+                            className="p-2 w-full rounded-lg bg-teal-500 cursor-pointer"
                         >
-                            <p>
-                                Transcript
-                            </p>
-                            <LuDownload className="size-5 mt-0.5" />
-                        </div>
-                    </button>
+                            <div
+                                className="flex gap-2 justify-between items-center font-bold"
+                            >
+                                <p>
+                                    Transcript
+                                </p>
+                                <LuDownload className="size-5 mt-0.5" />
+                            </div>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

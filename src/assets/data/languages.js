@@ -1,10 +1,10 @@
-import CIcon from "./../assets/c.svg"
-import JavaIcon from "./../assets/java.svg"
-import PythonIcon from "./../assets/python.svg"
-import CppIcon from "./../assets/cpp.svg"
-import JavaScriptIcon from "./../assets/javascript.svg"
-import HtmlIcon from "./../assets/html.svg"
-import CssIcon from "./../assets/css.svg"
+import CIcon from "../images/c.svg"
+import JavaIcon from "../images/java.svg"
+import PythonIcon from "../images/python.svg"
+import CppIcon from "../images/cpp.svg"
+import JavaScriptIcon from "../images/javascript.svg"
+import HtmlIcon from "../images/html.svg"
+import CssIcon from "../images/css.svg"
 
 const languages = [
     {

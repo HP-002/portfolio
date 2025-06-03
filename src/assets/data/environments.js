@@ -1,7 +1,7 @@
-import WindowsIcon from "./../assets/windows.svg"
-import UbuntuIcon from "./../assets/linux.svg"
-import NodeIcon from "./../assets/nodejs.svg"
-import WSLIcon from "./../assets/wsl.webp"
+import WindowsIcon from "../images/windows.svg"
+import UbuntuIcon from "../images/linux.svg"
+import NodeIcon from "../images/nodejs.svg"
+import WSLIcon from "../images/wsl.webp"
 
 const environments = [
     {
@@ -21,7 +21,7 @@ const environments = [
         shadowColor: "yellow-500",
     },
     {
-        id: 2,
+        id: 3,
         name: 'Node.js',
         icon: NodeIcon,
         description: "Runtime Environment",
@@ -29,7 +29,7 @@ const environments = [
         shadowColor: "lime-500",
     },
     {
-        id: 3,
+        id: 4,
         name: "WSL",
         icon: WSLIcon,
         description: "Windows Subsystem for Linux",

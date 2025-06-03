@@ -1,5 +1,5 @@
 import Course from "./Course.jsx"
-import coursework from './../data/coursework.js';
+import coursework from '../assets/data/coursework.js';
 
 function CourseCloud() {
     return (
