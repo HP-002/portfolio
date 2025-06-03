@@ -11,6 +11,14 @@ function App() {
     const [isOpen, setIsOpen] = useState(true)
 
     useEffect(() => {
+        // Close sidebar on small screens
+        const isSmallScreen = window.matchMedia("(max-width: 765px)").matches;
+        if (isSmallScreen) {
+            setIsOpen(false);
+        }
+    }, []);
+
+    useEffect(() => {
         const aboutSection = document.getElementById("about");
 
         const observer = new IntersectionObserver(
