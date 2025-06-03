@@ -62,7 +62,7 @@ function Contact() {
                 >
                     <a href={Resume} download>
                         <button
-                            className="p-2 w-full rounded-lg bg-teal-500 cursor-pointer"
+                            className="p-2 w-full rounded-lg bg-sky-500 cursor-pointer"
                         >
                             <div
                                 className="flex gap-2 justify-between items-center font-bold"
@@ -77,7 +77,7 @@ function Contact() {
 
                     <a href={Transcript} download>
                         <button
-                            className="p-2 w-full rounded-lg bg-teal-500 cursor-pointer"
+                            className="p-2 w-full rounded-lg bg-sky-500 cursor-pointer"
                         >
                             <div
                                 className="flex gap-2 justify-between items-center font-bold"

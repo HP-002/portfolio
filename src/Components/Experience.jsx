@@ -1,4 +1,5 @@
 import { BsCaretRightFill } from "react-icons/bs";
+import { TbExternalLink } from "react-icons/tb";
 
 function Experience(props) {
     return (
@@ -38,11 +39,15 @@ function Experience(props) {
                     </h1>
                     {/* Bottom */}
                     {props.webpage &&
-                        <p
-                            className="font-semibold text-neutral-400"
+                        <a
+                        className="flex gap-1 items-center justify-end font-semibold text-neutral-400 hover:text-neutral-200 cursor-pointer"
+                            href={props.webpageLink}    
                         >
-                            {props.webpage}
-                        </p>
+                            <p>
+                                {props.webpage}
+                            </p>
+                            <TbExternalLink className="size-4" />
+                        </a>
                     }
                 </div>
             </div>
