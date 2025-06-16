@@ -1,3 +1,4 @@
+import salaryEstimatorIcon from "../images/salaryEstimator.png"
 import ipoptIcon from "../images/ipopt.png"
 import tenziesIcon from "../images/tenzies.png"
 import PALIcon from "../images/pal.png"
@@ -5,6 +6,15 @@ import GOLIcon from "../images/gameOfLife.jpg"
 import chefClaudeIcon from "../images/chefclaude.png"
 
 const projects = [
+  {
+    id: 0,
+    title: "Salary Estimator",
+    description: "Implemented and compared 15 models—including logistic regression, random forests, XGBoost, SVMs, and neural networks.",
+    tech: ["Python", "Colab", "Scikit-learn", "TensorFlow", "NumPy", "Pandas", "Matplotlib"],
+    img: salaryEstimatorIcon,
+    github: "https://github.com/HP-002/salary_estimator.git",
+    live: null
+  },
   {
     id: 1,
     title: "IPOPT (Research)",

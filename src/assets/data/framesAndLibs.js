@@ -1,6 +1,11 @@
 import ReactIcon from "../images/react.svg"
+import ExpressIcon from "../images/express.svg"
 import ViteIcon from "../images//vite.svg"
+import NumPyIcon from "../images/numpy.svg"
 import PandasIcon from "../images/pandas.svg"
+import MatplotlibIcon from "../images/matplotlib.svg"
+import TensorFlowIcon from "../images/tensorflow.svg"
+import ScikitLearnIcon from "../images/scikitlearn.svg"
 import JUnitIcon from "../images/JUnit.svg"
 import TailwindIcon from "../images/tailwind.svg"
 import MicroPyIcon from "../images/micropython.svg"
@@ -8,7 +13,7 @@ import IpoptIcon from "../images/coinor.png"
 
 const framesAndLibs = [
     {
-        id: 1,
+        id: "react",
         name: 'React',
         icon: ReactIcon,
         description: "Frontend Library",
@@ -16,7 +21,15 @@ const framesAndLibs = [
         shadowColor: "cyan-500",
     },
     {
-        id: 2,
+        id: "express",
+        name: 'Express.js',
+        icon: ExpressIcon,
+        description: "Web App Framework",
+        insetColor: "white",
+        shadowColor: "white",
+    },
+    {
+        id: "vite",
         name: 'Vite',
         icon: ViteIcon,
         description: "Build Tool",
@@ -24,7 +37,15 @@ const framesAndLibs = [
         shadowColor: "violet-400",
     },
     {
-        id: 3,
+        id: "numpy",
+        name: 'NumPy',
+        icon: NumPyIcon,
+        description: "Python Library",
+        insetColor: "cyan-500",
+        shadowColor: "blue-500",
+    },
+    {
+        id: "pandas",
         name: 'Pandas',
         icon: PandasIcon,
         description: "Data Analysis Library",
@@ -32,7 +53,31 @@ const framesAndLibs = [
         shadowColor: "pink-500",
     },
     {
-        id: 4,
+        id: "matplotlib",
+        name: 'Matplotlib',
+        icon: MatplotlibIcon,
+        description: "Build Tool",
+        insetColor: "yellow-400",
+        shadowColor: "green-500",
+    },
+    {
+        id: "tensorflow",
+        name: 'TensorFlow',
+        icon: TensorFlowIcon,
+        description: "ML Library",
+        insetColor: "orange-500",
+        shadowColor: "orange-500",
+    },
+    {
+        id: "scikitlearn",
+        name: 'scikit-learn',
+        icon: ScikitLearnIcon,
+        description: "ML Library",
+        insetColor: "orange-500",
+        shadowColor: "sky-600",
+    },
+    {
+        id: "junit",
         name: 'JUnit',
         icon: JUnitIcon,
         description: "Testing Framework",
@@ -40,7 +85,7 @@ const framesAndLibs = [
         shadowColor: "green-500",
     },
     {
-        id: 5,
+        id: "tailwind",
         name: 'Tailwind CSS',
         icon: TailwindIcon,
         description: "CSS Framework",
@@ -48,7 +93,7 @@ const framesAndLibs = [
         shadowColor: "cyan-500",
     },
     {
-        id: 6,
+        id: "micropython",
         name: 'MicroPython',
         icon: MicroPyIcon,
         description: "Python for Microcontrollers",
@@ -56,7 +101,7 @@ const framesAndLibs = [
         shadowColor: "white",
     },
     {
-        id: 7,
+        id: "ipopt",
         name: 'IPOPT',
         icon: IpoptIcon,
         description: "Nonlinear Optimization",

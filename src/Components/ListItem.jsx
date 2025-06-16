@@ -1,12 +1,13 @@
 import { motion } from "motion/react"
 
 function ListItem(props) {
-    const iconIsBlack = props.name === "Pandas" || props.name === "MicroPython" || props.name === "Node.js"
+    const iconIsBlack = props.name === "Pandas" || props.name === "MicroPython" || props.name === "Node.js" || props.name === "Express.js" || props.name === "scikit-learn";
 
     const insetColors = {
         "white": "inset-shadow-white",
 
         // Orange shades
+        "orange-300": "inset-shadow-orange-300",
         "orange-500": "inset-shadow-orange-500",
         "orange-700": "inset-shadow-orange-700",
 

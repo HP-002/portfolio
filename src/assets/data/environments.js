@@ -1,6 +1,7 @@
 import WindowsIcon from "../images/windows.svg"
 import UbuntuIcon from "../images/linux.svg"
 import NodeIcon from "../images/nodejs.svg"
+import ColabIcon from "../images/colab.svg"
 import WSLIcon from "../images/wsl.webp"
 
 const environments = [
@@ -27,6 +28,14 @@ const environments = [
         description: "Runtime Environment",
         insetColor: "lime-500",
         shadowColor: "lime-500",
+    },
+    {
+        id: "colab",
+        name: "Google Colab",
+        icon: ColabIcon,
+        description: "Cloud-based",
+        insetColor: "orange-300",
+        shadowColor: "yellow-300",
     },
     {
         id: 4,
