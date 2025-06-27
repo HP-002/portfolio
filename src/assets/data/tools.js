@@ -1,4 +1,5 @@
 import GitIcon from "../images/git.svg"
+import DockerIcon from "../images/docker.svg"
 import NPMIcon from "../images/npm.svg"
 import WebpackIcon from "../images/webpack.svg"
 import VSCodeIcon from "../images/vscode.svg"
@@ -8,7 +9,7 @@ import FigmaIcon from "../images/figma.svg"
 
 const tools = [
     {
-        id: 1,
+        id: "git",
         name: "Git",
         icon: GitIcon,
         description: "Version Control",
@@ -16,7 +17,15 @@ const tools = [
         shadowColor: "orange-500",
     },
     {
-        id: 2,
+        id: "docker",
+        name: "Docker",
+        icon: DockerIcon,
+        description: "Containerization",
+        insetColor: "sky-600",
+        shadowColor: "white",
+    },
+    {
+        id: "npm",
         name: "npm",
         icon: NPMIcon,
         description: "Package Manager",
@@ -24,7 +33,7 @@ const tools = [
         shadowColor: "orange-700",
     },
     {
-        id: 3,
+        id: "webpack",
         name: "Webpack",
         icon: WebpackIcon,
         description: "Module Bundler",
@@ -32,7 +41,7 @@ const tools = [
         shadowColor: "sky-600",
     },
     {
-        id: 4,
+        id: "vs",
         name: "VS Code",
         icon: VSCodeIcon,
         description: "IDE",
@@ -40,7 +49,7 @@ const tools = [
         shadowColor: "blue-400",
     },
     {
-        id: 5,
+        id: "idea",
         name: "IntelliJ IDEA",
         icon: IntelliJIcon,
         description: "IDE",
@@ -48,7 +57,7 @@ const tools = [
         shadowColor: "blue-500",
     },
     {
-        id: 6,
+        id: "minitab",
         name: "Minitab",
         icon: MinitabIcon,
         description: "Statistical Software",
@@ -56,7 +65,7 @@ const tools = [
         shadowColor: "lime-300",
     },
     {
-        id: 7,
+        id: "figma",
         name: "Figma",
         icon: FigmaIcon,
         description: "Collaborative Design Platform",

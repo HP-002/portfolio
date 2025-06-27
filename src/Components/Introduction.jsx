@@ -55,6 +55,9 @@ function Introduction() {
 
                     <a
                         className="flex items-center gap-1.5 text-md cursor-pointer group"
+                        href="https://www.linkedin.com/in/hetpatel19/"
+                        target="_blank" 
+                        rel="noopener noreferrer"
                     >
                         <FaLinkedinIn className="text-neutral-400 group-hover:text-white" />
                         <p className="group-hover:text-white">hetpatel19</p>
@@ -62,6 +65,9 @@ function Introduction() {
 
                     <a
                         className="flex items-center gap-1.5 text-md cursor-pointer group"
+                        href="https://github.com/HP-002"
+                        target="_blank" 
+                        rel="noopener noreferrer"
                     >
                         <IoLogoGithub className="text-neutral-400 group-hover:text-white" />
                         <p className="group-hover:text-white">HP-002</p>

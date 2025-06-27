@@ -12,6 +12,8 @@ function Header(props) {
             <a
                 className="flex justify-start gap-2 items-center text-neutral-500 text-base font-semibold hover:text-neutral-200"
                 href="https://www.linkedin.com/in/hetpatel19/"
+                target="_blank"
+                rel="noopener noreferrer"
             >
                 <FaLinkedinIn className="size-5 mt-0.5" />
             </a>
@@ -19,6 +21,8 @@ function Header(props) {
             <a
                 className="flex justify-start gap-2 items-center text-neutral-500 text-base font-semibold hover:text-neutral-200"
                 href="https://github.com/HP-002"
+                target="_blank"
+                rel="noopener noreferrer"
             >
                 <IoLogoGithub className="size-5 mt-0.5" />
             </a>
@@ -26,6 +30,8 @@ function Header(props) {
             <a
                 className="flex justify-start gap-2 items-center text-neutral-500 text-base font-semibold hover:text-neutral-200"
                 href="mailto:hetfaldu19@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
             >
                 <MdEmail className="size-5 mt-0.5" />
             </a>
