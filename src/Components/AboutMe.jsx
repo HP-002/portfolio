@@ -46,7 +46,7 @@ function AboutMe() {
                         className="relative text-sm text-neutral-400 text-justify flex flex-col gap-4"
                     >
                         <p>
-                            Hi, I’m Het! I’m a Computer Science student minoring in Statistics at the University at Buffalo. I’m passionate about designing and building efficient, scalable systems—whether through backend development, algorithm optimization, or full-stack application design.
+                            Hi, I’m Het! I’m a student at the University at Buffalo pursuing B.S. in Computer Science and B.A. in Statistics. I’m passionate about designing and building efficient, scalable systems—whether through backend development, algorithm optimization, or full-stack application design.
                         </p>
 
                         <p>

@@ -69,18 +69,18 @@ function Education() {
                                 <h1
                                     className="text-lg font-semibold text-neutral-400"
                                 >
-                                    BS in Computer Science
+                                    B.S. in Computer Science
                                 </h1>
                                 <p
-                                    className="text-sm font-semibold text-neutral-400"
+                                    className="text-lg font-semibold text-neutral-400"
                                 >
-                                    Minor: Statistics
+                                    B.A. in Statistics
 
                                 </p>
                                 <p
                                     className="text-sm font-semibold text-neutral-400"
                                 >
-                                    GPA: 4.0/4.0
+                                    GPA: 3.98/4.0
                                 </p>
                                 <p
                                     className="text-sm font-semibold text-neutral-400"

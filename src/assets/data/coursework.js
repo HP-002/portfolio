@@ -1,21 +1,27 @@
 
 const coursework = [
     {
-        id: 14,
+        id: 15,
         title: 'Operating Systems',
         category: 'cse',
         description: '',
     },
     {
-        id: 13,
+        id: 14,
         title: 'Machine Learning',
         category: 'cse',
         description: '',
     },
     {
-        id: 12,
+        id: 13,
         title: 'Programming Languages',
         category: 'cse',
+        description: '',
+    },
+    {
+        id: 12,
+        title: 'Quality Control',
+        category: 'sta',
         description: '',
     },
     {

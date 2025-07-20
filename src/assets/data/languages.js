@@ -1,5 +1,6 @@
 import CIcon from "../images/c.svg"
 import JavaIcon from "../images/java.svg"
+import KotlinIcon from "../images/kotlin.svg"
 import PythonIcon from "../images/python.svg"
 import CppIcon from "../images/cpp.svg"
 import JavaScriptIcon from "../images/javascript.svg"
@@ -25,6 +26,14 @@ const languages = [
     },
     {
         id: 3,
+        name: 'Kotlin',
+        icon: KotlinIcon,
+        description: "Android Development",
+        insetColor: "violet-500",
+        shadowColor: "amber-500",
+    },
+    {
+        id: 4,
         name: 'Python',
         icon: PythonIcon,
         description: "Programming",
@@ -32,7 +41,7 @@ const languages = [
         shadowColor: "amber-300",
     },
     {
-        id: 4,
+        id: 5,
         name: 'C++',
         icon: CppIcon,
         description: "Programming",
@@ -40,7 +49,7 @@ const languages = [
         shadowColor: "blue-500",
     },
     {
-        id: 5,
+        id: 6,
         name: 'JavaScript',
         icon: JavaScriptIcon,
         description: "Scripting",
@@ -48,7 +57,7 @@ const languages = [
         shadowColor: "yellow-300",
     },
     {
-        id: 6,
+        id: 7,
         name: 'HTML',
         icon: HtmlIcon,
         description: "Markup",
@@ -56,7 +65,7 @@ const languages = [
         shadowColor: "orange-500",
     },
     {
-        id: 7,
+        id: 8,
         name: 'CSS',
         icon: CssIcon,
         description: "Styling",

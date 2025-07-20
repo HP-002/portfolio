@@ -18,7 +18,7 @@ function Introduction() {
                 >
                     <img
                         src={ProfileImage}
-                        className="rounded-2xl size-16 mt-1 block sm:hidden"
+                        className="rounded-4xl size-16 mt-1 block sm:hidden"
                     />
                     <h1
                         className="text-4xl text-left text-white font-bold"

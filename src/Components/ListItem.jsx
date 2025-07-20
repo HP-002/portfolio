@@ -16,6 +16,9 @@ function ListItem(props) {
         "sky-800": "inset-shadow-sky-800",
         "blue-200": "inset-shadow-blue-200",
 
+        // Violet shades
+        "violet-500" : "inset-shadow-violet-500",
+
         // Yellow shades
         "yellow-300": "inset-shadow-yellow-300",
         "yellow-400": "inset-shadow-yellow-400",
@@ -47,6 +50,7 @@ function ListItem(props) {
 
         // Yellow/Amber shades
         "amber-300": "shadow-amber-300",
+        "amber-500": "shadow-amber-500",
         "yellow-300": "shadow-yellow-300",
         "yellow-500": "shadow-yellow-500",
 

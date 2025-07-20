@@ -20,7 +20,7 @@ function Body(props) {
             <Contact />
 
             <footer
-                className="mt-5 text-neutral-200 text-xs bg-neutral-900 text-center"
+                className="mt-25 text-neutral-200 text-xs bg-neutral-900 text-center"
             >
                 HetPatel &copy; {new Date().getFullYear()}
             </footer>
