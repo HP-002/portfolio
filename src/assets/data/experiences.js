@@ -1,11 +1,40 @@
 
 const experiences = [
     {
+        id: 6,
+        department: "Computer Science Department @ University at Buffalo",
+        title: "Undergraduate Teaching Assistant - Computer Organization",
+        start: "January 2026",
+        end: "Present",
+        webpage: null,
+        webpageLink: null,
+        description: [
+            "Assist in teaching core computer architecture topics including MIPS assembly, datapath design, pipelining, memory hierarchy, and ALU design.",
+            "Support students in debugging and optimizing MIPS programs using QtSpim and simulating digital circuits in VHDL on EDA Playground.",
+            "Lead office hours and review sessions, and evaluate assignments and provide technical feedback on assembly programming, processor design, and hardware simulation projects.",
+        ]
+    },
+    {
+        id: 5,
+        department: "ATHLYNK",
+        title: "Full-Stack Software Developer Intern",
+        start: "August 2025",
+        end: "November 2025",
+        webpage: null,
+        webpageLink: null,
+        description: [
+            "Engineered end-to-end mobile features using React Native and TypeScript (frontend) and FastAPI (backend), integrating UI components with scalable API services.",
+            "Implemented a real-time messaging system with WebSockets, enabling seamless user-to-user communication.",
+            "Designed and deployed RESTful API endpoints and optimized database CRUD operations with Supabase and PostgreSQL to support dynamic content.",
+            "Improved application reliability and performance by contributing to Agile development cycles, code reviews, and cross-functional integration.",
+        ]
+    },
+    {
         id: 4,
         department: "Tutoring & Academic Support Services",
         title: "Peer-Assisted Learning (PAL) Leader",
         start: "August 2024",
-        end: "Present",
+        end: "August 2025",
         webpage: "PAL Webpage",
         webpageLink: "https://www.acsu.buffalo.edu/~hetpatel/STA-119/",
         description: [
@@ -19,7 +48,7 @@ const experiences = [
         department: "Math Place",
         title: "Math Tutor",
         start: "January 2024",
-        end: "Present",
+        end: "August 2025",
         webpage: null,
         webpageLink: null,
         description: [

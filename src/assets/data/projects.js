@@ -4,8 +4,28 @@ import tenziesIcon from "../images/tenzies.png"
 import PALIcon from "../images/pal.png"
 import GOLIcon from "../images/gameOfLife.jpg"
 import chefClaudeIcon from "../images/chefclaude.png"
+import pintosIcon from "../images/pintos.png"
+import crowdsenseIcon from "../images/crowdsense.png"
 
 const projects = [
+  {
+    id: 'pintos',
+    title: "Pintos Operating System (Stanford)",
+    description: "Utilized C, gdb, and Makefiles to engineer core kernel components, including the threading subsystem with synchronization primitives and a Multilevel Feedback Queue Scheduler (MLFQS). I also built a comprehensive system call interface that enforced argument validation, safe user memory access, and secure transitions between user and kernel modes, ensuring robust process control and overall system stability.",
+    tech: ["C", "gdb", "Makefile"],
+    img: pintosIcon,
+    github: "https://github.com/ShambhaviGoyal/Pintos",
+    live: null
+  },
+  {
+    id: 'crowdsense',
+    title: "Crowdsense",
+    description: "Developed a real-time crowd monitoring system using Ultralytics YOLO, PyTorch, and OpenCV to accurately detect occupancy levels from live CCTV feeds. I designed a multi-service architecture that integrated a Python model pipeline with a FastAPI backend, utilizing WebSockets to facilitate instantaneous data communication to a React Native mobile application built with Expo.",
+    tech: ["Ultralytics YOLO", "Pytorch", "OpenCV", "FastAPI", "Websockets", "React Native", "Expo"],
+    img: crowdsenseIcon,
+    github: "https://github.com/HP-002/crowdsense.git",
+    live: "https://devpost.com/software/crowdsense-q9ariu"
+  },
   {
     id: 0,
     title: "Salary Estimator",

@@ -6,6 +6,9 @@ import VSCodeIcon from "../images/vscode.svg"
 import IntelliJIcon from "../images/intellij.svg"
 import MinitabIcon from "../images/minitab.svg"
 import FigmaIcon from "../images/figma.svg"
+import FirebaseIcon from "../images/firebase.svg"
+import ExpoIcon from "../images/expo.svg"
+import SupabaseIcon from "../images/supabase.svg"
 
 const tools = [
     {
@@ -31,6 +34,30 @@ const tools = [
         description: "Package Manager",
         insetColor: "orange-700",
         shadowColor: "orange-700",
+    },
+    {
+        id: "expo",
+        name: "Expo",
+        icon: ExpoIcon,
+        description: "Mobile Development",
+        insetColor: "white",
+        shadowColor: "white",
+    },
+    {
+        id: "supabase",
+        name: "Supabase",
+        icon: SupabaseIcon,
+        description: "Database",
+        insetColor: "green-500",
+        shadowColor: "green-500",
+    },
+    {
+        id: "firebase",
+        name: "Firebase",
+        icon: FirebaseIcon,
+        description: "Cloud-based",
+        insetColor: "orange-500",
+        shadowColor: "yellow-500",
     },
     {
         id: "webpack",

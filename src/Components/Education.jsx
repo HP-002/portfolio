@@ -80,7 +80,7 @@ function Education() {
                                 <p
                                     className="text-sm font-semibold text-neutral-400"
                                 >
-                                    GPA: 3.98/4.0
+                                    GPA: 4.0/4.0
                                 </p>
                                 <p
                                     className="text-sm font-semibold text-neutral-400"

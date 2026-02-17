@@ -10,8 +10,17 @@ import JUnitIcon from "../images/JUnit.svg"
 import TailwindIcon from "../images/tailwind.svg"
 import MicroPyIcon from "../images/micropython.svg"
 import IpoptIcon from "../images/coinor.png"
+import ReactNativeIcon from "../images/react-native.svg"
 
 const framesAndLibs = [
+    {
+        id: "react-native",
+        name: 'React Native',
+        icon: ReactNativeIcon,
+        description: "Mobile Development",
+        insetColor: "white",
+        shadowColor: "cyan-500",
+    },
     {
         id: "react",
         name: 'React',

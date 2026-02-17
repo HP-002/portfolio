@@ -1,7 +1,7 @@
 import { motion } from "motion/react"
 
 function ListItem(props) {
-    const iconIsBlack = props.name === "Pandas" || props.name === "MicroPython" || props.name === "Node.js" || props.name === "Express.js" || props.name === "scikit-learn";
+    const iconIsBlack = props.name === "Pandas" || props.name === "MicroPython" || props.name === "Node.js" || props.name === "Express.js" || props.name === "scikit-learn" || props.name === "MIPS" || props.name === "VHDL";
 
     const insetColors = {
         "white": "inset-shadow-white",
@@ -24,9 +24,10 @@ function ListItem(props) {
         "yellow-400": "inset-shadow-yellow-400",
         "yellow-500": "inset-shadow-yellow-500",
 
-        // Lime shades
+        // Lime/Green shades
         "lime-300": "inset-shadow-lime-300",
         "lime-500": "inset-shadow-lime-500",
+        "green-500": "inset-shadow-green-500",
 
         // Red shades
         "red-400": "inset-shadow-red-400",

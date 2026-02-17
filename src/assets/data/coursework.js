@@ -1,6 +1,24 @@
 
 const coursework = [
     {
+        id: 19,
+        title: 'Distributed Systems',
+        category: 'cse',
+        description: '',
+    },
+    {
+        id: 18,
+        title: 'Compilers',
+        category: 'cse',
+        description: '',
+    },
+    {
+        id: 17,
+        title: 'Computer Vision & Image Processing',
+        category: 'cse',
+        description: '',
+    },
+    {
         id: 15,
         title: 'Operating Systems',
         category: 'cse',
@@ -10,6 +28,12 @@ const coursework = [
         id: 14,
         title: 'Machine Learning',
         category: 'cse',
+        description: '',
+    },
+    {
+        id: 16,
+        title: 'Design of Experiments',
+        category: 'sta',
         description: '',
     },
     {

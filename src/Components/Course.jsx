@@ -10,7 +10,7 @@ function Course(props) {
 
     return (
         <div
-            className="relative group w-[235px]"
+            className="relative group w-fit"
         >
             <p
                 className={`m-1 p-2.5 text-neutral-300 group-hover:text-neutral-200 rounded-lg text-sm font-semibold
