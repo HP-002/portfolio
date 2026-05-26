@@ -6,8 +6,18 @@ import GOLIcon from "../images/gameOfLife.jpg"
 import chefClaudeIcon from "../images/chefclaude.png"
 import pintosIcon from "../images/pintos.png"
 import crowdsenseIcon from "../images/crowdsense.png"
+import compilerIcon from "../images/compiler.png"
 
 const projects = [
+  {
+    id: 'compiler',
+    title: "Alpha Compiler",
+    description: "Developed a compiler for a subset of C using Flex and Bison to generate an intermediate representation (IR) and then optimize it using a register allocator. I also implemented a code generator to produce x86-64 assembly code from the IR.",
+    tech: ["C", "x86-64 Assembly", "Flex", "Bison", "Makefile"],
+    img: compilerIcon,
+    github: "https://github.com/HP-002/compiler",
+    live: null
+  },
   {
     id: 'pintos',
     title: "Pintos Operating System (Stanford)",
