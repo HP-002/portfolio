@@ -1,21 +1,18 @@
 {
-  "name": "Portfolio-DevEnv",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
-  "forwardPorts": [
-    5173
-  ],
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "editor.formatOnSave": true
-      },
-      "extensions": [
-        "dbaeumer.vscode-eslint"
-      ]
-    }
-  },
-  "postCreateCommand": [
-    "git config --global --add safe.directory ${containerWorkspaceFolder} && npm install",
-    "npm install"
-  ]
+	"name": "Portfolio-DevEnv",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+	"forwardPorts": [
+		5173
+	],
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.formatOnSave": true
+			},
+			"extensions": [
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	},
+	"postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && npm install"
 }
