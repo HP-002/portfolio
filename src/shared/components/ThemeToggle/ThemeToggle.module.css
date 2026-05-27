@@ -1,19 +1,18 @@
-/* ThemeToggle now lives inside the active theme tree, so every value
-   resolves from the current theme's tokens.css. */
 
 .toggle {
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
-  padding: 0.4rem 0.85rem;
+  padding: 0.4rem 0.75rem;
   background: var(--color-bg);
   color: var(--color-text);
   border: 1px solid var(--color-border);
-  border-radius: 999px;
+  border-radius: var(--radius-btn);
   font-family: var(--font-body);
   font-size: var(--size-small);
   font-weight: var(--weight-body);
   letter-spacing: 0.02em;
+  white-space: nowrap;
   cursor: pointer;
   transition: var(--transition-nav);
 }
@@ -36,4 +35,16 @@
 
 .label {
   line-height: 1;
+}
+
+/* For very narrow screens, drop the text label, keep the icon as a compact
+   button. The aria-label on the parent button still announces the action. */
+@media (max-width: 420px) {
+  .toggle {
+    padding: 0.4rem;
+  }
+
+  .label {
+    display: none;
+  }
 }
