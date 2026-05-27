@@ -1,0 +1,43 @@
+/* Creative theme design tokens — dark, motion-friendly */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+  /* --- Colors --- */
+  --color-bg:          #13111F;
+  --color-surface:     #1E1C30;
+  --color-text:        #E8E6F5;
+  --color-muted:       #7A78A0;
+  --color-accent:      #7B6EF6;
+  --color-border:      #2E2B4A;
+
+  /* --- Typography --- */
+  --font-heading:      'DM Sans', 'Inter', sans-serif;
+  --font-body:         'Inter', system-ui, sans-serif;
+  --size-h1:           3rem;
+  --size-h2:           2rem;
+  --size-h3:           1.35rem;
+  --size-body:         1rem;
+  --size-small:        0.875rem;
+  --weight-heading:    700;
+  --weight-body:       400;
+  --line-height-body:  1.7;
+
+  /* --- Spacing scale: identical to research --- */
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   1.5rem;
+  --space-lg:   2.5rem;
+  --space-xl:   4rem;
+  --space-xxl:  6rem;
+
+  /* --- Layout --- */
+  --max-width:        1100px;
+  --radius-card:      10px;
+  --radius-btn:       6px;
+
+  /* --- Transitions: ON in creative mode --- */
+  --transition-card:  transform 0.2s ease, box-shadow 0.2s ease;
+  --transition-link:  color 0.15s ease;
+  --transition-nav:   background 0.3s ease;
+}
