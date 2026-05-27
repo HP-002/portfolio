@@ -10,6 +10,7 @@ export default function App() {
 
   useEffect(() => {
     localStorage.setItem('portfolio-theme', theme)
+    document.documentElement.dataset.theme = theme
   }, [theme])
 
   const value = useMemo(
@@ -23,7 +24,7 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={value}>
-      {theme === 'research' ? <ResearchApp /> : <CreativeApp />}
+      {theme === 'research' ? <ResearchApp /> : <ResearchApp />} {/* TODO: Change to CreativeApp */}
     </ThemeContext.Provider>
   )
 }
