@@ -1,24 +1,17 @@
 import { FaGithub, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa'
 
 import ThemeToggle from '../../../../shared/components/ThemeToggle/ThemeToggle'
-import siteLogo from '../../../../assets/images/sitelogo.png'
 import styles from './Nav.module.css'
 
-// TODO: replace these placeholders with the real handles / address.
-const CONTACT = {
-  github: 'https://github.com/hetpatel',
-  linkedin: 'https://www.linkedin.com/in/hetpatel/',
-  email: 'mailto:hetpatel@buffalo.edu',
-}
+import CONTACT from '../../../../assets/data/contact'
 
 const SECTIONS = [
   { href: '#about', label: 'About Me' },
   { href: '#education', label: 'Education' },
-  { href: '#current-position', label: 'Current Position' },
+  { href: '#experience', label: 'Experiences' },
   { href: '#publications', label: 'Publications' },
-  { href: '#experience', label: 'Previous Experiences' },
   { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact Information' },
+  { href: '#contact', label: 'Contact' },
 ]
 
 export default function Nav() {
@@ -32,16 +25,6 @@ export default function Nav() {
         </div>
 
         <ul className={styles.center}>
-          <li>
-            <a href="#home" className={styles.homeLink} aria-label="Home">
-              <img
-                src={siteLogo}
-                alt=""
-                aria-hidden="true"
-                className={styles.logo}
-              />
-            </a>
-          </li>
           {SECTIONS.map(({ href, label }) => (
             <li key={href}>
               <a href={href} className={styles.link}>

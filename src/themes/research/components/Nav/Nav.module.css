@@ -1,149 +1,164 @@
-/* Research Nav — light, academic, motionless.
-   All values come from themes/research/tokens.css. */
-
 .nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  background: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	background: var(--color-bg);
+	border-bottom: 1px solid var(--color-border);
 }
 
 .inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: var(--space-lg);
-  height: var(--height-nav);
-  max-width: var(--max-width-nav);
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	gap: var(--space-md);
+	height: var(--height-nav);
+	width: 100%;
+	padding: 0 var(--space-lg);
 }
 
-/* ---------- LEFT: wordmark ---------- */
 
+/* ---------- LEFT: Name ---------- */
 .left {
-  display: flex;
-  align-items: center;
+	grid-column: 1;
+	justify-self: start;
+	display: flex;
+	align-items: center;
+	min-width: 0;
 }
 
 .name {
-  font-family: var(--font-heading);
-  font-size: var(--size-h3);
-  font-weight: var(--weight-heading);
-  color: var(--color-text);
-  text-decoration: none;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  transition: var(--transition-link);
+	font-family: var(--font-heading);
+	font-size: var(--size-h3);
+	font-weight: var(--weight-heading);
+	color: var(--color-text);
+	text-decoration: none;
+	letter-spacing: 0.01em;
+	white-space: nowrap;
+	transition: var(--transition-link);
 }
 
 .name:hover {
-  color: var(--color-accent);
+	color: var(--color-accent);
 }
 
-/* ---------- CENTER: sections ---------- */
 
+/* ---------- CENTER: Sections ---------- */
 .center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	grid-column: 2;
+	justify-self: center;
+	display: flex;
+	align-items: center;
+	gap: var(--space-md);
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .homeLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-xs);
-  border-radius: var(--radius-btn);
-  text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.25rem;
+	border-radius: var(--radius-btn);
+	text-decoration: none;
+	line-height: 0;
 }
 
 .logo {
-  height: 28px;
-  width: auto;
-  display: block;
+	height: 28px;
+	width: auto;
+	display: block;
 }
 
 .link {
-  font-family: var(--font-body);
-  font-size: var(--size-small);
-  font-weight: var(--weight-body);
-  color: var(--color-text);
-  text-decoration: none;
-  white-space: nowrap;
-  padding: var(--space-xs) 0;
-  border-bottom: 1px solid transparent;
-  transition: var(--transition-link);
+	font-family: var(--font-body);
+	font-size: var(--size-small);
+	font-weight: var(--weight-body);
+	color: var(--color-text);
+	text-decoration: none;
+	white-space: nowrap;
+	padding: var(--space-xs) 0;
+	border-bottom: 1px solid transparent;
+	transition: var(--transition-link);
 }
 
 .link:hover,
 .link:focus-visible {
-  color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
-  outline: none;
+	color: var(--color-accent);
+	border-bottom-color: var(--color-accent);
+	outline: none;
 }
 
-/* ---------- RIGHT: theme toggle + socials ---------- */
 
+/* ---------- RIGHT: Theme Toggle + Contact ---------- */
 .right {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
+	grid-column: 3;
+	justify-self: end;
+	display: flex;
+	align-items: center;
+	gap: var(--space-md);
 }
 
 .socials {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .socialLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  color: var(--color-text);
-  font-size: 1.05rem;
-  text-decoration: none;
-  border-radius: var(--radius-btn);
-  transition: var(--transition-link);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	color: var(--color-text);
+	font-size: var(--size-h3);
+	text-decoration: none;
+	border-radius: var(--radius-btn);
+	transition: var(--transition-link);
 }
 
 .socialLink:hover,
 .socialLink:focus-visible {
-  color: var(--color-accent);
-  outline: none;
+	color: var(--color-accent);
+	outline: none;
 }
 
-/* ---------- Responsive: collapse center on narrow screens ---------- */
+/* ---------- Responsive ---------- */
+/* Does not display the center sections
+when the view is smaller than 1100px */
 
-@media (max-width: 960px) {
-  .inner {
-    gap: var(--space-md);
-    padding: 0 var(--space-md);
-  }
+@media (max-width: 1100px) {
+	.center {
+		display: none;
+	}
 
-  .center {
-    gap: var(--space-sm);
-  }
-
-  .link {
-    font-size: 0.8rem;
-  }
+	.inner {
+		padding: 0 var(--space-md);
+	}
 }
 
-@media (max-width: 760px) {
-  .center {
-    display: none;
-  }
+@media (max-width: 560px) {
+	.inner {
+		padding: 0 var(--space-sm);
+		gap: var(--space-sm);
+	}
+
+	.right {
+		gap: var(--space-sm);
+	}
+
+	.socials {
+		gap: 0;
+	}
+
+	.socialLink {
+		width: 1.75rem;
+		height: 1.75rem;
+		font-size: 1rem;
+	}
 }
