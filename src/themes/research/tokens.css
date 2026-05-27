@@ -1,45 +1,43 @@
-/* Research theme design tokens — light, academic, no motion */
-
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Inter:wght@400;500&display=swap');
 
-:root {
+[data-theme='research'] {
   /* --- Colors --- */
-  --color-bg:          #FAFAF7;
-  --color-surface:     #F2F0EB;
-  --color-text:        #2A2418;
-  --color-muted:       #7A6E55;
-  --color-accent:      #4A7C6B;
-  --color-border:      #DDD8CC;
+  --color-bg: #FAFAF7;
+  --color-surface: #F2F0EB;
+  --color-text: #2A2418;
+  --color-muted: #7A6E55;
+  --color-accent: #5e7bff;
+  --color-border: #DDD8CC;
 
   /* --- Typography --- */
-  --font-heading:      'Lora', Georgia, serif;
-  --font-body:         'Inter', system-ui, sans-serif;
-  --size-h1:           2.5rem;
-  --size-h2:           1.75rem;
-  --size-h3:           1.25rem;
-  --size-body:         1rem;
-  --size-small:        0.875rem;
-  --weight-heading:    500;
-  --weight-body:       400;
-  --line-height-body:  1.7;
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --size-h1: 2.5rem;
+  --size-h2: 1.75rem;
+  --size-h3: 1.25rem;
+  --size-body: 1rem;
+  --size-small: 0.875rem;
+  --weight-heading: 500;
+  --weight-body: 400;
+  --line-height-body: 1.7;
 
   /* --- Spacing scale --- */
-  --space-xs:   0.5rem;
-  --space-sm:   1rem;
-  --space-md:   1.5rem;
-  --space-lg:   2.5rem;
-  --space-xl:   4rem;
-  --space-xxl:  6rem;
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-xxl: 6rem;
 
   /* --- Layout --- */
-  --max-width:        760px;
-  --max-width-nav:    1240px;
-  --height-nav:       64px;
-  --radius-card:      6px;
-  --radius-btn:       4px;
+  --max-width: 760px;
+  --height-nav: 64px;
+  --radius-card: 6px;
+  --radius-btn: 15px;
 
   /* --- Transitions: NONE in research mode --- */
-  --transition-card:  none;
-  --transition-link:  none;
-  --transition-nav:   none;
+  --transition-card: none;
+  --transition-link: none;
+  --transition-nav: none;
 }

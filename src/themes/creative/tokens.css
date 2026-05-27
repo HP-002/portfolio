@@ -1,8 +1,10 @@
-/* Creative theme design tokens — dark, motion-friendly */
+/* Creative theme design tokens — dark, motion-friendly.
+   Scoped to [data-theme="creative"] on <html> so that research tokens
+   (which are bundled into the same page) cannot collide. */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Inter:wght@400;500&display=swap');
 
-:root {
+[data-theme='creative'] {
   /* --- Colors --- */
   --color-bg:          #13111F;
   --color-surface:     #1E1C30;
