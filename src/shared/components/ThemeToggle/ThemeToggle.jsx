@@ -3,8 +3,8 @@ import { useTheme } from '../../hooks/useTheme'
 import styles from './ThemeToggle.module.css'
 
 const THEMES = {
-  research: { label: 'Research', Icon: LuBookOpenText, next: 'creative' },
-  creative: { label: 'Creative', Icon: LuSparkles, next: 'research' },
+  research: { label: 'Go Creative', Icon: LuBookOpenText, next: 'creative' },
+  creative: { label: 'Go Research', Icon: LuSparkles, next: 'research' },
 }
 
 export default function ThemeToggle() {
