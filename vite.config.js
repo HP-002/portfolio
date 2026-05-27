@@ -7,4 +7,16 @@ export default defineConfig({
     react(),
   ],
   base: './',
+  server: {
+    host: true,
+
+    watch: {
+      usePolling: true,
+      interval: 100
+    },
+
+    hmr: {
+      clientPort: 5173
+    }
+  }
 })
