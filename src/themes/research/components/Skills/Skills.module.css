@@ -1,5 +1,60 @@
-/* Research Skills styles — all values must come from tokens */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
 
 .skills {
-  /* TODO: layout */
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  margin: 0;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--size-body);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--space-xxs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xxs) var(--space-xxs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  padding: var(--space-xxs) var(--space-xs);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: var(--space-xxs);
+}
+
+.itemtext {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  font-weight: var(--weight-body);
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.item:hover {
+  border: 1px solid var(--color-accent);
+  background: var(--color-surface);
 }
