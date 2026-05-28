@@ -10,30 +10,35 @@ const environments = [
         name: "Windows",
         icon: WindowsIcon,
         description: "OS",
+        showInResearch: true,
     },
     {
         id: 2,
         name: "Ubuntu Linux",
         icon: UbuntuIcon,
         description: "OS",
+        showInResearch: true,
     },
     {
         id: 3,
         name: 'Node.js',
         icon: NodeIcon,
         description: "Runtime Environment",
+        showInResearch: true,
     },
     {
         id: "colab",
         name: "Google Colab",
         icon: ColabIcon,
         description: "Cloud-based",
+        showInResearch: true,
     },
     {
         id: 4,
         name: "WSL",
         icon: WSLIcon,
         description: "Windows Subsystem for Linux",
+        showInResearch: false,
     },
 ]
 

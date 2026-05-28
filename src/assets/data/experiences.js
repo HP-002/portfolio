@@ -12,7 +12,8 @@ const experiences = [
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        ]
+        ],
+        type: 'research'
     },
     {
         id: 7,
@@ -26,7 +27,8 @@ const experiences = [
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        ]
+        ],
+        type: 'ta'
     },
     {
         id: 6,
@@ -40,7 +42,8 @@ const experiences = [
             "Instruct students on fundamental computer architecture principles, including MIPS assembly, datapath design, memory hierarchies, and ALU architecture.",
             "Facilitate hands-on debugging and optimization of MIPS programs utilizing QtSpim, alongside hardware simulation via VHDL on EDA Playground.",
             "Lead technical review sessions and evaluate processor design projects to reinforce low-level systems engineering concepts."
-        ]
+        ],
+        type: 'ta'
     },
     {
         id: 5,
@@ -55,7 +58,8 @@ const experiences = [
             "Architected and integrated a real-time WebSocket-based messaging system to enable seamless and concurrent user-to-user communication.",
             "Designed RESTful APIs and optimized complex CRUD operations utilizing PostgreSQL and Supabase, ensuring robust data management.",
             "Streamlined cross-functional integration and maintained software reliability through rigorous code reviews within an Agile development environment."
-        ]
+        ],
+        type: 'intern'
     },
     {
         id: 4,
@@ -69,7 +73,8 @@ const experiences = [
             "Facilitated targeted Peer-Assisted Learning sessions to solidify advanced concepts in Statistical Methods, cultivating robust analytical and quantitative skills.",
             "Collaborated with instructors to align session materials with core statistical curriculum and empirical analysis techniques.",
             "Directed interactive, data-driven review sessions to enhance critical problem-solving capabilities and theoretical retention."
-        ]
+        ],
+        type: 'other'
     },
     {
         id: 3,
@@ -83,7 +88,8 @@ const experiences = [
             "Delivered analytical and technical tutoring across complex mathematical disciplines, adapting instructional methodologies for quantitative analysis.",
             "Mentored students in developing independent, logic-driven problem-solving strategies essential for computational mathematics.",
             "Supported academic progression by building foundational confidence and promoting rigorous mathematical proofing and calculation techniques."
-        ]
+        ],
+        type: 'other'
     },
     {
         id: 2,
@@ -97,7 +103,8 @@ const experiences = [
             "Partnered with faculty to execute technical instruction, evaluate coursework, and track academic performance within the quantitative Summer Bridge Program.",
             "Led focused recitations, delivering targeted academic interventions to establish a rigorous mathematical foundation for incoming students.",
             "Reinforced critical analytical concepts and guided targeted practice to optimize student transition into STEM disciplines."
-        ]
+        ],
+        type: 'other'
     },
     {
         id: 1,
@@ -111,7 +118,8 @@ const experiences = [
             "Conducted individualized academic tutoring in advanced Computer Science, Applied Statistics, and theoretical Mathematics, including Linear Algebra.",
             "Reinforced complex technical subjects and core software engineering principles through personalized, logic-oriented instructional strategies.",
             "Monitored quantitative progress and synchronized with program coordinators to ensure consistent, high-level academic support for student-athletes."
-        ]
+        ],
+        type: 'other'
     }
 ]
 
