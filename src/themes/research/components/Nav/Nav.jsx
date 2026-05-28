@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa'
 import ThemeToggle from '../../../../shared/components/ThemeToggle/ThemeToggle'
 import styles from './Nav.module.css'
 
+import { name } from '../../../../assets/data/about'
 import CONTACT from '../../../../assets/data/contact'
 
 const SECTIONS = [
@@ -20,7 +21,7 @@ export default function Nav() {
       <div className={styles.inner}>
         <div className={styles.left}>
           <a href="#home" className={styles.name}>
-            Het Patel
+            {name}
           </a>
         </div>
 
@@ -61,7 +62,7 @@ export default function Nav() {
             </li>
             <li>
               <a
-                href={CONTACT.email}
+                href={CONTACT.personalEmail}
                 className={styles.socialLink}
                 aria-label="Email"
               >
