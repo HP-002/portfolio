@@ -13,7 +13,8 @@ const experiences = [
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         ],
-        type: 'research'
+        type: 'research',
+        showInResearch: true,
     },
     {
         id: 7,
@@ -28,7 +29,8 @@ const experiences = [
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         ],
-        type: 'ta'
+        type: 'ta',
+        showInResearch: true,
     },
     {
         id: 6,
@@ -43,7 +45,8 @@ const experiences = [
             "Facilitate hands-on debugging and optimization of MIPS programs utilizing QtSpim, alongside hardware simulation via VHDL on EDA Playground.",
             "Lead technical review sessions and evaluate processor design projects to reinforce low-level systems engineering concepts."
         ],
-        type: 'ta'
+        type: 'ta',
+        showInResearch: true,
     },
     {
         id: 5,
@@ -59,7 +62,8 @@ const experiences = [
             "Designed RESTful APIs and optimized complex CRUD operations utilizing PostgreSQL and Supabase, ensuring robust data management.",
             "Streamlined cross-functional integration and maintained software reliability through rigorous code reviews within an Agile development environment."
         ],
-        type: 'intern'
+        type: 'intern',
+        showInResearch: true,
     },
     {
         id: 4,
@@ -74,7 +78,8 @@ const experiences = [
             "Collaborated with instructors to align session materials with core statistical curriculum and empirical analysis techniques.",
             "Directed interactive, data-driven review sessions to enhance critical problem-solving capabilities and theoretical retention."
         ],
-        type: 'other'
+        type: 'other',
+        showInResearch: false,
     },
     {
         id: 3,
@@ -89,7 +94,8 @@ const experiences = [
             "Mentored students in developing independent, logic-driven problem-solving strategies essential for computational mathematics.",
             "Supported academic progression by building foundational confidence and promoting rigorous mathematical proofing and calculation techniques."
         ],
-        type: 'other'
+        type: 'other',
+        showInResearch: false,
     },
     {
         id: 2,
@@ -104,7 +110,8 @@ const experiences = [
             "Led focused recitations, delivering targeted academic interventions to establish a rigorous mathematical foundation for incoming students.",
             "Reinforced critical analytical concepts and guided targeted practice to optimize student transition into STEM disciplines."
         ],
-        type: 'other'
+        type: 'other',
+        showInResearch: false,
     },
     {
         id: 1,
@@ -119,7 +126,8 @@ const experiences = [
             "Reinforced complex technical subjects and core software engineering principles through personalized, logic-oriented instructional strategies.",
             "Monitored quantitative progress and synchronized with program coordinators to ensure consistent, high-level academic support for student-athletes."
         ],
-        type: 'other'
+        type: 'other',
+        showInResearch: false,
     }
 ]
 
