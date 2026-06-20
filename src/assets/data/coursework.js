@@ -111,7 +111,7 @@ const coursework = [
     {
         id: 309,
         title: 'Linear Algebra',
-        category: 'mth',
+        category: 'cse',
         description: 'LA description',
     },
 ]
