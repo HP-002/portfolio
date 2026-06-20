@@ -1,5 +1,51 @@
-/* Research About styles — all values must come from tokens */
-
 .about {
-  /* TODO: layout */
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: calc(-1 * var(--height-nav) - var(--space-sm));
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.header {
+  margin-bottom: var(--space-lg);
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: var(--size-title);
+  font-weight: var(--weight-heading);
+  color: var(--color-text);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--size-h1);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.body {
+  max-width: 1100px;
+}
+
+.body p {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
 }
