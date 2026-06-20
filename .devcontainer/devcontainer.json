@@ -4,6 +4,9 @@
 	"forwardPorts": [
 		5173
 	],
+	"runArgs": [
+        "-p", "5173:5173"
+    ],
 	"customizations": {
 		"vscode": {
 			"settings": {
