@@ -7,7 +7,7 @@ const education = [
     minor: null,
     start: 'August 2023',
     end: 'Expected May 2027',
-    gpa: null,
+    gpa: 3.96,
     location: 'Buffalo, NY',
   },
 ]
