@@ -1,0 +1,111 @@
+.section {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: calc(-1 * var(--height-nav) - var(--space-sm));
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-heading);
+  color: var(--color-text);
+  margin: 0 0 var(--space-xs);
+}
+
+.grid {
+  list-style: none;
+  max-width: var(--max-width);
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-heading);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  align-self: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.iconLink {
+  color: var(--color-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.iconLink:hover,
+.iconLink:focus-visible {
+  color: var(--color-accent);
+  outline: none;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  text-align: justify;
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  margin: 0;
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: auto;
+}
+
+.tag {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  padding: 1px var(--space-xs);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

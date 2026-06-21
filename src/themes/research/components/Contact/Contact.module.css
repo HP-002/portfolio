@@ -1,0 +1,84 @@
+.section {
+  margin-bottom: var(--space-lg);
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: calc(-1 * var(--height-nav) - var(--space-sm));
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--size-h2);
+  font-weight: var(--weight-heading);
+  color: var(--color-text);
+  margin: 0 0 var(--space-xs);
+}
+
+.locationContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--space-xs);
+  margin: 0 0 var(--space-lg);
+}
+
+.location {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-muted);
+}
+
+.emails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.emailLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-text);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.emailLink:hover,
+.emailLink:focus-visible {
+  color: var(--color-accent);
+  outline: none;
+}
+
+.emailLabel {
+  font-size: var(--size-small);
+  color: var(--color-muted);
+  margin-left: var(--space-xxs);
+}
+
+.socials {
+  display: flex;
+  gap: var(--space-xxl);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.socialLink:hover,
+.socialLink:focus-visible {
+  color: var(--color-accent);
+  outline: none;
+}

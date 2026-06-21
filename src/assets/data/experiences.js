@@ -1,6 +1,57 @@
 
 const experiences = [
     {
+        id: 9,
+        department: "School of Engineering and Applied Sciences",
+        lab: "WIRES",
+        faculty: "Roshan Ayyalasomayajula",
+        title: "SEAS Undergraduate Research Experience (SURE) Intern",
+        start: "May 2026",
+        end: "Present",
+        webpage: null,
+        webpageLink: null,
+        description: [
+            "Designed a differentially private framework for collaborative WiFi-based indoor localization, where multiple access points work together to locate a person while stopping a central server from pinpointing their exact position.",
+            "Built and trained a split neural network on CSI data, keeping raw signals on-device and only sharing clipped embeddings, with formal differential privacy guarantees enforced by adding calibrated Gaussian noise.",
+            "Tuned the privacy-accuracy trade-off using geo-indistinguishability and fusion-aware noise calibration, then validated it by measuring the best attacker's localization error against the Cramér–Rao lower bound."
+        ],
+        type: 'research',
+        showInResearch: true,
+    },
+    {
+        id: 8,
+        department: "Computer Science Department",
+        lab: "ESC Lab",
+        faculty: "Dr. Wenyao Xu",
+        title: "Research Assistant",
+        start: "May 2026",
+        end: "Present",
+        webpage: null,
+        webpageLink: null,
+        description: [
+            "Contributed to mRehab, a mobile rehabilitation app that helps post-stroke patients rebuild mobility and independence by guiding them through therapy exercises at home, no clinic visit required.",
+            "Built the app in React Native and used the phone's built-in motion sensors (accelerometer and gyroscope) to track movements performed with 3D-printed props, turning everyday exercises into measurable rehab data."        
+        ],
+        type: 'research',
+        showInResearch: true,
+    },
+    {
+        id: 7,
+        department: "Computer Science Department @ University at Buffalo",
+        title: "Undergraduate Teaching Assistant - Machine Learning",
+        start: "May 2026",
+        end: "Present",
+        webpage: null,
+        webpageLink: null,
+        description: [
+            "Supported students across core ML topics including supervised and unsupervised learning, decision trees, neural networks, SVMs, and reinforcement learning.",
+            "Held weekly office hours and fielded questions on Piazza to help students debug their Python implementations and build a solid grasp of the math and intuition behind each algorithm.",
+            "Graded projects and exams while giving clear, actionable feedback, helping students connect machine learning theory to hands-on, real-world problem solving."
+        ],
+        type: 'ta',
+        showInResearch: true,
+    },
+    {
         id: 6,
         department: "Computer Science Department @ University at Buffalo",
         title: "Undergraduate Teaching Assistant - Computer Organization",
@@ -9,10 +60,12 @@ const experiences = [
         webpage: null,
         webpageLink: null,
         description: [
-            "Assist in teaching core computer architecture topics including MIPS assembly, datapath design, pipelining, memory hierarchy, and ALU design.",
-            "Support students in debugging and optimizing MIPS programs using QtSpim and simulating digital circuits in VHDL on EDA Playground.",
-            "Lead office hours and review sessions, and evaluate assignments and provide technical feedback on assembly programming, processor design, and hardware simulation projects.",
-        ]
+            "Assisted students understand MIPS assembly and instruction set architecture to datapath/control unit design, ALU design, pipelining, and the memory hierarchy.",
+            "Guided students with writing and debugging MIPS programs in QtSpim, and modeling and simulating digital and processor systems with behavioral and structural VHDL on EDA Playground.",
+            "Ran recitation and review sessions and graded processor-design projects with detailed feedback, helping students bridge the gap between low-level hardware and the software that runs on it."
+        ],
+        type: 'ta',
+        showInResearch: true,
     },
     {
         id: 5,
@@ -23,11 +76,13 @@ const experiences = [
         webpage: null,
         webpageLink: null,
         description: [
-            "Engineered end-to-end mobile features using React Native and TypeScript (frontend) and FastAPI (backend), integrating UI components with scalable API services.",
-            "Implemented a real-time messaging system with WebSockets, enabling seamless user-to-user communication.",
-            "Designed and deployed RESTful API endpoints and optimized database CRUD operations with Supabase and PostgreSQL to support dynamic content.",
-            "Improved application reliability and performance by contributing to Agile development cycles, code reviews, and cross-functional integration.",
-        ]
+            "Engineered scalable end-to-end mobile architectures utilizing React Native and TypeScript for the frontend, alongside a high-performance FastAPI backend.",
+            "Architected and integrated a real-time WebSocket-based messaging system to enable seamless and concurrent user-to-user communication.",
+            "Designed RESTful APIs and optimized complex CRUD operations utilizing PostgreSQL and Supabase, ensuring robust data management.",
+            "Streamlined cross-functional integration and maintained software reliability through rigorous code reviews within an Agile development environment."
+        ],
+        type: 'intern',
+        showInResearch: true,
     },
     {
         id: 4,
@@ -38,24 +93,28 @@ const experiences = [
         webpage: "PAL Webpage",
         webpageLink: "https://www.acsu.buffalo.edu/~hetpatel/STA-119/",
         description: [
-            "Facilitate collaborative PAL sessions to reinforce key concepts in Statistical Methods, promoting peer-to-peer learning and academic success.",
-            "Coordinate closely with course instructors by attending lectures and aligning session content with curriculum goals.",
-            "Lead structured, interactive review sessions that encourage critical thinking, improve retention, and support exam preparation.",
-        ]
+            "Facilitated targeted Peer-Assisted Learning sessions to solidify advanced concepts in Statistical Methods, cultivating robust analytical and quantitative skills.",
+            "Collaborated with instructors to align session materials with core statistical curriculum and empirical analysis techniques.",
+            "Directed interactive, data-driven review sessions to enhance critical problem-solving capabilities and theoretical retention."
+        ],
+        type: 'other',
+        showInResearch: false,
     },
     {
         id: 3,
         department: "Math Place",
-        title: "Math Tutor",
+        title: "Mathematics Tutor",
         start: "January 2024",
         end: "August 2025",
         webpage: null,
         webpageLink: null,
         description: [
-            "Provide individualized tutoring in Algebra, Business Math, and Calculus, adapting explanations to diverse learning styles.",
-            "Guide students toward deeper conceptual understanding while fostering independent problem-solving and critical thinking skills.",
-            "Support academic growth by encouraging active learning strategies and building student confidence in mathematics.",
-        ]
+            "Delivered analytical and technical tutoring across complex mathematical disciplines, adapting instructional methodologies for quantitative analysis.",
+            "Mentored students in developing independent, logic-driven problem-solving strategies essential for computational mathematics.",
+            "Supported academic progression by building foundational confidence and promoting rigorous mathematical proofing and calculation techniques."
+        ],
+        type: 'other',
+        showInResearch: false,
     },
     {
         id: 2,
@@ -66,10 +125,12 @@ const experiences = [
         webpage: null,
         webpageLink: null,
         description: [
-            "Collaborated with faculty to deliver instruction, grade coursework, and monitor student progress in a summer bridge math course.",
-            "Led recitation sessions and provided personalized academic support to help first-year students strengthen foundational skills.",
-            "Supported student success by reinforcing key concepts, facilitating targeted practice, and promoting effective study strategies.",
-        ]
+            "Partnered with faculty to execute technical instruction, evaluate coursework, and track academic performance within the quantitative Summer Bridge Program.",
+            "Led focused recitations, delivering targeted academic interventions to establish a rigorous mathematical foundation for incoming students.",
+            "Reinforced critical analytical concepts and guided targeted practice to optimize student transition into STEM disciplines."
+        ],
+        type: 'other',
+        showInResearch: false,
     },
     {
         id: 1,
@@ -80,11 +141,13 @@ const experiences = [
         webpage: null,
         webpageLink: null,
         description: [
-            "Provide one-on-one and drop-in tutoring for student-athletes in Computer Science, Statistics, and Math courses from Precalculus to Advanced Calculus, Management Math, and Linear Algebra.",
-            "Support academic success by clarifying lecture material, guiding problem-solving, and reinforcing core concepts through personalized instruction.",
-            "Monitor student progress and collaborate with program coordinators and coaches to ensure consistent academic support.",
-        ]
-    },
+            "Conducted individualized academic tutoring in advanced Computer Science, Applied Statistics, and theoretical Mathematics, including Linear Algebra.",
+            "Reinforced complex technical subjects and core software engineering principles through personalized, logic-oriented instructional strategies.",
+            "Monitored quantitative progress and synchronized with program coordinators to ensure consistent, high-level academic support for student-athletes."
+        ],
+        type: 'other',
+        showInResearch: false,
+    }
 ]
 
 export default experiences
