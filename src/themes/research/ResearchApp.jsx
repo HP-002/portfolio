@@ -26,7 +26,7 @@ export default function ResearchApp() {
           <Education />
           <Research />
           <Work />
-          <Publications />
+          {/* <Publications /> */}
           <Projects />
           <Contact />
           <footer className={styles.footer}>
