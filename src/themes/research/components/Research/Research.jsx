@@ -15,9 +15,9 @@ export default function Research() {
           <li key={entry.id} className={styles.item}>
             <div className={styles.itemHeader}>
               <h3 className={styles.title}>{entry.title}</h3>
-              <span className={styles.dates}>
+              {/* <span className={styles.dates}>
                 {entry.start} – {entry.end}
-              </span>
+              </span> */}
             </div>
             {/* <p className={styles.department}>
               {entry.department}
