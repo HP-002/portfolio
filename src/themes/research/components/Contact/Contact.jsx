@@ -11,7 +11,7 @@ export default function Contact() {
       <div className={styles.locationContainer}>
         <FaMapMarkerAlt aria-hidden="true" />
         <p className={styles.location}>
-          University at Buffalo - State University of New York @ Buffalo, NY
+          University at Buffalo - State University of New York
         </p>
       </div>
 
