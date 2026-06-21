@@ -14,7 +14,7 @@ const environments = [
     },
     {
         id: 2,
-        name: "Ubuntu Linux",
+        name: "Ubuntu",
         icon: UbuntuIcon,
         description: "OS",
         showInResearch: true,

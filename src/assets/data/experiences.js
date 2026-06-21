@@ -1,17 +1,36 @@
 
 const experiences = [
     {
-        id: 8,
+        id: 9,
         department: "School of Engineering and Applied Sciences",
+        lab: "WIRES",
+        faculty: "Roshan Ayyalasomayajula",
         title: "SEAS Undergraduate Research Experience (SURE) Intern",
         start: "May 2026",
         end: "Present",
         webpage: null,
         webpageLink: null,
         description: [
-            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Designed a differentially private framework for collaborative WiFi-based indoor localization, where multiple access points work together to locate a person while stopping a central server from pinpointing their exact position.",
+            "Built and trained a split neural network on CSI data, keeping raw signals on-device and only sharing clipped embeddings, with formal differential privacy guarantees enforced by adding calibrated Gaussian noise.",
+            "Tuned the privacy-accuracy trade-off using geo-indistinguishability and fusion-aware noise calibration, then validated it by measuring the best attacker's localization error against the Cramér–Rao lower bound."
+        ],
+        type: 'research',
+        showInResearch: true,
+    },
+    {
+        id: 8,
+        department: "Computer Science Department",
+        lab: "ESC Lab",
+        faculty: "Dr. Wenyao Xu",
+        title: "Research Assistant",
+        start: "May 2026",
+        end: "Present",
+        webpage: null,
+        webpageLink: null,
+        description: [
+            "Contributed to mRehab, a mobile rehabilitation app that helps post-stroke patients rebuild mobility and independence by guiding them through therapy exercises at home, no clinic visit required.",
+            "Built the app in React Native and used the phone's built-in motion sensors (accelerometer and gyroscope) to track movements performed with 3D-printed props, turning everyday exercises into measurable rehab data."        
         ],
         type: 'research',
         showInResearch: true,
@@ -25,9 +44,9 @@ const experiences = [
         webpage: null,
         webpageLink: null,
         description: [
-            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Supported students across core ML topics including supervised and unsupervised learning, decision trees, neural networks, SVMs, and reinforcement learning.",
+            "Held weekly office hours and fielded questions on Piazza to help students debug their Python implementations and build a solid grasp of the math and intuition behind each algorithm.",
+            "Graded projects and exams while giving clear, actionable feedback, helping students connect machine learning theory to hands-on, real-world problem solving."
         ],
         type: 'ta',
         showInResearch: true,
@@ -41,9 +60,9 @@ const experiences = [
         webpage: null,
         webpageLink: null,
         description: [
-            "Instruct students on fundamental computer architecture principles, including MIPS assembly, datapath design, memory hierarchies, and ALU architecture.",
-            "Facilitate hands-on debugging and optimization of MIPS programs utilizing QtSpim, alongside hardware simulation via VHDL on EDA Playground.",
-            "Lead technical review sessions and evaluate processor design projects to reinforce low-level systems engineering concepts."
+            "Assisted students understand MIPS assembly and instruction set architecture to datapath/control unit design, ALU design, pipelining, and the memory hierarchy.",
+            "Guided students with writing and debugging MIPS programs in QtSpim, and modeling and simulating digital and processor systems with behavioral and structural VHDL on EDA Playground.",
+            "Ran recitation and review sessions and graded processor-design projects with detailed feedback, helping students bridge the gap between low-level hardware and the software that runs on it."
         ],
         type: 'ta',
         showInResearch: true,
@@ -84,7 +103,7 @@ const experiences = [
     {
         id: 3,
         department: "Math Place",
-        title: "Math Tutor",
+        title: "Mathematics Tutor",
         start: "January 2024",
         end: "August 2025",
         webpage: null,
