@@ -9,7 +9,8 @@ import CONTACT from '../../../../assets/data/contact'
 const SECTIONS = [
   { href: '#about', label: 'About Me' },
   { href: '#education', label: 'Education' },
-  { href: '#experience', label: 'Experiences' },
+  { href: '#research', label: 'Research' },
+  { href: '#work', label: 'Work' },
   { href: '#publications', label: 'Publications' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
