@@ -11,7 +11,7 @@ const SECTIONS = [
   { href: '#education', label: 'Education' },
   { href: '#research', label: 'Research' },
   { href: '#work', label: 'Work' },
-  { href: '#publications', label: 'Publications' },
+  // { href: '#publications', label: 'Publications' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
 ]
@@ -21,7 +21,7 @@ export default function Nav() {
     <nav className={styles.nav} aria-label="Primary">
       <div className={styles.inner}>
         <div className={styles.left}>
-          <a href="#home" className={styles.name}>
+          <a href="#about" className={styles.name}>
             {name}
           </a>
         </div>
@@ -37,7 +37,7 @@ export default function Nav() {
         </ul>
 
         <div className={styles.right}>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <ul className={styles.socials} aria-label="External links">
             <li>
               <a
