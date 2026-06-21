@@ -4,14 +4,15 @@
   /* --- Colors --- */
   --color-bg: #FAFAF7;
   --color-surface: #F2F0EB;
-  --color-text: #2A2418;
-  --color-muted: #7A6E55;
-  --color-accent: #5e7bff;
+  --color-text: #000000;
+  --color-muted: #382a06;
+  --color-accent: #382a06;
   --color-border: #DDD8CC;
 
   /* --- Typography --- */
   --font-heading: 'Lora', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
+  --size-title: 5rem;
   --size-h1: 2.5rem;
   --size-h2: 1.75rem;
   --size-h3: 1.25rem;
@@ -31,10 +32,10 @@
   --space-xxl: 6rem;
 
   /* --- Layout --- */
-  --max-width: 760px;
+  --max-width: 70rem;
   --height-nav: 64px;
-  --radius-card: 6px;
-  --radius-btn: 15px;
+  --radius-card: 8px;
+  --radius-btn: 20px;
 
   /* --- Transitions: NONE in research mode --- */
   --transition-card: none;
