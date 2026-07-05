@@ -15,6 +15,8 @@ import PyTorchIcon from "../images/pytorch.svg"
 import OpenCVIcon from "../images/opencv.svg"
 import GNUBisonIcon from "../images/gnu-bison.png"
 import FastAPIIcon from "../images/fastapi.svg"
+import OpacusIcon from "../images/opacus.svg"
+import CometMLIcon from "../images/cometml.svg"
 
 const machineLearningFL = [
     {
@@ -36,6 +38,20 @@ const machineLearningFL = [
         name: "scikit-learn",
         icon: ScikitLearnIcon,
         description: "ML Library",
+        showInResearch: true,
+    },
+    {   
+        id: "opacus",
+        name: "Opcaus",
+        icon: OpacusIcon,
+        description: "ML Library",
+        showInResearch: true,
+    },
+    {   
+        id: "cometml",
+        name: "CometML",
+        icon: CometMLIcon,
+        description: "ML Log Platform",
         showInResearch: true,
     },
     {
