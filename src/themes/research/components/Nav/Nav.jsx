@@ -37,7 +37,7 @@ export default function Nav() {
         </ul>
 
         <div className={styles.right}>
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
           <ul className={styles.socials} aria-label="External links">
             <li>
               <a

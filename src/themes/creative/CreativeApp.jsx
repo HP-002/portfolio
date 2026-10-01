@@ -1,21 +1,45 @@
-import './tokens.css'
-
-import Nav from './components/Nav/Nav'
-import Hero from './components/Hero/Hero'
-import About from './components/About/About'
-import Projects from './components/Projects/Projects'
-import Skills from './components/Skills/Skills'
-import Contact from './components/Contact/Contact'
+import "./tokens.css";
+import styles from "./CreativeApp.module.css";
+import Nav from "./components/Nav/Nav";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Experience from "./components/Experience/Experience";
+import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
 
 export default function CreativeApp() {
   return (
-    <main>
+    <div className={styles.app}>
+      <a className={styles.skip} href="#creative-main">
+        Skip to content
+      </a>
       <Nav />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-    </main>
-  )
+      <main id="creative-main">
+        <Hero />
+        <div
+          className={styles.ticker}
+          aria-label="Research, engineering, and creative exploration"
+        >
+          <span>RESEARCH WITH PURPOSE</span>
+          <i aria-hidden="true">✳</i>
+          <span>ENGINEERING WITH INTENTION</span>
+          <i aria-hidden="true">✳</i>
+          <span>ALWAYS EXPLORING</span>
+        </div>
+        <Projects />
+        <About />
+        <Experience />
+        <Skills />
+        <Contact />
+      </main>
+      <footer className={styles.footer}>
+        <a href="#home">
+          HP<span> / </span>Het Patel
+        </a>
+        <p>Built with curiosity. © {new Date().getFullYear()}</p>
+        <a href="#home">Back to top ↑</a>
+      </footer>
+    </div>
+  );
 }

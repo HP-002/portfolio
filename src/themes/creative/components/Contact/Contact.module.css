@@ -1,5 +1,137 @@
-/* Creative Contact styles — all values must come from tokens */
-
 .contact {
-  /* TODO: layout */
+  background: #1c241b;
+  border-top: 1px solid #3e4a36;
+}
+.inner {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 72px 40px 54px;
+}
+.eyebrow {
+  font: 500 0.65rem var(--font-heading);
+  letter-spacing: 0.17em;
+  color: #b7ce99;
+  margin-bottom: 28px;
+}
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.layout h2 {
+  font: 500 clamp(2.5rem, 5vw, 4.5rem)/1.1 var(--font-heading);
+  letter-spacing: -0.055em;
+}
+.layout h2 em {
+  color: #c8d7b7;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.layout p {
+  color: #b1bca8;
+  font-size: 0.9rem;
+  margin-top: 24px;
+}
+.circle {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #1c241b;
+  text-decoration: none;
+  gap: 8px;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.circle svg {
+  font-size: 2.8rem;
+}
+.circle span {
+  font: 500 0.65rem var(--font-heading);
+  letter-spacing: 0.08em;
+}
+.circle:hover {
+  transform: rotate(8deg);
+  background: #f9c291;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 50px;
+  padding-top: 28px;
+  border-top: 1px solid #404b37;
+  flex-wrap: wrap;
+}
+.email {
+  color: var(--color-text);
+  font: 500 clamp(0.95rem, 2vw, 1.5rem) var(--font-heading);
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c0cbb8;
+  font-size: 0.75rem;
+  text-decoration: none;
+  padding-block: 8px;
+}
+.bottom a:hover {
+  color: var(--color-accent);
+}
+@media (max-width: 700px) {
+  .inner {
+    padding: 56px 24px 36px;
+  }
+  .layout {
+    flex-direction: column;
+    align-items: start;
+    gap: 28px;
+  }
+  .layout h2 {
+    font-size: clamp(2.3rem, 8.5vw, 3.5rem);
+  }
+  .layout p br {
+    display: none;
+  }
+  .circle {
+    width: 90px;
+    height: 90px;
+  }
+  .circle svg {
+    font-size: 1.8rem;
+  }
+  .circle span {
+    font-size: 0.5rem;
+  }
+  .bottom {
+    margin-top: 36px;
+    gap: 18px;
+  }
+  .socials {
+    gap: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    transition: none;
+  }
 }

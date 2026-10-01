@@ -133,6 +133,14 @@
 when the view is smaller than 1100px */
 
 @media (max-width: 1100px) {
+	.inner {
+		grid-template-columns: auto 1fr;
+	}
+
+	.right {
+		grid-column: 2;
+	}
+
 	.center {
 		display: none;
 	}
