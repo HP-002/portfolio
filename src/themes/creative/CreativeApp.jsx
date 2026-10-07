@@ -19,16 +19,6 @@ export default function CreativeApp() {
         <div id="home">
           <About />
         </div>
-        <div
-          className={styles.ticker}
-          aria-label="Research, engineering, and creative exploration"
-        >
-          <span>RESEARCH WITH PURPOSE</span>
-          <i aria-hidden="true">✳</i>
-          <span>ENGINEERING WITH INTENTION</span>
-          <i aria-hidden="true">✳</i>
-          <span>ALWAYS EXPLORING</span>
-        </div>
         <Education />
         <Experience />
         <Projects />

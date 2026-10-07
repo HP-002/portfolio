@@ -1,7 +1,8 @@
-import { LuArrowDown, LuArrowUpRight } from "react-icons/lu";
+import { LuArrowUpRight } from "react-icons/lu";
 import { name } from "../../../../assets/data/about";
 import profile from "../../assets/profile.webp";
 import resume from "../../../../assets/docs/Het Patel - Resume.pdf";
+import transcript from "../../../../assets/docs/Het Patel - Transcript.pdf";
 import styles from "./About.module.css";
 
 export default function About() {
@@ -12,12 +13,10 @@ export default function About() {
           <span /> 00 / AN INTRODUCTION
         </p>
         <h1 id="about-title">
-          {name.split(" ")[0]} <em>{name.split(" ").slice(1).join(" ")}.</em>
+          {name.split(" ")[0]} <em>{name.split(" ").slice(1).join(" ")}</em>
         </h1>
         <p className={styles.subtitle}>
-          Researcher. Developer.
-          <br />
-          Always a student of how things work.
+          Researcher + Developer
         </p>
         <p>
           I’m a Computer Science and Statistics undergraduate at the University
@@ -27,20 +26,24 @@ export default function About() {
         <p>
           My work moves between WiFi signals, mobile rehabilitation, systems,
           and creative experiments. I’m currently exploring reinforcement
-          learning and looking toward a PhD, with a growing interest in quantum
-          computing.
+          learning and looking toward a PhD in Deep Learning and Reinforcement Learning topics.
         </p>
         <div className={styles.links}>
-          <a className={styles.primary} href="#education">
-            Get to know me <LuArrowDown aria-hidden="true" />
-          </a>
           <a
-            className={styles.resume}
+            className={styles.primary}
             href={resume}
             target="_blank"
             rel="noopener noreferrer"
           >
-            View my résumé <LuArrowUpRight aria-hidden="true" />
+            Resume <LuArrowUpRight aria-hidden="true" />
+          </a>
+          <a
+            className={styles.secondary}
+            href={transcript}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Transcript <LuArrowUpRight aria-hidden="true" />
           </a>
         </div>
         <div className={styles.marginNote}>
@@ -62,14 +65,9 @@ export default function About() {
           </span>
         </div>
         <figcaption>
-          <span>THE PERSON BEHIND THE CODE</span>
+          <span></span>
           <span>FIG. 00 ↗</span>
         </figcaption>
-        <span className={styles.stamp} aria-hidden="true">
-          STAY
-          <br />
-          <em>curious.</em>
-        </span>
       </figure>
     </section>
   );

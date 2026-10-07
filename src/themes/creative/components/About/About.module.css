@@ -71,12 +71,12 @@
 .primary:hover {
   background: #fbc399;
 }
-.resume {
+.secondary {
   color: var(--color-text);
   border-bottom: 1px solid #82906d;
   padding-block: 8px;
 }
-.resume:hover {
+.secondary:hover {
   color: var(--color-accent);
 }
 .marginNote {
@@ -84,9 +84,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px 28px;
-  font: 0.55rem var(--font-heading);
-  letter-spacing: 0.1em;
-  color: var(--color-muted);
+  font: 600 0.875rem/1.5 var(--font-heading);
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
 }
 .photo {
   position: relative;
@@ -110,7 +110,6 @@
   height: 460px;
   object-fit: cover;
   object-position: center 35%;
-  filter: saturate(0.7);
 }
 .crosshair {
   position: absolute;
@@ -184,6 +183,6 @@
   }
   .marginNote {
     margin-top: 30px;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
