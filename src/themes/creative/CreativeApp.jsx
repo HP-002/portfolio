@@ -1,7 +1,7 @@
 import "./tokens.css";
 import styles from "./CreativeApp.module.css";
 import Nav from "./components/Nav/Nav";
-import Hero from "./components/Hero/Hero";
+import Education from "./components/Education/Education";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Experience from "./components/Experience/Experience";
@@ -16,7 +16,9 @@ export default function CreativeApp() {
       </a>
       <Nav />
       <main id="creative-main">
-        <Hero />
+        <div id="home">
+          <About />
+        </div>
         <div
           className={styles.ticker}
           aria-label="Research, engineering, and creative exploration"
@@ -27,9 +29,9 @@ export default function CreativeApp() {
           <i aria-hidden="true">✳</i>
           <span>ALWAYS EXPLORING</span>
         </div>
-        <Projects />
-        <About />
+        <Education />
         <Experience />
+        <Projects />
         <Skills />
         <Contact />
       </main>

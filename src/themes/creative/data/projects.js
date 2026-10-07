@@ -64,6 +64,20 @@ const presentation = {
 
 export default [
   {
+    id: "traffic-light-control",
+    title: "Traffic Light Control",
+    category: "AI & ML",
+    label: "Learning when to let traffic flow",
+    visual: "traffic",
+    status: "In progress",
+    description:
+      "An in-progress reinforcement learning project exploring adaptive signal control in a simulated intersection, using traffic queues and time in green to inform decisions.",
+    tech: ["Python", "Gymnasium", "NumPy", "Q-Learning", "Double Q-Learning"],
+    github: "https://github.com/HP-002/traffic-light-control",
+    live: null,
+    note: "Currently developing a custom Gymnasium environment and Q-Learning / Double Q-Learning agents. The simulation supports stochastic arrivals; evaluation and refinements are ongoing.",
+  },
+  {
     id: "black-hole",
     title: "Black Hole Simulator",
     category: "Systems",

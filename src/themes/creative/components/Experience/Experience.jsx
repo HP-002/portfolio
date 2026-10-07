@@ -1,46 +1,62 @@
 import { LuArrowUpRight } from "react-icons/lu";
+import experiences from "../../../../assets/data/experiences";
 import styles from "./Experience.module.css";
 
-const experiences = [
-  {
-    id: "wires",
-    period: "MAY 2026 — PRESENT",
-    title: "Privacy-preserving wireless localization",
-    role: "Research Assistant · WIRES Lab",
-    description:
-      "Working with Dr. Roshan Ayyalasomayajula on split neural networks, differential privacy, and federated learning to locate devices using WiFi signals.",
-    link: "https://wires-ub.github.io/",
-    linkLabel: "WIRES Lab",
-    tag: "RESEARCH",
-  },
-  {
-    id: "mrehab",
-    period: "MAY 2026 — PRESENT",
-    title: "Technology that helps people move",
-    role: "Research Assistant · ESC Group",
-    description:
-      "Contributing to mRehab with Dr. Wenyao Xu: a React Native rehabilitation app using built-in motion sensors to help post-stroke patients rebuild mobility.",
-    tag: "RESEARCH",
-  },
-  {
-    id: "teaching",
-    period: "JAN 2026 — PRESENT",
-    title: "Making complex ideas click",
-    role: "Undergraduate Teaching Assistant · University at Buffalo",
-    description:
-      "Helping students connect theory and implementation in Computer Organization and Machine Learning, from MIPS and datapaths to neural networks and reinforcement learning.",
-    tag: "TEACHING",
-  },
-  {
-    id: "athlynk",
-    period: "AUG 2025 — OCT 2025",
-    title: "Building across the stack",
-    role: "Full-Stack Software Developer Intern · Athlynk Inc.",
-    description:
-      "Built mobile features with React Native, REST APIs with FastAPI, real-time messaging with WebSockets, and database operations with PostgreSQL.",
-    tag: "ENGINEERING",
-  },
-];
+const tags = {
+  research: "RESEARCH",
+  ta: "TEACHING",
+  intern: "ENGINEERING",
+  other: "TEACHING & SUPPORT",
+};
+const recent = experiences.filter((item) => item.type !== "other");
+const earlier = experiences.filter((item) => item.type === "other");
+
+function Role({ item, compact = false }) {
+  return (
+    <article
+      className={`${styles.row} ${compact ? styles.compact : ""}`}
+      data-experience-id={item.id}
+    >
+      <div className={styles.meta}>
+        <span>
+          {item.start} — {item.end}
+        </span>
+        <span className={styles.tag}>{tags[item.type]}</span>
+      </div>
+      <div className={styles.detail}>
+        <p className={styles.role}>
+          {item.lab
+            ? `${item.lab.endsWith("Lab") ? item.lab : `${item.lab} Lab`} · ${item.department}`
+            : item.department}
+        </p>
+        <h3>{item.title}</h3>
+        {item.faculty && <p className={styles.faculty}>With {item.faculty}</p>}
+        <p className={styles.description}>{item.description[0]}</p>
+        {item.description.length > 1 && (
+          <details className={styles.notes}>
+            <summary>
+              More about this role <span aria-hidden="true">+</span>
+            </summary>
+            <ul>
+              {item.description.slice(1).map((text) => (
+                <li key={text}>{text}</li>
+              ))}
+            </ul>
+          </details>
+        )}
+        {item.webpageLink && (
+          <a href={item.webpageLink} target="_blank" rel="noopener noreferrer">
+            {item.webpage || "Visit website"}{" "}
+            <LuArrowUpRight aria-hidden="true" />
+          </a>
+        )}
+      </div>
+      <span className={styles.arrow} aria-hidden="true">
+        ↗
+      </span>
+    </article>
+  );
+}
 
 export default function Experience() {
   return (
@@ -51,38 +67,34 @@ export default function Experience() {
     >
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>03 / THE JOURNEY SO FAR</p>
+          <p className={styles.eyebrow}>02 / THE COMPLETE JOURNEY</p>
           <h2 id="experience-title">
-            Learning by <em>doing.</em>
+            Every chapter
+            <br />
+            <em>leaves a mark.</em>
           </h2>
         </div>
         <p>
-          In the lab. In the classroom.
+          Research, engineering, and teaching.
           <br />
-          And out in the world.
+          All {experiences.length} roles. Each part of the story.
         </p>
       </div>
       <div className={styles.timeline}>
-        {experiences.map((item) => (
-          <article className={styles.row} key={item.id}>
-            <div className={styles.meta}>
-              <span>{item.period}</span>
-              <span className={styles.tag}>{item.tag}</span>
-            </div>
-            <div className={styles.detail}>
-              <p className={styles.role}>{item.role}</p>
-              <h3>{item.title}</h3>
-              <p className={styles.description}>{item.description}</p>
-              {item.link && (
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  {item.linkLabel} <LuArrowUpRight aria-hidden="true" />
-                </a>
-              )}
-            </div>
-            <span className={styles.arrow} aria-hidden="true">
-              ↗
-            </span>
-          </article>
+        {recent.map((item) => (
+          <Role key={item.id} item={item} />
+        ))}
+      </div>
+      <div className={styles.archiveHeading}>
+        <span>EARLIER CHAPTERS / 2024—2025</span>
+        <p>
+          Where explaining, mentoring, and building confidence became part of my
+          work.
+        </p>
+      </div>
+      <div className={styles.archive}>
+        {earlier.map((item) => (
+          <Role key={item.id} item={item} compact />
         ))}
       </div>
     </section>

@@ -27,6 +27,25 @@ function ProjectVisual({ project }) {
         </span>
       </div>
     );
+  if (project.visual === "traffic")
+    return (
+      <div className={styles.traffic} aria-hidden="true">
+        <div className={styles.roads} />
+        <div className={styles.signal}>
+          <i />
+          <i />
+          <i />
+        </div>
+        <span className={styles.trafficTitle}>
+          observe.
+          <br />
+          <em>decide.</em>
+          <br />
+          adapt.
+        </span>
+        <span className={styles.figureLabel}>RL / ADAPTIVE SIGNAL CONTROL</span>
+      </div>
+    );
   if (project.visual === "compiler")
     return (
       <div className={styles.compiler} aria-hidden="true">
@@ -106,7 +125,7 @@ export default function Projects() {
     >
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>01 / SELECTED WORK</p>
+          <p className={styles.eyebrow}>03 / SELECTED WORK</p>
           <h2 id="projects-title">
             Ideas in the <em>real world.</em>
           </h2>
@@ -149,6 +168,12 @@ export default function Projects() {
             <div className={styles.body}>
               <p className={styles.label}>{project.label}</p>
               <h3>{project.title}</h3>
+              {project.status && (
+                <p className={styles.status}>
+                  <span aria-hidden="true" />
+                  {project.status}
+                </p>
+              )}
               <p className={styles.description}>{project.description}</p>
               <ul className={styles.tech} aria-label="Technologies">
                 {project.tech.map((tech) => (

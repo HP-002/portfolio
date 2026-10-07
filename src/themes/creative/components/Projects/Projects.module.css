@@ -417,3 +417,82 @@
     transition: none;
   }
 }
+
+.traffic {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #1c2823;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+.roads {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 48%,
+      #c1cdb01a 48%,
+      #c1cdb01a 52%,
+      transparent 52%
+    ),
+    linear-gradient(
+      transparent 45%,
+      #c1cdb01a 45%,
+      #c1cdb01a 55%,
+      transparent 55%
+    );
+  transform: rotate(-20deg) scale(1.4);
+}
+.signal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid #65735a;
+  border-radius: 12px;
+  background: #121b16;
+}
+.signal i {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #734939;
+}
+.signal i:nth-child(2) {
+  background: #716039;
+}
+.signal i:nth-child(3) {
+  background: #b7ce99;
+  box-shadow: 0 0 22px #b7ce9940;
+}
+.trafficTitle {
+  position: relative;
+  font: 500 2rem/1.05 var(--font-heading);
+  letter-spacing: -0.04em;
+  color: #d4dfcb;
+}
+.trafficTitle em {
+  font-family: Georgia, serif;
+  color: var(--color-accent);
+  font-weight: 400;
+}
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent);
+  font: 0.65rem var(--font-heading);
+  margin: -4px 0 14px;
+}
+.status span {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}

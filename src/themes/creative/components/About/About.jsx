@@ -1,74 +1,76 @@
-import { LuArrowUpRight } from "react-icons/lu";
+import { LuArrowDown, LuArrowUpRight } from "react-icons/lu";
+import { name } from "../../../../assets/data/about";
 import profile from "../../assets/profile.webp";
-import education from "../../../../assets/data/education";
 import resume from "../../../../assets/docs/Het Patel - Resume.pdf";
 import styles from "./About.module.css";
 
 export default function About() {
-  const university = education[0];
   return (
     <section id="about" className={styles.about} aria-labelledby="about-title">
-      <div className={styles.photo}>
-        <img
-          src={profile}
-          alt="Het Patel"
-          loading="lazy"
-          width="600"
-          height="750"
-        />
-        <div className={styles.caption}>
-          <span>A LITTLE ABOUT ME</span>
-          <span>↗</span>
+      <div className={styles.copy}>
+        <p className={styles.eyebrow}>
+          <span /> 00 / AN INTRODUCTION
+        </p>
+        <h1 id="about-title">
+          {name.split(" ")[0]} <em>{name.split(" ").slice(1).join(" ")}.</em>
+        </h1>
+        <p className={styles.subtitle}>
+          Researcher. Developer.
+          <br />
+          Always a student of how things work.
+        </p>
+        <p>
+          I’m a Computer Science and Statistics undergraduate at the University
+          at Buffalo. I build software and explore machine learning, with a
+          particular interest in privacy-preserving wireless localization.
+        </p>
+        <p>
+          My work moves between WiFi signals, mobile rehabilitation, systems,
+          and creative experiments. I’m currently exploring reinforcement
+          learning and looking toward a PhD, with a growing interest in quantum
+          computing.
+        </p>
+        <div className={styles.links}>
+          <a className={styles.primary} href="#education">
+            Get to know me <LuArrowDown aria-hidden="true" />
+          </a>
+          <a
+            className={styles.resume}
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View my résumé <LuArrowUpRight aria-hidden="true" />
+          </a>
         </div>
-        <span className={styles.stamp}>
+        <div className={styles.marginNote}>
+          <span>BUFFALO, NEW YORK</span>
+          <span>COMPUTER SCIENCE × STATISTICS</span>
+        </div>
+      </div>
+      <figure className={styles.photo}>
+        <div className={styles.frame}>
+          <img
+            src={profile}
+            alt="Het Patel"
+            width="600"
+            height="750"
+            fetchPriority="high"
+          />
+          <span className={styles.crosshair} aria-hidden="true">
+            +
+          </span>
+        </div>
+        <figcaption>
+          <span>THE PERSON BEHIND THE CODE</span>
+          <span>FIG. 00 ↗</span>
+        </figcaption>
+        <span className={styles.stamp} aria-hidden="true">
           STAY
           <br />
           <em>curious.</em>
         </span>
-      </div>
-      <div className={styles.copy}>
-        <p className={styles.eyebrow}>02 / THE PERSON BEHIND THE CODE</p>
-        <h2 id="about-title">
-          A builder’s mindset.
-          <br />
-          <em>A researcher’s curiosity.</em>
-        </h2>
-        <p>
-          I’m Het, a Computer Science and Statistics undergraduate at the
-          University at Buffalo. I’m drawn to the space where a good question
-          becomes something you can actually use.
-        </p>
-        <p>
-          That takes me from privacy-preserving wireless localization and mobile
-          rehabilitation to operating systems, compilers, and a black hole
-          rendered from scratch. Different problems. The same drive to
-          understand them deeply.
-        </p>
-        <p>
-          Right now, I’m exploring machine learning and reinforcement learning,
-          with a growing interest in quantum computing. I’m looking toward a PhD
-          and always happy to meet people asking interesting questions.
-        </p>
-        <div className={styles.education}>
-          <span className={styles.eduLabel}>THE FOUNDATION</span>
-          <h3>University at Buffalo</h3>
-          <p>B.S. Computer Science + B.A. Statistics</p>
-          <div>
-            <span>
-              {university.start} — {university.end}
-            </span>
-            <span>{university.gpa.toFixed(2)} / 4.0 GPA</span>
-          </div>
-        </div>
-        <a
-          className={styles.resume}
-          href={resume}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View my résumé <LuArrowUpRight aria-hidden="true" />
-        </a>
-      </div>
+      </figure>
     </section>
   );
 }

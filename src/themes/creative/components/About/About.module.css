@@ -1,49 +1,151 @@
 .about {
   max-width: var(--max-width);
   margin: auto;
-  padding: 40px 40px 96px;
+  padding: 72px 40px 64px;
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 90px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 100px;
   align-items: center;
 }
+.copy {
+  min-width: 0;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-accent);
+  font: 500 0.65rem var(--font-heading);
+  letter-spacing: 0.15em;
+  margin-bottom: 28px;
+}
+.eyebrow span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b7ce99;
+}
+.copy h1 {
+  font: 500 clamp(3.5rem, 7vw, 6.5rem)/1 var(--font-heading);
+  letter-spacing: -0.065em;
+  margin-bottom: 24px;
+}
+.copy h1 em {
+  color: var(--color-accent);
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.copy > .subtitle {
+  font: 500 1.2rem/1.55 var(--font-heading);
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+.copy > p:not(.eyebrow):not(.subtitle) {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  max-width: 590px;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: center;
+  margin-top: 30px;
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.primary {
+  padding: 14px 20px;
+  border-radius: 100px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 600;
+}
+.primary:hover {
+  background: #fbc399;
+}
+.resume {
+  color: var(--color-text);
+  border-bottom: 1px solid #82906d;
+  padding-block: 8px;
+}
+.resume:hover {
+  color: var(--color-accent);
+}
+.marginNote {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  font: 0.55rem var(--font-heading);
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+}
 .photo {
+  position: relative;
+  margin: 0;
+  padding: 16px 0 0 16px;
+}
+.photo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 16px;
+  bottom: 48px;
+  left: 0;
+  border: 1px solid #65735a;
+}
+.frame {
   position: relative;
 }
 .photo img {
   width: 100%;
-  height: 520px;
+  height: 460px;
   object-fit: cover;
   object-position: center 35%;
-  border-radius: 12px;
-  filter: saturate(0.65);
+  filter: saturate(0.7);
 }
-.caption {
+.crosshair {
+  position: absolute;
+  top: -27px;
+  left: -23px;
+  color: var(--color-accent);
+  font: 1.5rem var(--font-heading);
+}
+.photo figcaption {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 14px 0;
-  font: 0.6rem var(--font-heading);
+  gap: 15px;
+  padding: 16px 0;
+  font: 0.55rem var(--font-heading);
   letter-spacing: 0.12em;
   color: var(--color-muted);
 }
 .stamp {
   position: absolute;
-  right: -25px;
+  right: -24px;
   bottom: 62px;
+  width: 104px;
+  height: 104px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border: 1px solid #c5ccae;
-  width: 116px;
-  height: 116px;
   border-radius: 50%;
   background: #252d20;
   color: #d4ddc7;
   transform: rotate(-14deg);
-  font: 0.8rem/1.6 var(--font-heading);
-  letter-spacing: 0.1em;
-  box-shadow: 0 4px 20px #10121160;
+  font: 0.7rem/1.6 var(--font-heading);
+  letter-spacing: 0.12em;
 }
 .stamp em {
   font:
@@ -51,93 +153,37 @@
     serif;
   letter-spacing: -0.05em;
 }
-.eyebrow {
-  font: 500 0.65rem var(--font-heading);
-  letter-spacing: 0.15em;
-  color: var(--color-accent);
-  margin-bottom: 20px;
-}
-.copy h2 {
-  font: 500 clamp(1.8rem, 3.2vw, 2.7rem)/1.2 var(--font-heading);
-  letter-spacing: -0.045em;
-  margin-bottom: 26px;
-}
-.copy h2 em {
-  font-family: Georgia, serif;
-  font-weight: 400;
-  color: var(--color-accent);
-}
-.copy > p:not(.eyebrow) {
-  margin-bottom: 18px;
-  color: var(--color-muted);
-  font-size: 0.9rem;
-}
-.education {
-  margin: 28px 0;
-  border-left: 2px solid #82906d;
-  padding-left: 20px;
-}
-.eduLabel {
-  font: 0.55rem var(--font-heading);
-  letter-spacing: 0.14em;
-  color: #b7ce99;
-}
-.education h3 {
-  font: 500 1.1rem var(--font-heading);
-  margin: 8px 0 4px;
-}
-.education p {
-  font-size: 0.8rem;
-  color: var(--color-muted);
-}
-.education div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  font-size: 0.65rem;
-  color: var(--color-muted);
-  margin-top: 10px;
-}
-.resume {
-  color: var(--color-text);
-  display: inline-flex;
-  align-items: center;
-  gap: 24px;
-  text-decoration: none;
-  border-bottom: 1px solid #82906d;
-  padding: 8px 0;
-  font-size: 0.85rem;
-}
-.resume:hover {
-  color: var(--color-accent);
-}
 @media (max-width: 1000px) {
   .about {
-    gap: 50px;
+    gap: 48px;
   }
   .photo img {
-    height: 440px;
+    height: 420px;
   }
 }
 @media (max-width: 700px) {
   .about {
-    padding: 20px 24px 64px;
+    padding: 42px 24px 36px;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
+  }
+  .copy h1 {
+    font-size: clamp(3.5rem, 14vw, 5.5rem);
+  }
+  .copy > .subtitle {
+    font-size: 1.1rem;
   }
   .photo {
-    max-width: 420px;
-    width: 100%;
+    width: min(100%, 400px);
   }
   .photo img {
-    height: 390px;
+    height: 380px;
   }
   .stamp {
-    right: -10px;
-    width: 100px;
-    height: 100px;
+    right: -8px;
   }
-  .copy h2 {
-    font-size: 2rem;
+  .marginNote {
+    margin-top: 30px;
+    font-size: 0.5rem;
   }
 }

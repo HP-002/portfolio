@@ -118,3 +118,93 @@
     font-size: 1.3rem;
   }
 }
+.faculty {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  margin-bottom: 12px;
+}
+.notes {
+  font-size: 0.8rem;
+  margin-top: 12px;
+  color: var(--color-muted);
+  max-width: 670px;
+}
+.notes summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: fit-content;
+  min-width: 160px;
+  cursor: pointer;
+  list-style: none;
+  padding-block: 5px;
+}
+.notes summary::-webkit-details-marker {
+  display: none;
+}
+.notes summary:hover {
+  color: var(--color-accent);
+}
+.notes[open] summary span {
+  transform: rotate(45deg);
+}
+.notes ul {
+  margin: 14px 0 0 18px;
+}
+.notes li + li {
+  margin-top: 10px;
+}
+.archiveHeading {
+  margin: 38px 0 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 30px;
+}
+.archiveHeading span {
+  font: 0.6rem var(--font-heading);
+  letter-spacing: 0.12em;
+  color: #b7ce99;
+}
+.archiveHeading p {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  max-width: 470px;
+}
+.archive {
+  border-left: 1px solid #65735a;
+  padding-left: 28px;
+}
+.compact {
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+}
+.compact .arrow {
+  display: none;
+}
+.compact .detail h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.compact .description {
+  font-size: 0.78rem;
+}
+.compact .role {
+  font-size: 0.7rem;
+}
+.compact .tag {
+  font-size: 0.45rem;
+}
+@media (max-width: 700px) {
+  .archiveHeading {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .archive {
+    padding-left: 16px;
+  }
+  .compact {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

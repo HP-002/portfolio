@@ -4,9 +4,10 @@ import ThemeToggle from "../../../../shared/components/ThemeToggle/ThemeToggle";
 import styles from "./Nav.module.css";
 
 const sections = [
-  { id: "projects", label: "Work" },
-  { id: "about", label: "About" },
+  { id: "about", label: "Intro" },
+  { id: "education", label: "Education" },
   { id: "experience", label: "Journey" },
+  { id: "projects", label: "Projects" },
   { id: "skills", label: "Toolkit" },
 ];
 
