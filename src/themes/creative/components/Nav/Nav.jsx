@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LuArrowUpRight, LuMenu, LuX } from "react-icons/lu";
+import { FaGithub, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
+import CONTACT from "../../../../assets/data/contact";
 import ThemeToggle from "../../../../shared/components/ThemeToggle/ThemeToggle";
 import styles from "./Nav.module.css";
 
@@ -40,7 +42,7 @@ export default function Nav() {
         menuButton.current?.focus();
       }
     };
-    const media = window.matchMedia("(min-width: 901px)");
+    const media = window.matchMedia("(min-width: 1101px)");
     const onResize = () => {
       if (media.matches) setOpen(false);
     };
@@ -55,6 +57,7 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav} aria-label="Primary">
+        <div className={styles.brandGroup}>
         <a
           className={styles.brand}
           href="#home"
@@ -63,6 +66,18 @@ export default function Nav() {
         >
           hp<span>.</span>
         </a>
+          <button
+            ref={menuButton}
+            className={styles.menu}
+            type="button"
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-expanded={open}
+            aria-controls="creative-navigation"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <LuX /> : <LuMenu />}
+          </button>
+        </div>
         <div
           id="creative-navigation"
           className={`${styles.links} ${open ? styles.open : ""}`}
@@ -87,17 +102,23 @@ export default function Nav() {
         </div>
         <div className={styles.actions}>
           <ThemeToggle />
-          <button
-            ref={menuButton}
-            className={styles.menu}
-            type="button"
-            aria-label={open ? "Close navigation" : "Open navigation"}
-            aria-expanded={open}
-            aria-controls="creative-navigation"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <LuX /> : <LuMenu />}
-          </button>
+          <ul className={styles.socials} aria-label="External links">
+            <li>
+              <a href={CONTACT.github} className={styles.socialLink} aria-label="GitHub" target="_blank" rel="noreferrer noopener">
+                <FaGithub />
+              </a>
+            </li>
+            <li>
+              <a href={CONTACT.linkedin} className={styles.socialLink} aria-label="LinkedIn" target="_blank" rel="noreferrer noopener">
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li>
+              <a href={CONTACT.personalEmail} className={styles.socialLink} aria-label="Email">
+                <FaRegEnvelope />
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
