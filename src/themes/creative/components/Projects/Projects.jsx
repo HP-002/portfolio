@@ -2,6 +2,7 @@ import { useState } from "react";
 import { LuArrowUpRight, LuGithub } from "react-icons/lu";
 import projects from "../../data/projects";
 import styles from "./Projects.module.css";
+import section from "../Role/Sections.module.css";
 
 const filters = ["All work", "AI & ML", "Systems", "Web & Mobile"];
 
@@ -120,24 +121,19 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className={styles.projects}
+      className={section.section}
       aria-labelledby="projects-title"
     >
-      <div className={styles.heading}>
+      <div className={section.heading}>
         <div>
-          <p className={styles.eyebrow}>04 / SELECTED WORK</p>
-          <h2 id="projects-title">
-            Ideas in the <em>real world.</em>
-          </h2>
+          <p className={section.eyebrow}>04 /</p>
+          <h2 id="projects-title">Projects</h2>
         </div>
-        <p>
-          A few things I’ve built.
-          <br />A lot of things I’ve learned.
-        </p>
       </div>
       <div className={styles.filterRow}>
         <div
           className={styles.filters}
+          role="group"
           aria-label="Filter projects by category"
         >
           {filters.map((label) => (
@@ -155,22 +151,23 @@ export default function Projects() {
           ))}
         </div>
         <span className={styles.count} role="status">
-          {String(filtered.length).padStart(2, "0")} PROJECTS
+          {String(visible.length).padStart(2, "0")} / {String(filtered.length).padStart(2, "0")} projects
         </span>
       </div>
-      <div className={styles.cards}>
+      <div className={styles.cards} id="creative-project-list">
         {visible.map((project) => (
           <article className={styles.card} key={project.id}>
             <div className={styles.visual}>
               <ProjectVisual project={project} />
-              <span className={styles.category}>{project.category}</span>
             </div>
             <div className={styles.body}>
-              <p className={styles.label}>{project.label}</p>
+              <div className={styles.projectMeta}>
+                <p className={styles.label}>{project.label}</p>
+                <span className={styles.category}>{project.category}</span>
+              </div>
               <h3>{project.title}</h3>
               {project.status && (
                 <p className={styles.status}>
-                  <span aria-hidden="true" />
                   {project.status}
                 </p>
               )}
@@ -216,10 +213,11 @@ export default function Projects() {
           className={styles.more}
           type="button"
           aria-expanded={showAll}
+          aria-controls="creative-project-list"
           onClick={() => setShowAll(!showAll)}
         >
           {showAll
-            ? "Show selected work"
+            ? "Show fewer projects"
             : `Explore all ${filtered.length} projects`}{" "}
           <span aria-hidden="true">{showAll ? "−" : "+"}</span>
         </button>
