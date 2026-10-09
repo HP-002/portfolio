@@ -4,7 +4,8 @@ import Nav from "./components/Nav/Nav";
 import Education from "./components/Education/Education";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
-import Experience from "./components/Experience/Experience";
+import Research from "./components/Research/Research";
+import Work from "./components/Work/Work";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 
@@ -20,7 +21,8 @@ export default function CreativeApp() {
           <About />
         </div>
         <Education />
-        <Experience />
+        <Research />
+        <Work />
         <Projects />
         <Skills />
         <Contact />

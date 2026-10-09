@@ -125,7 +125,7 @@ export default function Projects() {
     >
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>03 / SELECTED WORK</p>
+          <p className={styles.eyebrow}>04 / SELECTED WORK</p>
           <h2 id="projects-title">
             Ideas in the <em>real world.</em>
           </h2>

@@ -10,7 +10,7 @@ export default function Contact() {
       aria-labelledby="contact-title"
     >
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>05 / WHAT’S NEXT?</p>
+        <p className={styles.eyebrow}>06 / WHAT’S NEXT?</p>
         <div className={styles.layout}>
           <div>
             <h2 id="contact-title">

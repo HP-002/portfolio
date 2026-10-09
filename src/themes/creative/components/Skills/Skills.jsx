@@ -13,7 +13,7 @@ export default function Skills() {
     >
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>04 / THE COMPLETE TOOLKIT</p>
+          <p className={styles.eyebrow}>05 / THE COMPLETE TOOLKIT</p>
           <h2 id="skills-title">
             A working index
             <br />

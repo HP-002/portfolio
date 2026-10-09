@@ -1,0 +1,208 @@
+.row {
+  padding: 32px 0 36px;
+  border-top: 1px solid var(--color-border);
+}
+.workHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 16px 40px;
+}
+.identity {
+  min-width: 0;
+}
+.workHeader .dates {
+  padding-top: 3px;
+}
+.dates {
+  color: var(--color-muted);
+  font: 400 0.7rem/1.6 var(--font-heading);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  justify-self: end;
+  white-space: nowrap;
+}
+.research {
+  padding-block: 40px 44px;
+}
+.lab {
+  font: 500 clamp(1.45rem, 2.4vw, 2rem)/1.3 var(--font-heading);
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+  margin-bottom: 14px;
+}
+.advisor {
+  color: var(--color-accent-secondary);
+  font-weight: 400;
+}
+.position {
+  font: 500 0.9rem/1.5 var(--font-heading);
+  margin-bottom: 4px;
+}
+.department {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+.organization {
+  color: var(--color-accent-secondary);
+  font: 500 0.75rem/1.5 var(--font-heading);
+  margin-bottom: 8px;
+}
+.title {
+  font: 500 clamp(1.15rem, 2vw, 1.5rem)/1.35 var(--font-heading);
+  letter-spacing: -0.03em;
+  text-wrap: pretty;
+}
+.description {
+  margin: 20px 0 0;
+  padding-left: 1.1rem;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+.description li {
+  padding-left: 5px;
+}
+.description li + li {
+  margin-top: 10px;
+}
+.description li::marker {
+  color: var(--color-accent-secondary);
+  font-size: 0.7em;
+}
+.research .description li::marker {
+  color: var(--color-accent-secondary);
+}
+.lead {
+  margin-top: 20px;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  transition: var(--transition-link);
+}
+.link:hover {
+  color: var(--color-accent);
+}
+.notes {
+  margin-top: 16px;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+.notes summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  min-height: 44px;
+}
+.compact {
+  border-top: 1px solid var(--color-border);
+}
+.compact summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 24px;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.compact summary,
+.notes summary {
+  cursor: pointer;
+  list-style: none;
+}
+.compact summary::-webkit-details-marker,
+.notes summary::-webkit-details-marker {
+  display: none;
+}
+.compact summary:hover,
+.compact[open] summary {
+  background: var(--color-surface);
+}
+.compact summary:hover .compactTitle,
+.notes summary:hover {
+  color: var(--color-accent);
+}
+.compact summary:focus-visible,
+.notes summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+.compactTitle {
+  font: 500 1rem/1.5 var(--font-heading);
+  transition: var(--transition-link);
+}
+.compactIdentity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.compactOrganization {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.toggle {
+  color: var(--color-accent);
+  font: 400 1.4rem/1 var(--font-heading);
+  justify-self: center;
+  transition: transform 0.2s ease;
+}
+details[open] > summary .toggle {
+  transform: rotate(45deg);
+}
+.compactBody {
+  padding: 0 12px 16px;
+}
+.compactBody .description {
+  margin-top: 0;
+}
+.compactBody .description li + li {
+  margin-top: 6px;
+}
+.compactBody .link {
+  margin-top: 12px;
+}
+@media (max-width: 600px) {
+  .row {
+    padding-block: 28px 32px;
+  }
+  .workHeader {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .workHeader .dates {
+    padding-top: 0;
+  }
+  .compact summary {
+    grid-template-columns: minmax(0, 1fr) 24px;
+    gap: 6px 12px;
+    padding-block: 10px;
+  }
+  .compact summary .dates {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .compact summary .toggle {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .toggle,
+  .compact summary,
+  .compactTitle,
+  .link {
+    transition: none;
+  }
+}

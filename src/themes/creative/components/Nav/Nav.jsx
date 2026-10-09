@@ -8,7 +8,8 @@ import styles from "./Nav.module.css";
 const sections = [
   { id: "about", label: "Intro" },
   { id: "education", label: "Education" },
-  { id: "experience", label: "Journey" },
+  { id: "research", label: "Research" },
+  { id: "work", label: "Work" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Toolkit" },
 ];
@@ -42,7 +43,7 @@ export default function Nav() {
         menuButton.current?.focus();
       }
     };
-    const media = window.matchMedia("(min-width: 1101px)");
+    const media = window.matchMedia("(min-width: 1201px)");
     const onResize = () => {
       if (media.matches) setOpen(false);
     };
