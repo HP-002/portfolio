@@ -13,17 +13,11 @@ export default function Skills() {
     >
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>05 / THE COMPLETE TOOLKIT</p>
-          <h2 id="skills-title">
-            A working index
-            <br />
-            <em>of possibilities.</em>
-          </h2>
+          <p className={styles.eyebrow}>05 /</p>
+          <h2 id="skills-title">Skills</h2>
         </div>
         <p>
-          {total} technologies. Six collections.
-          <br />
-          Every tool has a place.
+          {total} technologies
         </p>
       </div>
       <div className={styles.index}>
@@ -41,7 +35,11 @@ export default function Skills() {
             <ul aria-label={`${group.title} technologies`}>
               {group.items.map((item) => (
                 <li key={item.name} title={item.description}>
-                  <span aria-hidden="true">↗</span>
+                  {item.icon ? (
+                    <img className={styles.logo} src={item.icon} alt="" width="24" height="24" loading="lazy" />
+                  ) : (
+                    <item.Icon className={styles.symbol} aria-hidden="true" />
+                  )}
                   {item.name}
                 </li>
               ))}
