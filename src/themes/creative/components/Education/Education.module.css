@@ -29,10 +29,23 @@
   gap: 36px;
   border-bottom: 1px solid var(--color-border);
 }
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+.logo {
+  display: block;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
 .label {
   font: 0.55rem var(--font-heading);
   letter-spacing: 0.14em;
-  color: #b7ce99;
+  color: var(--color-accent-secondary);
   margin-bottom: 12px;
 }
 .institution h3 {
@@ -78,25 +91,29 @@
   margin-left: 36px;
 }
 .degree {
+  --degree-title-size: 1.5rem;
+  --degree-height: calc(0.7rem * 1.65 + 4px + var(--degree-title-size) * 1.2);
   display: flex;
-  gap: 20px;
+  gap: 12px;
   align-items: center;
   margin-bottom: 28px;
 }
 .symbol {
   font:
-    500 2.6rem/1 Georgia,
+    500 var(--degree-height)/1 Georgia,
     serif;
-  color: #b7ce99;
-  width: 62px;
+  color: var(--color-accent-secondary);
+  flex-shrink: 0;
+  white-space: pre;
 }
 .degree p {
   font-size: 0.7rem;
+  line-height: 1.65;
   color: var(--color-muted);
   margin-bottom: 4px;
 }
 .degree h4 {
-  font: 500 1.5rem var(--font-heading);
+  font: 500 var(--degree-title-size)/1.2 var(--font-heading);
   letter-spacing: -0.035em;
 }
 .courseLabel {
@@ -114,7 +131,7 @@
 .strand li {
   font-size: 0.8rem;
   color: var(--color-muted);
-  border-bottom: 1px solid #404938;
+  border-bottom: 1px solid var(--color-border-secondary);
   padding-bottom: 3px;
 }
 .minor {
@@ -132,6 +149,13 @@
   }
 }
 @media (max-width: 700px) {
+  .identity {
+    gap: 16px;
+  }
+  .logo {
+    width: 56px;
+    height: 56px;
+  }
   .education {
     padding: 60px 24px;
   }
@@ -144,8 +168,8 @@
     padding-left: 0;
     margin-left: 0;
   }
-  .degree h4 {
-    font-size: 1.3rem;
+  .degree {
+    --degree-title-size: 1.3rem;
   }
   .strand li {
     font-size: 0.75rem;

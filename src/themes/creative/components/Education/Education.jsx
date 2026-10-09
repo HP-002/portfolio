@@ -1,9 +1,10 @@
 import education from "../../../../assets/data/education";
 import coursework from "../../../../assets/data/coursework";
+import ubLogo from "../../../../assets/images/ublogo.png";
 import styles from "./Education.module.css";
 
 const disciplines = [
-  { id: "cse", name: "Computer Science", marker: "CS" },
+  { id: "cse", name: "Computer Science", marker: "{ }" },
   { id: "sta", name: "Statistics", marker: "Σ" },
 ];
 
@@ -15,20 +16,26 @@ export default function Education() {
       aria-labelledby="education-title"
     >
       <div className={styles.heading}>
-        <p className={styles.eyebrow}>01 / THE FOUNDATION</p>
-        <h2 id="education-title">
-          Two disciplines.
-          <br />
-          <em>A wider perspective.</em>
-        </h2>
+        <p className={styles.eyebrow}>01 /</p>
+        <h2 id="education-title">Education</h2>
       </div>
       {education.map((entry) => (
         <article key={entry.id} className={styles.record}>
           <div className={styles.institution}>
-            <div>
+            <div className={styles.identity}>
+              <img
+                src={ubLogo}
+                alt="University at Buffalo logo"
+                className={styles.logo}
+                width="72"
+                height="72"
+                loading="lazy"
+              />
+              <div>
               <p className={styles.label}>EDUCATION</p>
               <h3>{entry.institution}</h3>
               <p>{entry.location}</p>
+              </div>
             </div>
             <div className={styles.metrics}>
               <span>

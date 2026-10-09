@@ -21,7 +21,9 @@
   --color-text: #f0efe8;
   --color-muted: #afb4aa;
   --color-accent: #eeab78;
+  --color-accent-secondary: #b7ce99;
   --color-border: #333832;
+  --color-border-secondary: #404938;
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
   --size-h1: clamp(3.5rem, 7.5vw, 7.5rem);
