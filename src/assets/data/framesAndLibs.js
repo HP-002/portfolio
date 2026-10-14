@@ -19,6 +19,7 @@ import OpacusIcon from "../images/opacus.svg"
 import CometMLIcon from "../images/cometml.svg"
 import { SiOpengl } from "react-icons/si"
 import { LuCable, LuScanText } from "react-icons/lu"
+import GymnasiumIcon from "../images/gymnasium.svg"
 
 // Each entry has either `icon` (image URL) or `Icon` (react-icons component).
 
@@ -28,6 +29,13 @@ const machineLearningFL = [
         name: "PyTorch",
         icon: PyTorchIcon,
         description: "Deep Learning Framework",
+        showInResearch: true,
+    },
+    {
+        id: "gym",
+        name: "Gymnasium",
+        icon: GymnasiumIcon,
+        description: "RL Interface for Environments",
         showInResearch: true,
     },
     {

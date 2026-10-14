@@ -11,9 +11,8 @@ const experiences = [
         webpage: null,
         webpageLink: null,
         description: [
-            "Designed a differentially private framework for collaborative WiFi-based indoor localization, where multiple access points work together to locate a person while stopping a central server from pinpointing their exact position.",
-            "Built and trained a split neural network on CSI data, keeping raw signals on-device and only sharing clipped embeddings, with formal differential privacy guarantees enforced by adding calibrated Gaussian noise.",
-            "Tuned the privacy-accuracy trade-off using geo-indistinguishability and fusion-aware noise calibration, then validated it by measuring the best attacker's localization error against the Cramér–Rao lower bound."
+            "Designed a differentially private framework for collaborative WiFi-based indoor localization, where multiple access points work together to locate a device while stopping a central server from pinpointing their exact position.",
+            "Desgining and building upon FedWiLoc architecture to add a verification layer to make the localization system resilient to malicous servers.",
         ],
         type: 'research',
         showInResearch: true,
@@ -30,9 +29,25 @@ const experiences = [
         webpageLink: null,
         description: [
             "Contributed to mRehab, a mobile rehabilitation app that helps post-stroke patients rebuild mobility and independence by guiding them through therapy exercises at home, no clinic visit required.",
-            "Built the app in React Native and used the phone's built-in motion sensors (accelerometer and gyroscope) to track movements performed with 3D-printed props, turning everyday exercises into measurable rehab data."        
+            "Worked on improving the tracking algorithms and local AI features to improve accessibilty and user experience."        
         ],
         type: 'research',
+        showInResearch: true,
+    },
+    {
+        id: 10,
+        department: "Computer Science Department @ University at Buffalo",
+        title: "Undergraduate Teaching Assistant - Real Time and Embedded Operating Systems",
+        start: "August 2026",
+        end: "Present",
+        webpage: null,
+        webpageLink: null,
+        description: [
+            "Assited Dr. Naeem Maroof as undergraduate teaching assistant for CSE 321 (Real Time and Embedded Operating Systems).",
+            "Held weekly office hours and fielded questions on Piazza to help students debug their Python implementations and build a solid grasp of the math and intuition behind each algorithm.",
+            "Graded projects and exams while giving clear, actionable feedback, helping students connect machine learning theory to hands-on, real-world problem solving."
+        ],
+        type: 'ta',
         showInResearch: true,
     },
     {
@@ -40,13 +55,13 @@ const experiences = [
         department: "Computer Science Department @ University at Buffalo",
         title: "Undergraduate Teaching Assistant - Machine Learning",
         start: "May 2026",
-        end: "Present",
+        end: "August 2026",
         webpage: null,
         webpageLink: null,
         description: [
+            "Assited Dr. Bakr Albahri as undergraduate teaching assistant for CSE 574 (Machine Learning).",
             "Supported students across core ML topics including supervised and unsupervised learning, decision trees, neural networks, SVMs, and reinforcement learning.",
             "Held weekly office hours and fielded questions on Piazza to help students debug their Python implementations and build a solid grasp of the math and intuition behind each algorithm.",
-            "Graded projects and exams while giving clear, actionable feedback, helping students connect machine learning theory to hands-on, real-world problem solving."
         ],
         type: 'ta',
         showInResearch: true,
@@ -56,13 +71,13 @@ const experiences = [
         department: "Computer Science Department @ University at Buffalo",
         title: "Undergraduate Teaching Assistant - Computer Organization",
         start: "January 2026",
-        end: "Present",
+        end: "August 2026",
         webpage: null,
         webpageLink: null,
         description: [
+            "Assited Dr. Bakr Albahri as undergraduate teaching assistant for CSE 341 (Computer Organization).",
             "Assisted students understand MIPS assembly and instruction set architecture to datapath/control unit design, ALU design, pipelining, and the memory hierarchy.",
             "Guided students with writing and debugging MIPS programs in QtSpim, and modeling and simulating digital and processor systems with behavioral and structural VHDL on EDA Playground.",
-            "Ran recitation and review sessions and graded processor-design projects with detailed feedback, helping students bridge the gap between low-level hardware and the software that runs on it."
         ],
         type: 'ta',
         showInResearch: true,
