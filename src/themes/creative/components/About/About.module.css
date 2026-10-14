@@ -23,7 +23,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #b7ce99;
+  background: var(--color-accent-secondary);
 }
 .copy h1 {
   font: 500 clamp(3.5rem, 7vw, 6.5rem)/1 var(--font-heading);
@@ -121,36 +121,12 @@
 .photo figcaption {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   gap: 15px;
   padding: 16px 0;
   font: 0.55rem var(--font-heading);
   letter-spacing: 0.12em;
   color: var(--color-muted);
-}
-.stamp {
-  position: absolute;
-  right: -24px;
-  bottom: 62px;
-  width: 104px;
-  height: 104px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #c5ccae;
-  border-radius: 50%;
-  background: #252d20;
-  color: #d4ddc7;
-  transform: rotate(-14deg);
-  font: 0.7rem/1.6 var(--font-heading);
-  letter-spacing: 0.12em;
-}
-.stamp em {
-  font:
-    italic 1.5rem Georgia,
-    serif;
-  letter-spacing: -0.05em;
 }
 @media (max-width: 1000px) {
   .about {
@@ -177,9 +153,6 @@
   }
   .photo img {
     height: 380px;
-  }
-  .stamp {
-    right: -8px;
   }
   .marginNote {
     margin-top: 30px;

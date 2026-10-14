@@ -28,7 +28,7 @@ export default function Nav() {
       },
       { rootMargin: "-15% 0px -65% 0px" },
     );
-    sections.forEach(({ id }) => {
+    [...sections, { id: "contact" }].forEach(({ id }) => {
       const section = document.getElementById(id);
       if (section) observer.observe(section);
     });
@@ -61,7 +61,7 @@ export default function Nav() {
         <div className={styles.brandGroup}>
         <a
           className={styles.brand}
-          href="#home"
+          href="#about"
           onClick={() => setOpen(false)}
           aria-label="Het Patel, home"
         >
@@ -96,6 +96,7 @@ export default function Nav() {
           <a
             className={styles.contact}
             href="#contact"
+            aria-current={active === "contact" ? "location" : undefined}
             onClick={() => setOpen(false)}
           >
             Let’s talk <LuArrowUpRight aria-hidden="true" />

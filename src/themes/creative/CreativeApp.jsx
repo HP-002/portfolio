@@ -17,9 +17,7 @@ export default function CreativeApp() {
       </a>
       <Nav />
       <main id="creative-main">
-        <div id="home">
-          <About />
-        </div>
+        <About />
         <Education />
         <Research />
         <Work />
@@ -28,11 +26,11 @@ export default function CreativeApp() {
         <Contact />
       </main>
       <footer className={styles.footer}>
-        <a href="#home">
+        <a href="#about">
           HP<span> / </span>Het Patel
         </a>
         <p>Built with curiosity. © {new Date().getFullYear()}</p>
-        <a href="#home">Back to top ↑</a>
+        <a href="#about">Back to top ↑</a>
       </footer>
     </div>
   );

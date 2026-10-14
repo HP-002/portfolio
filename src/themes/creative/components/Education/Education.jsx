@@ -1,12 +1,7 @@
 import education from "../../../../assets/data/education";
-import coursework from "../../../../assets/data/coursework";
-import ubLogo from "../../../../assets/images/ublogo.png";
+import coursework, { courseworkCategories } from "../../../../assets/data/coursework";
+import SectionHeading from "../Section/SectionHeading";
 import styles from "./Education.module.css";
-
-const disciplines = [
-  { id: "cse", name: "Computer Science", marker: "{ }" },
-  { id: "sta", name: "Statistics", marker: "Σ" },
-];
 
 export default function Education() {
   return (
@@ -15,17 +10,14 @@ export default function Education() {
       className={styles.education}
       aria-labelledby="education-title"
     >
-      <div className={styles.heading}>
-        <p className={styles.eyebrow}>01 /</p>
-        <h2 id="education-title">Education</h2>
-      </div>
+      <SectionHeading eyebrow="01 /" title="Education" id="education-title" />
       {education.map((entry) => (
         <article key={entry.id} className={styles.record}>
           <div className={styles.institution}>
             <div className={styles.identity}>
               <img
-                src={ubLogo}
-                alt="University at Buffalo logo"
+                src={entry.logo}
+                alt={`${entry.institution} logo`}
                 className={styles.logo}
                 width="72"
                 height="72"
@@ -41,38 +33,43 @@ export default function Education() {
               <span>
                 {entry.start} — {entry.end}
               </span>
-              <strong>
-                {entry.gpa.toFixed(2)} <small>/ 4.0 GPA</small>
-              </strong>
+              {entry.gpa != null && (
+                <strong>
+                  {entry.gpa.toFixed(2)} <small>/ 4.0 GPA</small>
+                </strong>
+              )}
             </div>
           </div>
           <div className={styles.strands}>
-            {disciplines.map((discipline, index) => (
-              <div className={styles.strand} key={discipline.id}>
-                <div className={styles.degree}>
-                  <span className={styles.symbol} aria-hidden="true">
-                    {discipline.marker}
-                  </span>
-                  <div>
-                    <p>{entry.degree[index]}</p>
-                    <h4>{entry.majors[index]}</h4>
+            {entry.courseworkCategories.map((id, index) => {
+              const discipline = courseworkCategories[id];
+              return (
+                <div className={styles.strand} key={id}>
+                  <div className={styles.degree}>
+                    <span className={styles.symbol} aria-hidden="true">
+                      {discipline.marker}
+                    </span>
+                    <div>
+                      <p>{entry.degree[index]}</p>
+                      <h4>{entry.majors[index]}</h4>
+                    </div>
                   </div>
+                  {entry.minor && index === 0 && (
+                    <p className={styles.minor}>Minor: {entry.minor}</p>
+                  )}
+                  <p className={styles.courseLabel}>
+                    COURSEWORK / {discipline.name.toUpperCase()}
+                  </p>
+                  <ul aria-label={`${discipline.name} coursework`}>
+                    {coursework
+                      .filter((course) => course.category === id)
+                      .map((course) => (
+                        <li key={course.id}>{course.title}</li>
+                      ))}
+                  </ul>
                 </div>
-                {entry.minor && index === 0 && (
-                  <p className={styles.minor}>Minor: {entry.minor}</p>
-                )}
-                <p className={styles.courseLabel}>
-                  COURSEWORK / {discipline.name.toUpperCase()}
-                </p>
-                <ul aria-label={`${discipline.name} coursework`}>
-                  {coursework
-                    .filter((course) => course.category === discipline.id)
-                    .map((course) => (
-                      <li key={course.title}>{course.title}</li>
-                    ))}
-                </ul>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </article>
       ))}

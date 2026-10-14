@@ -18,12 +18,12 @@ export default function Contact() {
       <div className={styles.emails}>
         <a href={CONTACT.schoolEmail} className={styles.emailLink}>
           <FaRegEnvelope aria-hidden="true" />
-          <span>hetpatel@buffalo.edu</span>
+          <span>{CONTACT.schoolEmailAddress}</span>
           <span className={styles.emailLabel}>School</span>
         </a>
         <a href={CONTACT.personalEmail} className={styles.emailLink}>
           <FaRegEnvelope aria-hidden="true" />
-          <span>hetfaldu19@gmail.com</span>
+          <span>{CONTACT.email}</span>
           <span className={styles.emailLabel}>Personal</span>
         </a>
       </div>

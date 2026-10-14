@@ -2,7 +2,8 @@ import { LuArrowUpRight } from "react-icons/lu";
 import experiences from "../../../../assets/data/experiences";
 import publications from "../../../../assets/data/publications";
 import Role from "../Role/Role";
-import section from "../Role/Sections.module.css";
+import SectionHeading from "../Section/SectionHeading";
+import section from "../Section/Section.module.css";
 import styles from "./Research.module.css";
 
 const labs = experiences.filter((item) => item.type === "research");
@@ -10,12 +11,7 @@ const labs = experiences.filter((item) => item.type === "research");
 export default function Research() {
   return (
     <section id="research" className={`${section.section} ${section.research}`} aria-labelledby="research-title">
-      <div className={section.heading}>
-        <div>
-          <p className={section.eyebrow}>02 /</p>
-          <h2 id="research-title">Research</h2>
-        </div>
-      </div>
+      <SectionHeading eyebrow="02 /" title="Research" id="research-title" />
       {labs.length > 0 && (
         <div className={section.group}>
           <div className={section.groupHeading}>
@@ -50,7 +46,7 @@ export default function Research() {
                       </a>
                     ) : paper.title}
                   </h4>
-                  <p>{Array.isArray(paper.authors) ? paper.authors.join(", ") : paper.authors}</p>
+                  <p>{paper.authors.join(", ")}</p>
                   {paper.venue && <p className={styles.venue}>{paper.venue}</p>}
                 </div>
               </li>

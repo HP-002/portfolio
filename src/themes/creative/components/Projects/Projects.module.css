@@ -43,14 +43,6 @@
   padding: 32px 0 36px;
   border-top: 1px solid var(--color-border);
 }
-.card + .card {
-  border-top: 2px solid transparent;
-  background-image: radial-gradient(circle at 1px 1px, var(--color-border) 1px, transparent 1px);
-  background-size: 8px 2px;
-  background-repeat: repeat-x;
-  background-position: left top;
-  background-origin: border-box;
-}
 .visual {
   position: relative;
   aspect-ratio: 1.6;
@@ -226,8 +218,8 @@
   transform: rotate(-18deg);
   box-shadow:
     0 0 16px #e7a068,
-    inset 0 0 12px #eeab78,
-    0 0 35px #eeab7850;
+    inset 0 0 12px var(--color-accent),
+    0 0 35px color-mix(in srgb, var(--color-accent) 31%, transparent);
 }
 .hole {
   position: absolute;
@@ -280,7 +272,7 @@
   font: 0.75rem/1.9 monospace;
 }
 .code b {
-  color: #eeab78;
+  color: var(--color-accent);
   font-weight: 400;
 }
 .diagram {
@@ -311,7 +303,7 @@
 .diagram b span {
   font: 0.6rem monospace;
   letter-spacing: 0.05em;
-  color: #eeab78;
+  color: var(--color-accent);
 }
 .diagram b em {
   color: var(--color-accent);
@@ -401,8 +393,8 @@
   background: #716039;
 }
 .signal i:nth-child(3) {
-  background: #b7ce99;
-  box-shadow: 0 0 22px #b7ce9940;
+  background: var(--color-accent-secondary);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--color-accent-secondary) 25%, transparent);
 }
 .trafficTitle {
   position: relative;

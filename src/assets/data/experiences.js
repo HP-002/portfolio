@@ -3,7 +3,7 @@ const experiences = [
     {
         id: 9,
         department: "School of Engineering and Applied Sciences",
-        lab: "WIRES",
+        lab: "WIRES Lab",
         faculty: "Roshan Ayyalasomayajula",
         title: "SEAS Undergraduate Research Experience (SURE) Intern",
         start: "May 2026",

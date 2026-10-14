@@ -6,21 +6,21 @@ import WSLIcon from "../images/wsl.webp"
 
 const environments = [
     {
-        id: 1,
+        id: "windows",
         name: "Windows",
         icon: WindowsIcon,
         description: "OS",
         showInResearch: true,
     },
     {
-        id: 2,
+        id: "ubuntu",
         name: "Ubuntu",
         icon: UbuntuIcon,
         description: "OS",
         showInResearch: true,
     },
     {
-        id: 3,
+        id: "nodejs",
         name: 'Node.js',
         icon: NodeIcon,
         description: "Runtime Environment",
@@ -34,7 +34,7 @@ const environments = [
         showInResearch: true,
     },
     {
-        id: 4,
+        id: "wsl",
         name: "WSL",
         icon: WSLIcon,
         description: "Windows Subsystem for Linux",

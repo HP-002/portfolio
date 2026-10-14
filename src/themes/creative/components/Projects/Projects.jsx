@@ -1,10 +1,126 @@
 import { useState } from "react";
 import { LuArrowUpRight, LuGithub } from "react-icons/lu";
-import projects from "../../data/projects";
+import projects from "../../../../assets/data/projects";
+import SectionHeading from "../Section/SectionHeading";
 import styles from "./Projects.module.css";
-import section from "../Role/Sections.module.css";
+import section from "../Section/Section.module.css";
 
-const filters = ["All work", "AI & ML", "Systems", "Web & Mobile"];
+const filters = ["All work", ...new Set(projects.map((p) => p.category))];
+
+function BlackHole() {
+  return (
+    <div className={styles.blackHole} aria-hidden="true">
+      <div className={styles.starfield} />
+      <div className={styles.disk} />
+      <div className={styles.hole} />
+      <span className={styles.figureLabel}>
+        SCHWARZSCHILD / REAL-TIME RENDERING
+      </span>
+    </div>
+  );
+}
+
+function Traffic() {
+  return (
+    <div className={styles.traffic} aria-hidden="true">
+      <div className={styles.roads} />
+      <div className={styles.signal}>
+        <i />
+        <i />
+        <i />
+      </div>
+      <span className={styles.trafficTitle}>
+        observe.
+        <br />
+        <em>decide.</em>
+        <br />
+        adapt.
+      </span>
+      <span className={styles.figureLabel}>RL / ADAPTIVE SIGNAL CONTROL</span>
+    </div>
+  );
+}
+
+function Compiler() {
+  return (
+    <div className={styles.compiler} aria-hidden="true">
+      <span className={styles.alpha}>α</span>
+      <div className={styles.code}>
+        <span>01 / SOURCE → EXECUTABLE</span>
+        <code>
+          tokens → syntax → IR
+          <br />
+          <b>→ x86-64 assembly</b>
+        </code>
+        <span>LEX · PARSE · CHECK · GENERATE</span>
+      </div>
+    </div>
+  );
+}
+
+const bars = [32, 54, 39, 73, 48, 90, 66, 100, 83, 120, 105, 142];
+
+function Data() {
+  return (
+    <div className={styles.chart} aria-hidden="true">
+      <span className={styles.figureLabel}>
+        PATTERNS / PREDICTIONS / POSSIBILITIES
+      </span>
+      <div>
+        {bars.map((height, i) => (
+          <i key={i} style={{ height }} />
+        ))}
+      </div>
+      <span>15 MODELS. ONE QUESTION.</span>
+    </div>
+  );
+}
+
+function Diagram({ caption, children }) {
+  return (
+    <div className={styles.diagram} aria-hidden="true">
+      <div className={styles.grid} />
+      <b>{children}</b>
+      <small>{caption}</small>
+    </div>
+  );
+}
+
+function Kernel() {
+  return (
+    <Diagram caption="THREADS / MEMORY / SYNCHRONIZATION">
+      user
+      <br />
+      <span>↓ system call ↓</span>
+      <br />
+      kernel
+    </Diagram>
+  );
+}
+
+function Learning() {
+  return (
+    <Diagram caption="PEER-ASSISTED LEARNING">
+      learn.
+      <br />
+      <em>together.</em>
+    </Diagram>
+  );
+}
+
+function Motion() {
+  return <Diagram caption="MOTION / MODELING / OPTIMIZATION">∂L / ∂x</Diagram>;
+}
+
+const visuals = {
+  "black-hole": BlackHole,
+  traffic: Traffic,
+  compiler: Compiler,
+  data: Data,
+  kernel: Kernel,
+  learning: Learning,
+  motion: Motion,
+};
 
 function ProjectVisual({ project }) {
   if (project.image)
@@ -17,98 +133,8 @@ function ProjectVisual({ project }) {
         height="500"
       />
     );
-  if (project.visual === "black-hole")
-    return (
-      <div className={styles.blackHole} aria-hidden="true">
-        <div className={styles.starfield} />
-        <div className={styles.disk} />
-        <div className={styles.hole} />
-        <span className={styles.figureLabel}>
-          SCHWARZSCHILD / REAL-TIME RENDERING
-        </span>
-      </div>
-    );
-  if (project.visual === "traffic")
-    return (
-      <div className={styles.traffic} aria-hidden="true">
-        <div className={styles.roads} />
-        <div className={styles.signal}>
-          <i />
-          <i />
-          <i />
-        </div>
-        <span className={styles.trafficTitle}>
-          observe.
-          <br />
-          <em>decide.</em>
-          <br />
-          adapt.
-        </span>
-        <span className={styles.figureLabel}>RL / ADAPTIVE SIGNAL CONTROL</span>
-      </div>
-    );
-  if (project.visual === "compiler")
-    return (
-      <div className={styles.compiler} aria-hidden="true">
-        <span className={styles.alpha}>α</span>
-        <div className={styles.code}>
-          <span>01 / SOURCE → EXECUTABLE</span>
-          <code>
-            tokens → syntax → IR
-            <br />
-            <b>→ x86-64 assembly</b>
-          </code>
-          <span>LEX · PARSE · CHECK · GENERATE</span>
-        </div>
-      </div>
-    );
-  if (project.visual === "data")
-    return (
-      <div className={styles.chart} aria-hidden="true">
-        <span className={styles.figureLabel}>
-          PATTERNS / PREDICTIONS / POSSIBILITIES
-        </span>
-        <div>
-          {[32, 54, 39, 73, 48, 90, 66, 100, 83, 120, 105, 142].map(
-            (height, i) => (
-              <i key={i} style={{ height }} />
-            ),
-          )}
-        </div>
-        <span>15 MODELS. ONE QUESTION.</span>
-      </div>
-    );
-  return (
-    <div className={styles.diagram} aria-hidden="true">
-      <div className={styles.grid} />
-      {project.visual === "kernel" ? (
-        <>
-          <b>
-            user
-            <br />
-            <span>↓ system call ↓</span>
-            <br />
-            kernel
-          </b>
-          <small>THREADS / MEMORY / SYNCHRONIZATION</small>
-        </>
-      ) : project.visual === "learning" ? (
-        <>
-          <b>
-            learn.
-            <br />
-            <em>together.</em>
-          </b>
-          <small>PEER-ASSISTED LEARNING</small>
-        </>
-      ) : (
-        <>
-          <b>∂L / ∂x</b>
-          <small>MOTION / MODELING / OPTIMIZATION</small>
-        </>
-      )}
-    </div>
-  );
+  const Visual = visuals[project.visual] ?? Motion;
+  return <Visual />;
 }
 
 export default function Projects() {
@@ -124,12 +150,7 @@ export default function Projects() {
       className={section.section}
       aria-labelledby="projects-title"
     >
-      <div className={section.heading}>
-        <div>
-          <p className={section.eyebrow}>04 /</p>
-          <h2 id="projects-title">Projects</h2>
-        </div>
-      </div>
+      <SectionHeading eyebrow="04 /" title="Projects" id="projects-title" />
       <div className={styles.filterRow}>
         <div
           className={styles.filters}
@@ -154,7 +175,10 @@ export default function Projects() {
           {String(visible.length).padStart(2, "0")} / {String(filtered.length).padStart(2, "0")} projects
         </span>
       </div>
-      <div className={styles.cards} id="creative-project-list">
+      <div
+        className={`${styles.cards} ${section.dottedRows}`}
+        id="creative-project-list"
+      >
         {visible.map((project) => (
           <article className={styles.card} key={project.id}>
             <div className={styles.visual}>
@@ -184,21 +208,23 @@ export default function Projects() {
                 <p>{project.note}</p>
               </details>
               <div className={styles.links}>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`View ${project.title} on GitHub`}
-                >
-                  <LuGithub aria-hidden="true" /> Source code{" "}
-                  <LuArrowUpRight aria-hidden="true" />
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Source code for ${project.title}`}
+                  >
+                    <LuGithub aria-hidden="true" /> Source code{" "}
+                    <LuArrowUpRight aria-hidden="true" />
+                  </a>
+                )}
                 {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`View ${project.title} demo`}
+                    aria-label={`View demo of ${project.title}`}
                   >
                     View demo <LuArrowUpRight aria-hidden="true" />
                   </a>

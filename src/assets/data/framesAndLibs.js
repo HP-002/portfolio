@@ -17,6 +17,10 @@ import GNUBisonIcon from "../images/gnu-bison.png"
 import FastAPIIcon from "../images/fastapi.svg"
 import OpacusIcon from "../images/opacus.svg"
 import CometMLIcon from "../images/cometml.svg"
+import { SiOpengl } from "react-icons/si"
+import { LuCable, LuScanText } from "react-icons/lu"
+
+// Each entry has either `icon` (image URL) or `Icon` (react-icons component).
 
 const machineLearningFL = [
     {
@@ -42,7 +46,7 @@ const machineLearningFL = [
     },
     {   
         id: "opacus",
-        name: "Opcaus",
+        name: "Opacus",
         icon: OpacusIcon,
         description: "ML Library",
         showInResearch: true,
@@ -127,6 +131,13 @@ const webDevFL = [
         description: "CSS Framework",
         showInResearch: false,
     },
+    {
+        id: "websockets",
+        name: "WebSockets",
+        Icon: LuCable,
+        description: "Real-time communication",
+        showInResearch: false,
+    },
 ]
 
 const otherFL = [
@@ -156,6 +167,27 @@ const otherFL = [
         name: "IPOPT",
         icon: IpoptIcon,
         description: "Nonlinear Optimization",
+        showInResearch: false,
+    },
+    {
+        id: "opengl",
+        name: "OpenGL",
+        Icon: SiOpengl,
+        description: "Graphics API",
+        showInResearch: false,
+    },
+    {
+        id: "glsl",
+        name: "GLSL",
+        Icon: SiOpengl,
+        description: "Shader language",
+        showInResearch: false,
+    },
+    {
+        id: "flex",
+        name: "Flex",
+        Icon: LuScanText,
+        description: "Lexer generator",
         showInResearch: false,
     },
 ]

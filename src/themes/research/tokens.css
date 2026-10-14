@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Inter:wght@400;500&display=swap');
+/* Research-only fonts; loaded with this theme's lazy chunk. Inter italic is used by the Research lab line. */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:ital,wght@0,400;0,500;1,400&display=swap');
 
 [data-theme='research'] {
   /* --- Colors --- */

@@ -1,3 +1,5 @@
+import ubLogo from '../images/ublogo.png'
+
 const education = [
   {
     id: 1,
@@ -9,6 +11,9 @@ const education = [
     end: 'Expected May 2027',
     gpa: 3.96,
     location: 'Buffalo, NY',
+    logo: ubLogo,
+    // Parallel to `degree` and `majors`; keys into courseworkCategories.
+    courseworkCategories: ['cse', 'sta'],
   },
 ]
 

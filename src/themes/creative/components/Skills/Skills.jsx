@@ -1,9 +1,11 @@
-import groups from "../../data/skills";
+import groups from "../../../../assets/data/skillsSections";
+import SkillIcon from "../../../../shared/components/SkillIcon/SkillIcon";
+import SectionHeading from "../Section/SectionHeading";
 import styles from "./Skills.module.css";
 
 export default function Skills() {
   const total = new Set(
-    groups.flatMap((group) => group.items.map((item) => item.name)),
+    groups.flatMap((group) => group.items.map((item) => item.id)),
   ).size;
   return (
     <section
@@ -11,42 +13,37 @@ export default function Skills() {
       className={styles.skills}
       aria-labelledby="skills-title"
     >
-      <div className={styles.heading}>
-        <div>
-          <p className={styles.eyebrow}>05 /</p>
-          <h2 id="skills-title">Skills</h2>
-        </div>
-        <p>
-          {total} technologies
-        </p>
-      </div>
-      <div className={styles.index}>
-        {groups.map((group, i) => (
-          <article className={styles.group} key={group.title}>
-            <div className={styles.category}>
-              <span className={styles.number}>0{i + 1}</span>
-              <div>
-                <h3>{group.title}</h3>
-                <span className={styles.count}>
-                  {String(group.items.length).padStart(2, "0")} ENTRIES
-                </span>
-              </div>
+      <SectionHeading eyebrow="05 /" title="Skills" id="skills-title">
+        {total} technologies
+      </SectionHeading>
+      {groups.map((group, i) => (
+        <article className={styles.group} key={group.title}>
+          <div className={styles.category}>
+            <span className={styles.number}>{String(i + 1).padStart(2, "0")}</span>
+            <div>
+              <h3>{group.title}</h3>
+              <span className={styles.count}>
+                {String(group.items.length).padStart(2, "0")} ENTRIES
+              </span>
             </div>
-            <ul aria-label={`${group.title} technologies`}>
-              {group.items.map((item) => (
-                <li key={item.name} title={item.description}>
-                  {item.icon ? (
-                    <img className={styles.logo} src={item.icon} alt="" width="24" height="24" loading="lazy" />
-                  ) : (
-                    <item.Icon className={styles.symbol} aria-hidden="true" />
-                  )}
-                  {item.name}
-                </li>
-              ))}
-            </ul>
-          </article>
-        ))}
-      </div>
+          </div>
+          <ul aria-label={`${group.title} technologies`}>
+            {group.items.map((item) => (
+              <li key={item.id} title={item.description}>
+                <SkillIcon
+                  item={item}
+                  className={styles.logo}
+                  iconClassName={styles.symbol}
+                  width="24"
+                  height="24"
+                  loading="lazy"
+                />
+                {item.name}
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
     </section>
   );
 }

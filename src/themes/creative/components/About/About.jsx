@@ -1,6 +1,6 @@
 import { LuArrowUpRight } from "react-icons/lu";
-import { name } from "../../../../assets/data/about";
-import profile from "../../assets/profile.webp";
+import { name, roles, intro, location } from "../../../../assets/data/about";
+import profile from "../../../../assets/images/profile.webp";
 import resume from "../../../../assets/docs/Het Patel - Resume.pdf";
 import transcript from "../../../../assets/docs/Het Patel - Transcript.pdf";
 import styles from "./About.module.css";
@@ -15,19 +15,10 @@ export default function About() {
         <h1 id="about-title">
           {name.split(" ")[0]} <em>{name.split(" ").slice(1).join(" ")}</em>
         </h1>
-        <p className={styles.subtitle}>
-          Researcher + Developer
-        </p>
-        <p>
-          I’m a Computer Science and Statistics undergraduate at the University
-          at Buffalo. I build software and explore machine learning, with a
-          particular interest in privacy-preserving wireless localization.
-        </p>
-        <p>
-          My work moves between WiFi signals, mobile rehabilitation, systems,
-          and creative experiments. I’m currently exploring reinforcement
-          learning and looking toward a PhD in Deep Learning and Reinforcement Learning topics.
-        </p>
+        <p className={styles.subtitle}>{roles.join(" + ")}</p>
+        {intro.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
         <div className={styles.links}>
           <a
             className={styles.primary}
@@ -47,7 +38,7 @@ export default function About() {
           </a>
         </div>
         <div className={styles.marginNote}>
-          <span>BUFFALO, NEW YORK</span>
+          <span>{location.toUpperCase()}</span>
           <span>COMPUTER SCIENCE × STATISTICS</span>
         </div>
       </div>
@@ -65,7 +56,6 @@ export default function About() {
           </span>
         </div>
         <figcaption>
-          <span></span>
           <span>FIG. 00 ↗</span>
         </figcaption>
       </figure>

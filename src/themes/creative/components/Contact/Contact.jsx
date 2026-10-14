@@ -23,18 +23,14 @@ export default function Contact() {
               or an idea worth exploring? I’d love to hear it.
             </p>
           </div>
-          <a
-            className={styles.circle}
-            href={contact.personalEmail}
-            aria-label="Email Het Patel"
-          >
+          <a className={styles.circle} href={contact.personalEmail}>
             <LuArrowUpRight aria-hidden="true" />
             <span>SAY HELLO</span>
           </a>
         </div>
         <div className={styles.bottom}>
           <a className={styles.email} href={contact.personalEmail}>
-            hetfaldu19@gmail.com <LuArrowUpRight aria-hidden="true" />
+            {contact.email} <LuArrowUpRight aria-hidden="true" />
           </a>
           <div className={styles.socials}>
             <a href={contact.github} target="_blank" rel="noopener noreferrer">

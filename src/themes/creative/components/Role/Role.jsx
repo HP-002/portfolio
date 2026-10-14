@@ -19,43 +19,41 @@ function Description({ items }) {
 
 export default function Role({ item, expanded = false }) {
   const research = item.type === "research";
-  const lab = item.lab && (item.lab.endsWith("Lab") ? item.lab : `${item.lab} Lab`);
+  const { lab } = item;
 
   return (
     <article className={`${styles.row} ${research ? styles.research : ""}`} data-experience-id={item.id}>
-      <div className={styles.detail}>
-        {research ? (
-          <>
-            <h4 className={styles.lab}>
-              {lab || item.department}
-              {item.faculty && <span className={styles.advisor}> · {item.faculty}</span>}
-            </h4>
-            <p className={styles.position}>{item.title}</p>
-            <p className={styles.department}>{item.department}</p>
-          </>
-        ) : (
-          <header className={styles.workHeader}>
-            <div className={styles.identity}>
-              <p className={styles.organization}>{item.department}</p>
-              <h4 className={styles.title}>{item.title}</h4>
-              {item.faculty && <p className={styles.department}>With {item.faculty}</p>}
-            </div>
-            <p className={styles.dates}>{item.start} — {item.end}</p>
-          </header>
-        )}
-        {expanded ? <Description items={item.description} /> : (
-          <>
-            <p className={styles.lead}>{item.description[0]}</p>
-            {item.description.length > 1 && (
-              <details className={styles.notes}>
-                <summary>More about this role <span className={styles.toggle} aria-hidden="true">+</span></summary>
-                <Description items={item.description.slice(1)} />
-              </details>
-            )}
-          </>
-        )}
-        <RoleLink item={item} />
-      </div>
+      {research ? (
+        <>
+          <h4 className={styles.lab}>
+            {lab || item.department}
+            {item.faculty && <span className={styles.advisor}> · {item.faculty}</span>}
+          </h4>
+          <p className={styles.position}>{item.title}</p>
+          {lab && <p className={styles.department}>{item.department}</p>}
+        </>
+      ) : (
+        <header className={styles.workHeader}>
+          <div className={styles.identity}>
+            <p className={styles.organization}>{item.department}</p>
+            <h4 className={styles.title}>{item.title}</h4>
+            {item.faculty && <p className={styles.department}>With {item.faculty}</p>}
+          </div>
+          <p className={styles.dates}>{item.start} — {item.end}</p>
+        </header>
+      )}
+      {expanded ? <Description items={item.description} /> : (
+        <>
+          <p className={styles.lead}>{item.description[0]}</p>
+          {item.description.length > 1 && (
+            <details className={styles.notes}>
+              <summary>More about this role <span className={styles.toggle} aria-hidden="true">+</span></summary>
+              <Description items={item.description.slice(1)} />
+            </details>
+          )}
+        </>
+      )}
+      <RoleLink item={item} />
     </article>
   );
 }

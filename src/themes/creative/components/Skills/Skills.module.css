@@ -3,27 +3,6 @@
   margin: auto;
   padding: 0 40px 96px;
 }
-.heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 38px;
-}
-.eyebrow {
-  font: 500 0.65rem var(--font-heading);
-  letter-spacing: 0.17em;
-  color: var(--color-accent);
-  margin-bottom: 20px;
-}
-.heading h2 {
-  font: 500 var(--size-h2)/1.15 var(--font-heading);
-  letter-spacing: -0.045em;
-}
-.heading > p {
-  color: var(--color-muted);
-  font-size: 0.85rem;
-}
 .group {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -90,11 +69,6 @@
 @media (max-width: 700px) {
   .skills {
     padding: 0 24px 64px;
-  }
-  .heading {
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
   }
   .group {
     grid-template-columns: 1fr;

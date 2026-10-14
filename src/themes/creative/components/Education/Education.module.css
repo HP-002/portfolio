@@ -3,22 +3,7 @@
   margin: auto;
   padding: 80px 40px;
 }
-.eyebrow {
-  font: 500 0.65rem var(--font-heading);
-  letter-spacing: 0.17em;
-  color: var(--color-accent);
-  margin-bottom: 20px;
-}
-.heading h2 {
-  font: 500 var(--size-h2)/1.15 var(--font-heading);
-  letter-spacing: -0.045em;
-}
-.heading h2 em {
-  font-family: Georgia, serif;
-  font-weight: 400;
-}
 .record {
-  margin-top: 36px;
   border-block: 1px solid var(--color-border);
 }
 .institution {

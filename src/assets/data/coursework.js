@@ -1,7 +1,7 @@
 
 const coursework = [
     {
-        id: 443,
+        id: 446,
         title: 'Reinforcement Learning',
         category: 'cse',
         description: '',
@@ -115,5 +115,10 @@ const coursework = [
         description: 'LA description',
     },
 ]
+
+export const courseworkCategories = {
+    cse: { name: 'Computer Science', marker: '{ }' },
+    sta: { name: 'Statistics', marker: 'Σ' },
+}
 
 export default coursework

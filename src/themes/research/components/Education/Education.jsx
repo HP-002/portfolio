@@ -1,12 +1,6 @@
 import education from '../../../../assets/data/education'
-import coursework from '../../../../assets/data/coursework'
-import ubLogo from '../../../../assets/images/ublogo.png'
+import coursework, { courseworkCategories } from '../../../../assets/data/coursework'
 import styles from './Education.module.css'
-
-const CATEGORY_LABELS = {
-  cse: 'Computer Science',
-  sta: 'Statistics',
-}
 
 export default function Education() {
   const grouped = coursework.reduce((acc, course) => {
@@ -27,7 +21,7 @@ export default function Education() {
           <div key={entry.id} className={styles.degree}>
             <div className={styles.logoContainer}>
               <img
-                src={ubLogo}
+                src={entry.logo}
                 alt={`${entry.institution} logo`}
                 className={styles.logo}
                 />
@@ -55,11 +49,11 @@ export default function Education() {
         {Object.entries(grouped).map(([cat, courses]) => (
           <div key={cat} className={styles.courseGroup}>
             <span className={styles.courseCategory}>
-              {CATEGORY_LABELS[cat] ?? cat.toUpperCase()}
+              {courseworkCategories[cat]?.name ?? cat.toUpperCase()}
             </span>
             <div className={styles.courseTags}>
-              {courses.map((course, i) => (
-                <span key={`${course.id}-${i}`} className={styles.courseTag}>
+              {courses.map((course) => (
+                <span key={course.id} className={styles.courseTag}>
                   {course.title}
                 </span>
               ))}

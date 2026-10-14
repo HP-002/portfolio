@@ -70,9 +70,6 @@
   color: var(--color-accent-secondary);
   font-size: 0.7em;
 }
-.research .description li::marker {
-  color: var(--color-accent-secondary);
-}
 .lead {
   margin-top: 20px;
   color: var(--color-muted);
