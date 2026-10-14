@@ -19,8 +19,7 @@ export default function Contact() {
               with a <em>conversation.</em>
             </h2>
             <p>
-              Have an interesting problem, a research opportunity,
-              <br />
+              Have an interesting problem, a research opportunity,{" "}
               or an idea worth exploring? I’d love to hear it.
             </p>
           </div>
