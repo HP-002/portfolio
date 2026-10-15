@@ -1,14 +1,22 @@
 import { lazy, Suspense, startTransition, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { ThemeContext } from "./shared/hooks/useTheme";
 
 // Each theme (JS, CSS, fonts) is its own chunk, so visitors only download the theme they see.
-const loaders = {
+const importers = {
   research: () => import("./themes/research/ResearchApp"),
   creative: () => import("./themes/creative/CreativeApp"),
 };
+// Loaded theme components, so a switch can render synchronously inside a view transition.
+const loaded = {};
+const load = (name) =>
+  importers[name]().then((module) => {
+    loaded[name] = module.default;
+    return module;
+  });
 const themes = {
-  research: lazy(loaders.research),
-  creative: lazy(loaders.creative),
+  research: lazy(() => load("research")),
+  creative: lazy(() => load("creative")),
 };
 
 const STORAGE_KEY = "portfolio-theme";
@@ -47,7 +55,7 @@ export default function App() {
 
   // Warm the other theme's chunk once the browser is idle so toggling is instant.
   useEffect(() => {
-    const prefetch = () => loaders[otherTheme(theme)]();
+    const prefetch = () => load(otherTheme(theme));
     if ("requestIdleCallback" in window) {
       const id = window.requestIdleCallback(prefetch);
       return () => window.cancelIdleCallback(id);
@@ -59,13 +67,27 @@ export default function App() {
   const value = useMemo(
     () => ({
       theme,
-      // A transition keeps the current theme on screen until the next one has loaded.
-      toggleTheme: () => startTransition(() => setTheme(otherTheme)),
+      toggleTheme: () => {
+        const next = otherTheme(theme);
+        const animate =
+          document.startViewTransition &&
+          !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!animate) {
+          // A transition keeps the current theme on screen until the next one has loaded.
+          startTransition(() => setTheme(next));
+          return;
+        }
+        // Load first so the snapshot captures the new theme, not an empty Suspense fallback.
+        load(next)
+          .then(() => document.startViewTransition(() => flushSync(() => setTheme(next))))
+          .catch(() => startTransition(() => setTheme(next)));
+      },
     }),
     [theme],
   );
 
-  const Theme = themes[theme];
+  // Picked once per theme so the lazy -> loaded swap never remounts the page mid-visit.
+  const Theme = useMemo(() => loaded[theme] ?? themes[theme], [theme]);
 
   return (
     <ThemeContext.Provider value={value}>
