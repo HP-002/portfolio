@@ -1,7 +1,7 @@
-import { LuArrowUpRight } from "react-icons/lu";
 import experiences from "../../../../assets/data/experiences";
 import publications from "../../../../assets/data/publications";
 import Role from "../Role/Role";
+import Publication from "./Publication";
 import SectionHeading from "../Section/SectionHeading";
 import section from "../Section/Section.module.css";
 import styles from "./Research.module.css";
@@ -32,24 +32,8 @@ export default function Research() {
             <span>{String(publications.length).padStart(2, "0")} entries</span>
           </div>
           <ol className={styles.publications}>
-            {publications.map((paper) => (
-              <li key={`${paper.title}-${paper.year}`} className={styles.publication}>
-                <div className={styles.meta}>
-                  <span>{paper.year}</span>
-                  <span className={styles.status}>{paper.status}</span>
-                </div>
-                <div>
-                  <h4>
-                    {paper.link ? (
-                      <a href={paper.link} target="_blank" rel="noopener noreferrer">
-                        {paper.title} <LuArrowUpRight aria-hidden="true" />
-                      </a>
-                    ) : paper.title}
-                  </h4>
-                  <p>{paper.authors.join(", ")}</p>
-                  {paper.venue && <p className={styles.venue}>{paper.venue}</p>}
-                </div>
-              </li>
+            {publications.map((paper, i) => (
+              <Publication key={`${paper.title}-${paper.year}`} paper={paper} index={i} />
             ))}
           </ol>
         </div>

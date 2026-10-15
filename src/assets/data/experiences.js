@@ -44,8 +44,8 @@ const experiences = [
         webpageLink: null,
         description: [
             "Assited Dr. Naeem Maroof as undergraduate teaching assistant for CSE 321 (Real Time and Embedded Operating Systems).",
-            "Held weekly office hours and fielded questions on Piazza to help students debug their Python implementations and build a solid grasp of the math and intuition behind each algorithm.",
-            "Graded projects and exams while giving clear, actionable feedback, helping students connect machine learning theory to hands-on, real-world problem solving."
+            "Cover embedded C and hardware, RTOS, task scheduling, concurrency, timers, memory architectures and serial protocols.",
+            "Create and grade assignments, homeworks, recitation activities, and assist students with Arduino Unos and FreeRTOS library."
         ],
         type: 'ta',
         showInResearch: true,
