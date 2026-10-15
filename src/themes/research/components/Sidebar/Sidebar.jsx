@@ -12,7 +12,9 @@ export default function Sidebar() {
       {/* <p className={styles.name}>{name}</p>
       <p className={styles.subtitle}>{subtitle.replace(/\|/g, ' · ')}</p>
       <hr className={styles.divider} /> */}
-      <Skills variant="sidebar" />
+      <div className={styles.skills}>
+        <Skills variant="sidebar" />
+      </div>
       <div className={styles.docButtons}>
         <a
           href={resume}
