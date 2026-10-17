@@ -1,8 +1,6 @@
 import { LuArrowUpRight } from "react-icons/lu";
-import { name, roles, intro, location } from "../../../../assets/data/about";
+import { name, roles, intro, location, resume, transcript } from "../../../../assets/data/about";
 import profile from "../../../../assets/images/profile.webp";
-import resume from "../../../../assets/docs/Het Patel - Resume.pdf";
-import transcript from "../../../../assets/docs/Het Patel - Transcript.pdf";
 import styles from "./About.module.css";
 
 export default function About() {

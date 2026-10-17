@@ -1,7 +1,5 @@
 import photo from '../../../../assets/images/profile.webp'
-import resume from '../../../../assets/docs/Het Patel - Resume.pdf'
-import transcript from '../../../../assets/docs/Het Patel - Transcript.pdf'
-import { name } from '../../../../assets/data/about'
+import { name, resume, transcript } from '../../../../assets/data/about'
 import Skills from '../Skills/Skills'
 import styles from './Sidebar.module.css'
 

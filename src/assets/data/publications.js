@@ -1,4 +1,3 @@
-import SUREPoster from "../docs/SURE-poster.pdf"
 /**
  * Your own publications, separate from the reading list in papers.js.
  * Each entry: { title, authors: string[], venue, year,
@@ -23,7 +22,7 @@ const publications = [
         type: "poster",
         status: "Accepted",
         link: null,
-        file: SUREPoster,
+        file: "https://hetpatel-work-docs.s3.us-east-2.amazonaws.com/posters/sure-research-poster.pdf",
     },
 ];
 
