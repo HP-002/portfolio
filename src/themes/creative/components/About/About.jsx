@@ -8,7 +8,7 @@ export default function About() {
     <section id="about" className={styles.about} aria-labelledby="about-title">
       <div className={styles.copy}>
         <p className={styles.eyebrow}>
-          <span /> 00 / AN INTRODUCTION
+          <span /> 00 /
         </p>
         <h1 id="about-title">
           {name.split(" ")[0]} <em>{name.split(" ").slice(1).join(" ")}</em>
