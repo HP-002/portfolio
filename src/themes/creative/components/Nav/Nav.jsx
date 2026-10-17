@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { LuArrowUpRight, LuMenu, LuX } from "react-icons/lu";
+import { LuArrowUpRight } from "react-icons/lu";
 import { FaGithub, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
 import CONTACT from "../../../../assets/data/contact";
 import ThemeToggle from "../../../../shared/components/ThemeToggle/ThemeToggle";
@@ -13,6 +13,28 @@ const sections = [
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Toolkit" },
 ];
+
+function Socials({ className }) {
+  return (
+    <ul className={className} aria-label="External links">
+      <li>
+        <a href={CONTACT.github} className={styles.socialLink} aria-label="GitHub" target="_blank" rel="noreferrer noopener">
+          <FaGithub />
+        </a>
+      </li>
+      <li>
+        <a href={CONTACT.linkedin} className={styles.socialLink} aria-label="LinkedIn" target="_blank" rel="noreferrer noopener">
+          <FaLinkedinIn />
+        </a>
+      </li>
+      <li>
+        <a href={CONTACT.personalEmail} className={styles.socialLink} aria-label="Email">
+          <FaRegEnvelope />
+        </a>
+      </li>
+    </ul>
+  );
+}
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -47,18 +69,21 @@ export default function Nav() {
     const onResize = () => {
       if (media.matches) setOpen(false);
     };
+    // The open menu covers the whole screen, so the page behind it should not scroll.
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
     document.addEventListener("keydown", close);
     media.addEventListener("change", onResize);
     return () => {
+      document.body.style.overflow = overflow;
       document.removeEventListener("keydown", close);
       media.removeEventListener("change", onResize);
     };
   }, [open]);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${open ? styles.headerOpen : ""}`}>
       <nav className={styles.nav} aria-label="Primary">
-        <div className={styles.brandGroup}>
         <a
           className={styles.brand}
           href="#about"
@@ -67,6 +92,38 @@ export default function Nav() {
         >
           hp<span>.</span>
         </a>
+        <div
+          id="creative-navigation"
+          className={`${styles.links} ${open ? styles.open : ""}`}
+        >
+          <div className={styles.list}>
+            {sections.map(({ id, label }, index) => (
+              <span key={id} className={styles.line} style={{ "--i": index }}>
+                <a
+                  href={`#${id}`}
+                  aria-current={active === id ? "location" : undefined}
+                  onClick={() => setOpen(false)}
+                >
+                  {label}
+                </a>
+              </span>
+            ))}
+          </div>
+          <div className={styles.menuFoot}>
+            <a
+              className={styles.contact}
+              href="#contact"
+              aria-current={active === "contact" ? "location" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              Let’s talk <LuArrowUpRight aria-hidden="true" />
+            </a>
+            <Socials className={`${styles.socials} ${styles.menuSocials}`} />
+          </div>
+        </div>
+        <div className={styles.actions}>
+          <ThemeToggle />
+          <Socials className={`${styles.socials} ${styles.barSocials}`} />
           <button
             ref={menuButton}
             className={styles.menu}
@@ -76,51 +133,9 @@ export default function Nav() {
             aria-controls="creative-navigation"
             onClick={() => setOpen(!open)}
           >
-            {open ? <LuX /> : <LuMenu />}
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
           </button>
-        </div>
-        <div
-          id="creative-navigation"
-          className={`${styles.links} ${open ? styles.open : ""}`}
-        >
-          {sections.map(({ id, label }) => (
-            <a
-              key={id}
-              href={`#${id}`}
-              aria-current={active === id ? "location" : undefined}
-              onClick={() => setOpen(false)}
-            >
-              {label}
-            </a>
-          ))}
-          <a
-            className={styles.contact}
-            href="#contact"
-            aria-current={active === "contact" ? "location" : undefined}
-            onClick={() => setOpen(false)}
-          >
-            Let’s talk <LuArrowUpRight aria-hidden="true" />
-          </a>
-        </div>
-        <div className={styles.actions}>
-          <ThemeToggle />
-          <ul className={styles.socials} aria-label="External links">
-            <li>
-              <a href={CONTACT.github} className={styles.socialLink} aria-label="GitHub" target="_blank" rel="noreferrer noopener">
-                <FaGithub />
-              </a>
-            </li>
-            <li>
-              <a href={CONTACT.linkedin} className={styles.socialLink} aria-label="LinkedIn" target="_blank" rel="noreferrer noopener">
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li>
-              <a href={CONTACT.personalEmail} className={styles.socialLink} aria-label="Email">
-                <FaRegEnvelope />
-              </a>
-            </li>
-          </ul>
         </div>
       </nav>
     </header>
