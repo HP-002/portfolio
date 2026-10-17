@@ -62,7 +62,7 @@
 }
 .circle:hover {
   transform: rotate(8deg);
-  background: #f9c291;
+  background: color-mix(in srgb, var(--color-accent) 78%, #ffffff);
 }
 .circle:active {
   transform: scale(0.97);

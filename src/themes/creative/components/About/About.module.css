@@ -69,7 +69,7 @@
   font-weight: 600;
 }
 .primary:hover {
-  background: #fbc399;
+  background: color-mix(in srgb, var(--color-accent) 78%, #ffffff);
 }
 .secondary {
   color: var(--color-text);

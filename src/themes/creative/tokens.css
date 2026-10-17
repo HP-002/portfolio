@@ -16,14 +16,14 @@
 
 [data-theme="creative"] {
   color-scheme: dark;
-  --color-bg: #101211;
-  --color-surface: #191c1a;
-  --color-text: #f0efe8;
-  --color-muted: #afb4aa;
-  --color-accent: #eeab78;
+  --color-bg: #000000;
+  --color-surface: #0c0b0e;
+  --color-text: #f1eff5;
+  --color-muted: #aca8b4;
+  --color-accent: #cdbbfd;
   --color-accent-secondary: #b7ce99;
-  --color-border: #333832;
-  --color-border-secondary: #404938;
+  --color-border: #27242c;
+  --color-border-secondary: #343c2e;
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
   --size-h2: clamp(2rem, 4vw, 3.6rem);
