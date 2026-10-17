@@ -1,5 +1,502 @@
-/* Creative Projects styles — all values must come from tokens */
+.filterRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+}
+.filters {
+  display: flex;
+  gap: 8px 24px;
+  flex-wrap: wrap;
+}
+.filters button {
+  font: 500 0.75rem/1.5 var(--font-heading);
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--color-muted);
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.filters button:hover,
+.filters button[aria-pressed="true"] {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+.count {
+  color: var(--color-muted);
+  font: 400 0.7rem/1.5 var(--font-heading);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.cards {
+  border-bottom: 1px solid var(--color-border);
+}
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.7fr);
+  align-items: start;
+  gap: 32px;
+  padding: 32px 0 36px;
+  border-top: 1px solid var(--color-border);
+}
+.visual {
+  position: relative;
+  aspect-ratio: 1.6;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+.visual > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.body {
+  min-width: 0;
+}
+.projectMeta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 8px;
+}
+.category {
+  color: var(--color-muted);
+  font: 400 0.7rem/1.5 var(--font-heading);
+}
+.label {
+  color: var(--color-accent-secondary);
+  font: 500 0.75rem/1.5 var(--font-heading);
+}
+.body h3 {
+  font: 500 clamp(1.15rem, 2vw, 1.5rem)/1.35 var(--font-heading);
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.description {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+.tech {
+  list-style: none;
+  display: flex;
+  gap: 8px 18px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.tech li {
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-border-secondary);
+  padding-bottom: 3px;
+  font: 400 0.7rem/1.5 var(--font-heading);
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 12px;
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-size: 0.8rem;
+  transition: var(--transition-link);
+}
+.links a:hover {
+  color: var(--color-accent);
+}
+.details {
+  font-size: 0.8rem;
+  margin-top: 16px;
+}
+.details summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  list-style: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.details summary::-webkit-details-marker {
+  display: none;
+}
+.details summary:hover,
+.details[open] summary {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+.details summary span {
+  color: var(--color-accent);
+  font: 400 1.4rem/1 var(--font-heading);
+  transition: transform 0.2s ease;
+}
+.details[open] summary span {
+  transform: rotate(45deg);
+}
+.details p {
+  padding: 8px 12px 12px;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+.more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+  padding: 16px 12px;
+  background: none;
+  color: var(--color-text);
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  font: 400 0.8rem/1.5 var(--font-heading);
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.more span {
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+.more:hover {
+  color: var(--color-accent);
+  background: var(--color-surface);
+}
+.status {
+  color: var(--color-accent);
+  font: 400 0.7rem/1.5 var(--font-heading);
+  margin: -6px 0 14px;
+}
+.blackHole {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    #433226 0,
+    #151411 42%,
+    #080c0e 75%
+  );
+}
+.starfield {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 22%, #e8e2cc 90%, transparent),
+    radial-gradient(1px 1px at 80% 30%, #d0d8e6 90%, transparent),
+    radial-gradient(1px 1px at 25% 75%, #d0d8e6 90%, transparent),
+    radial-gradient(1px 1px at 65% 64%, #d0d8e6 90%, transparent);
+  background-size:
+    100px 90px,
+    123px 106px,
+    145px 85px,
+    230px 141px;
+  opacity: 0.6;
+}
+.disk {
+  position: absolute;
+  width: 66%;
+  height: 29%;
+  left: 17%;
+  top: 40%;
+  border-radius: 50%;
+  border: 9px solid #f9d59c;
+  transform: rotate(-18deg);
+  box-shadow:
+    0 0 16px #e7a068,
+    inset 0 0 12px var(--color-accent),
+    0 0 35px color-mix(in srgb, var(--color-accent) 31%, transparent);
+}
+.hole {
+  position: absolute;
+  height: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #090b09;
+  border: 2px solid #edc69b;
+  box-shadow:
+    0 0 8px #f4c18a,
+    0 -10px 20px #ffcc8d60;
+}
+.figureLabel {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  color: #b9b5a9;
+  font: 0.5rem var(--font-heading);
+  letter-spacing: 0.14em;
+}
+.compiler {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: radial-gradient(ellipse at left, #354336, #1b241e);
+}
+.alpha {
+  font:
+    italic 6rem/1 Georgia,
+    serif;
+  color: #becfa6;
+}
+.code {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.code span {
+  color: #96a58e;
+  font: 0.5rem var(--font-heading);
+  letter-spacing: 0.12em;
+}
+.code code {
+  color: #c8d3be;
+  font: 0.75rem/1.9 monospace;
+}
+.code b {
+  color: var(--color-accent);
+  font-weight: 400;
+}
+.diagram {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background: #1b2325;
+}
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#6d89971a 1px, transparent 1px),
+    linear-gradient(90deg, #6d89971a 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.diagram b {
+  position: relative;
+  text-align: center;
+  color: #b8c9cd;
+  font: 500 2rem/1.25 var(--font-heading);
+  letter-spacing: -0.04em;
+}
+.diagram b span {
+  font: 0.6rem monospace;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+}
+.diagram b em {
+  color: var(--color-accent);
+  font-family: Georgia, serif;
+}
+.diagram small {
+  z-index: 1;
+  font: 0.5rem var(--font-heading);
+  letter-spacing: 0.14em;
+  color: #a4b6bb;
+}
+.chart {
+  height: 100%;
+  background: #24241b;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.chart > div {
+  display: flex;
+  align-items: end;
+  gap: 9px;
+  height: 150px;
+  border-bottom: 1px solid #5d624c;
+  padding: 0 12px;
+}
+.chart i {
+  width: 15px;
+  background: linear-gradient(#d0d49c, #6c7450);
+  border-radius: 2px 2px 0 0;
+}
+.chart > span:last-child {
+  font: 0.5rem var(--font-heading);
+  letter-spacing: 0.15em;
+  color: #cad0ae;
+}
+.traffic {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #1c2823;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+.roads {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 48%,
+      #c1cdb01a 48%,
+      #c1cdb01a 52%,
+      transparent 52%
+    ),
+    linear-gradient(
+      transparent 45%,
+      #c1cdb01a 45%,
+      #c1cdb01a 55%,
+      transparent 55%
+    );
+  transform: rotate(-20deg) scale(1.4);
+}
+.signal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid #65735a;
+  border-radius: 12px;
+  background: #121b16;
+}
+.signal i {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #734939;
+}
+.signal i:nth-child(2) {
+  background: #716039;
+}
+.signal i:nth-child(3) {
+  background: var(--color-accent-secondary);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--color-accent-secondary) 25%, transparent);
+}
+.trafficTitle {
+  position: relative;
+  font: 500 2rem/1.05 var(--font-heading);
+  letter-spacing: -0.04em;
+  color: #d4dfcb;
+}
+.trafficTitle em {
+  font-family: Georgia, serif;
+  color: var(--color-accent);
+  font-weight: 400;
+}
 
-.projects {
-  /* TODO: layout */
+@media (min-width: 701px) and (max-width: 1000px) {
+  .card {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+    gap: 24px;
+  }
+  .visual {
+    aspect-ratio: 1;
+  }
+  .compiler {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .alpha {
+    font-size: 4rem;
+  }
+  .code {
+    gap: 10px;
+  }
+  .code code {
+    font-size: 0.7rem;
+  }
+  .chart > div {
+    gap: 5px;
+    padding-inline: 0;
+  }
+  .chart i {
+    width: 10px;
+  }
+  .traffic {
+    gap: 20px;
+  }
+  .trafficTitle {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 700px) {
+  .card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding-block: 24px 28px;
+  }
+  .visual {
+    aspect-ratio: 1.8;
+  }
+  .filters {
+    gap: 4px 18px;
+  }
+  .alpha {
+    font-size: 5rem;
+  }
+  .compiler {
+    gap: 18px;
+  }
+  .code {
+    gap: 12px;
+  }
+  .code code {
+    font-size: 0.7rem;
+  }
+  .chart > div {
+    gap: 5px;
+    height: 105px;
+    transform: scaleY(0.65);
+    transform-origin: bottom;
+  }
+  .chart i {
+    width: 10px;
+  }
+  .figureLabel {
+    left: 12px;
+    bottom: 10px;
+    font-size: 0.45rem;
+  }
+  .diagram b {
+    font-size: 1.5rem;
+  }
+  .diagram {
+    gap: 12px;
+  }
+  .trafficTitle {
+    font-size: 1.6rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .filters button,
+  .links a,
+  .details summary,
+  .details summary span,
+  .more {
+    transition: none;
+  }
 }

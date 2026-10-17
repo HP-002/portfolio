@@ -63,7 +63,7 @@ const languages = [
         showInResearch: false,
     },
     {
-        id: 6,
+        id: "javascript",
         name: 'JavaScript',
         icon: JavaScriptIcon,
         description: "Scripting",
@@ -77,14 +77,14 @@ const languages = [
         showInResearch: false,
     },
     {
-        id: 7,
+        id: "html",
         name: 'HTML',
         icon: HtmlIcon,
         description: "Markup",
         showInResearch: false,
     },
     {
-        id: 8,
+        id: "css",
         name: 'CSS',
         icon: CssIcon,
         description: "Styling",

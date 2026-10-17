@@ -47,6 +47,11 @@
   margin-right: var(--space-xxs);
 }
 
+/* Recolors light image icons (e.g. Gymnasium) to solid black. */
+.black {
+  filter: brightness(0);
+}
+
 .itemtext {
   font-family: var(--font-body);
   font-size: var(--size-small);

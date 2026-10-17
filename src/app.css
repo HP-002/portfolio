@@ -25,3 +25,28 @@ video {
   max-width: 100%;
   display: block;
 }
+
+/* Theme switch: old page blurs and recedes while the new one sharpens in (see toggleTheme in App.jsx). */
+::view-transition-old(root) {
+  animation: theme-out 300ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+::view-transition-new(root) {
+  animation: theme-in 300ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes theme-out {
+  to {
+    opacity: 0;
+    transform: scale(0.97);
+    filter: blur(8px);
+  }
+}
+
+@keyframes theme-in {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+    filter: blur(8px);
+  }
+}

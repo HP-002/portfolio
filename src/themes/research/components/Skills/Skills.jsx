@@ -1,4 +1,5 @@
 import skillsSections from '../../../../assets/data/skillsSections'
+import SkillIcon from '../../../../shared/components/SkillIcon/SkillIcon'
 import styles from './Skills.module.css'
 
 export default function Skills({ variant = 'sidebar' }) {
@@ -21,7 +22,11 @@ export default function Skills({ variant = 'sidebar' }) {
           <ul className={styles.list}>
             {items.map((item) => (
               <li key={item.id} className={styles.item} >
-                <img src={item.icon} alt={item.name} className={styles.icon} />
+                <SkillIcon
+                  item={item}
+                  alt={item.name}
+                  className={item.name === 'Gymnasium' ? `${styles.icon} ${styles.black}` : styles.icon}
+                />
                 <p className={styles.itemtext}>
                   {item.name}
                 </p>

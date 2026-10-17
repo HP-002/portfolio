@@ -9,6 +9,7 @@ import FigmaIcon from "../images/figma.svg"
 import FirebaseIcon from "../images/firebase.svg"
 import ExpoIcon from "../images/expo.svg"
 import SupabaseIcon from "../images/supabase.svg"
+import { SiCmake, SiGnu, SiPostgresql } from "react-icons/si"
 
 const tools = [
     {
@@ -86,6 +87,27 @@ const tools = [
         name: "Figma",
         icon: FigmaIcon,
         description: "Collaborative Design Platform",
+        showInResearch: false,
+    },
+    {
+        id: "gdb",
+        name: "gdb",
+        Icon: SiGnu,
+        description: "Debugger",
+        showInResearch: false,
+    },
+    {
+        id: "cmake",
+        name: "CMake",
+        Icon: SiCmake,
+        description: "Build system",
+        showInResearch: false,
+    },
+    {
+        id: "postgresql",
+        name: "PostgreSQL",
+        Icon: SiPostgresql,
+        description: "Database",
         showInResearch: false,
     },
 ]

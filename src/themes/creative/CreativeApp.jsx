@@ -1,21 +1,37 @@
-import './tokens.css'
-
-import Nav from './components/Nav/Nav'
-import Hero from './components/Hero/Hero'
-import About from './components/About/About'
-import Projects from './components/Projects/Projects'
-import Skills from './components/Skills/Skills'
-import Contact from './components/Contact/Contact'
+import "./tokens.css";
+import styles from "./CreativeApp.module.css";
+import Nav from "./components/Nav/Nav";
+import Education from "./components/Education/Education";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Research from "./components/Research/Research";
+import Work from "./components/Work/Work";
+import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
 
 export default function CreativeApp() {
   return (
-    <main>
+    <div className={styles.app}>
+      <a className={styles.skip} href="#creative-main">
+        Skip to content
+      </a>
       <Nav />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-    </main>
-  )
+      <main id="creative-main">
+        <About />
+        <Education />
+        <Research />
+        <Work />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+      <footer className={styles.footer}>
+        <a href="#about">
+          HP<span> / </span>Het Patel
+        </a>
+        <p>Built with curiosity. © {new Date().getFullYear()}</p>
+        <a href="#about">Back to top ↑</a>
+      </footer>
+    </div>
+  );
 }

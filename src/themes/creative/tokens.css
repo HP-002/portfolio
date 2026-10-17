@@ -1,45 +1,59 @@
-/* Creative theme design tokens — dark, motion-friendly.
-   Scoped to [data-theme="creative"] on <html> so that research tokens
-   (which are bundled into the same page) cannot collide. */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("./assets/fonts/space-grotesk-latin-wght-normal.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url("./assets/fonts/dm-sans-latin-wght-normal.woff2") format("woff2");
+}
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Inter:wght@400;500&display=swap');
+[data-theme="creative"] {
+  color-scheme: dark;
+  --color-bg: #000000;
+  --color-surface: #0c0b0e;
+  --color-text: #f1eff5;
+  --color-muted: #aca8b4;
+  --color-accent: #cdbbfd;
+  --color-accent-secondary: #b7ce99;
+  --color-border: #27242c;
+  --color-border-secondary: #343c2e;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --size-h2: clamp(2rem, 4vw, 3.6rem);
+  --size-body: 1rem;
+  --size-small: 0.875rem;
+  --weight-body: 400;
+  --line-height-body: 1.65;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --max-width: 1280px;
+  --radius-btn: 100px;
+  --transition-link: color 0.2s ease;
+  --transition-nav: background 0.2s ease;
+}
 
-[data-theme='creative'] {
-  /* --- Colors --- */
-  --color-bg:          #13111F;
-  --color-surface:     #1E1C30;
-  --color-text:        #E8E6F5;
-  --color-muted:       #7A78A0;
-  --color-accent:      #7B6EF6;
-  --color-border:      #2E2B4A;
-
-  /* --- Typography --- */
-  --font-heading:      'DM Sans', 'Inter', sans-serif;
-  --font-body:         'Inter', system-ui, sans-serif;
-  --size-h1:           3rem;
-  --size-h2:           2rem;
-  --size-h3:           1.35rem;
-  --size-body:         1rem;
-  --size-small:        0.875rem;
-  --weight-heading:    700;
-  --weight-body:       400;
-  --line-height-body:  1.7;
-
-  /* --- Spacing scale: identical to research --- */
-  --space-xs:   0.5rem;
-  --space-sm:   1rem;
-  --space-md:   1.5rem;
-  --space-lg:   2.5rem;
-  --space-xl:   4rem;
-  --space-xxl:  6rem;
-
-  /* --- Layout --- */
-  --max-width:        1100px;
-  --radius-card:      10px;
-  --radius-btn:       6px;
-
-  /* --- Transitions: ON in creative mode --- */
-  --transition-card:  transform 0.2s ease, box-shadow 0.2s ease;
-  --transition-link:  color 0.15s ease;
-  --transition-nav:   background 0.3s ease;
+[data-theme="creative"] ::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+[data-theme="creative"] :focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 5px;
+}
+[data-theme="creative"] section[id] {
+  scroll-margin-top: 100px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

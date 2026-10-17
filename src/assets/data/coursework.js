@@ -1,7 +1,7 @@
 
 const coursework = [
     {
-        id: 443,
+        id: 446,
         title: 'Reinforcement Learning',
         category: 'cse',
         description: '',
@@ -37,20 +37,14 @@ const coursework = [
         description: '',
     },
     {
-        id: 439,
-        title: 'Quantum Computing',
-        category: 'cse',
-        description: '',
-    },
-    {
         id: 443,
         title: 'Compilers',
         category: 'cse',
         description: '',
     },
     {
-        id: 306,
-        title: 'Statistical Computing with SAS',
+        id: 309,
+        title: 'Quality Control',
         category: 'sta',
         description: '',
     },
@@ -109,11 +103,16 @@ const coursework = [
         description: 'P description',
     },
     {
-        id: 309,
+        id: 3092,
         title: 'Linear Algebra',
         category: 'cse',
         description: 'LA description',
     },
 ]
+
+export const courseworkCategories = {
+    cse: { name: 'Computer Science', marker: '{ }' },
+    sta: { name: 'Statistics', marker: 'Σ' },
+}
 
 export default coursework

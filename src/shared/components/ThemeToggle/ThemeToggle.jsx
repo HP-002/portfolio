@@ -1,15 +1,16 @@
-import { LuBookOpenText, LuSparkles } from 'react-icons/lu'
+import { LuMoon, LuSun } from 'react-icons/lu'
 import { useTheme } from '../../hooks/useTheme'
 import styles from './ThemeToggle.module.css'
 
-const THEMES = {
-  research: { label: 'Go Creative', Icon: LuBookOpenText, next: 'creative' },
-  creative: { label: 'Go Research', Icon: LuSparkles, next: 'research' },
+// The research theme is the light look, creative the dark one; the button shows the mode it switches to.
+const MODES = {
+  research: { Icon: LuMoon, next: 'dark' },
+  creative: { Icon: LuSun, next: 'light' },
 }
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
-  const { label, Icon, next } = THEMES[theme] ?? THEMES.research
+  const { Icon, next } = MODES[theme] ?? MODES.research
 
   return (
     <button
@@ -20,7 +21,6 @@ export default function ThemeToggle() {
       title={`Switch to ${next} mode`}
     >
       <Icon className={styles.icon} aria-hidden="true" />
-      <span className={styles.label}>{label}</span>
     </button>
   )
 }
