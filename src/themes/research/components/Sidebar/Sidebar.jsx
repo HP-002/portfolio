@@ -1,5 +1,5 @@
 import photo from '../../../../assets/images/profile.webp'
-import { name, resume, transcript } from '../../../../assets/data/about'
+import { name, resume, cv, transcript } from '../../../../assets/data/about'
 import Skills from '../Skills/Skills'
 import styles from './Sidebar.module.css'
 
@@ -21,6 +21,14 @@ export default function Sidebar() {
           rel="noreferrer noopener"
         >
           Resume
+        </a>
+        <a
+          href={cv}
+          className={styles.docButton}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          CV
         </a>
         <a
           href={transcript}

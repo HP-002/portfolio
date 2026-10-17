@@ -9,6 +9,7 @@ const intro = [
 ]
 const resume = 'https://hetpatel-work-docs.s3.us-east-2.amazonaws.com/Het+Patel+-+Resume.pdf'
 const transcript = 'https://hetpatel-work-docs.s3.us-east-2.amazonaws.com/Het+Patel+-+Transcript.pdf'
+const cv = 'https://hetpatel-work-docs.s3.us-east-2.amazonaws.com/Het+Patel+-+CV.pdf'
 const lastUpdated = 'October 14, 2026'
 const about = [
   'I am an undergraduate student at University at Buffalo pursuing a B.S. in Computer Science and a B.A. in Statistics. I got into the field of Computer Science because of my interests in computers and various algorithms used to solve complex problems. I started off my CS journey in high school due to my interests in computers, software, and designing algorithms to solve simple problems. Over the years, I have grown my skills and I am now deeply interested in building robust machine learning algorithms.',
@@ -16,4 +17,4 @@ const about = [
   'I am currently interested in Machine Learning and Reinforcement Learning. I am actively looking for PhD opportunities in these domains. If you share similar interests or want to collaborate, please feel free to reach out to me.',
 ]
 
-export { name, roles, subtitle, location, intro, about, resume, transcript, lastUpdated }
+export { name, roles, subtitle, location, intro, about, resume, cv, transcript, lastUpdated }

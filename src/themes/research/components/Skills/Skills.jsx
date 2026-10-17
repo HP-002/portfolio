@@ -22,7 +22,11 @@ export default function Skills({ variant = 'sidebar' }) {
           <ul className={styles.list}>
             {items.map((item) => (
               <li key={item.id} className={styles.item} >
-                <SkillIcon item={item} alt={item.name} className={styles.icon} />
+                <SkillIcon
+                  item={item}
+                  alt={item.name}
+                  className={item.name === 'Gymnasium' ? `${styles.icon} ${styles.black}` : styles.icon}
+                />
                 <p className={styles.itemtext}>
                   {item.name}
                 </p>

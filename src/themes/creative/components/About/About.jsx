@@ -1,5 +1,5 @@
 import { LuArrowUpRight } from "react-icons/lu";
-import { name, roles, intro, location, resume, transcript } from "../../../../assets/data/about";
+import { name, roles, intro, location, resume, cv, transcript } from "../../../../assets/data/about";
 import profile from "../../../../assets/images/profile.webp";
 import styles from "./About.module.css";
 
@@ -25,6 +25,14 @@ export default function About() {
             rel="noopener noreferrer"
           >
             Resume <LuArrowUpRight aria-hidden="true" />
+          </a>
+          <a
+            className={styles.primary}
+            href={cv}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV <LuArrowUpRight aria-hidden="true" />
           </a>
           <a
             className={styles.secondary}
